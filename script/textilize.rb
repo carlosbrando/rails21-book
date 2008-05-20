@@ -2,15 +2,15 @@ require 'RedCloth'
 require 'coderay'
 
 desc 'Transforma o arquivo em HTML'
-task :textilize do
+task :textilize => :merge do
   if File.exists?('output/full_book.texttile')
     output = File.new('output/full_book.texttile').read
     output = RedCloth.new(output).to_html
 
     File.open('output/index.html', 'w') do |f|
-      f.puts '<html><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"><link rel="stylesheet" href="../layout/coderay.css" type="text/css" media="screen" /></head><body>'
-      f.puts output
-      f.puts '</body></html>'
+      html_template = File.new("layout/pdf_template.html").read
+      html_template.gsub!("#body", output)
+      f.puts html_template
     end
   end
 end

@@ -76,3 +76,80 @@ Tue May 20 03:11:24 2008: ---- begin
 Tue May 20 03:11:25 2008: -:32: error: Unexpected end tag : code
 Tue May 20 03:11:25 2008: finished: success
 Tue May 20 03:11:25 2008: ---- end
+Tue May 20 19:24:52 2008: ---- begin
+Tue May 20 19:24:53 2008: -:32: error: Unexpected end tag : code
+Tue May 20 19:24:54 2008: finished: success
+Tue May 20 19:24:54 2008: ---- end
+Tue May 20 19:25:32 2008: ---- begin
+Tue May 20 19:25:32 2008: -:32: error: Unexpected end tag : code
+Tue May 20 19:25:32 2008: finished: success
+Tue May 20 19:25:32 2008: ---- end
+Tue May 20 19:26:19 2008: ---- begin
+Tue May 20 19:26:20 2008: -:32: error: Unexpected end tag : code
+Tue May 20 19:26:20 2008: finished: success
+Tue May 20 19:26:20 2008: ---- end
+Tue May 20 19:26:40 2008: ---- begin
+Tue May 20 19:26:40 2008: -:32: error: Unexpected end tag : code
+Tue May 20 19:26:40 2008: finished: success
+Tue May 20 19:26:40 2008: ---- end
+Tue May 20 20:11:16 2008: ---- begin
+Tue May 20 20:11:16 2008: -:32: error: Unexpected end tag : code
+Tue May 20 20:11:17 2008: finished: success
+Tue May 20 20:11:17 2008: ---- end
+Tue May 20 20:11:32 2008: ---- begin
+Tue May 20 20:11:32 2008: -:32: error: Unexpected end tag : code
+Tue May 20 20:11:32 2008: finished: success
+Tue May 20 20:11:32 2008: ---- end
+Tue May 20 20:12:09 2008: ---- begin
+Tue May 20 20:12:10 2008: -:32: error: Unexpected end tag : code
+Tue May 20 20:12:10 2008: finished: success
+Tue May 20 20:12:10 2008: ---- end
+Tue May 20 20:17:21 2008: ---- begin
+Tue May 20 20:17:22 2008: -:6: error: Tag front invalid
+Tue May 20 20:17:22 2008: -:7: error: Tag contents invalid
+Tue May 20 20:17:22 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Tue May 20 20:17:22 2008: -:38: error: Unexpected end tag : code
+Tue May 20 20:17:22 2008: finished: success
+Tue May 20 20:17:22 2008: ---- end
+Tue May 20 20:18:44 2008: ---- begin
+Tue May 20 20:18:45 2008: -:6: error: Tag front invalid
+Tue May 20 20:18:45 2008: -:7: error: Tag table-of-contents invalid
+Tue May 20 20:18:45 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Tue May 20 20:18:45 2008: -:38: error: Unexpected end tag : code
+Tue May 20 20:18:45 2008: finished: success
+Tue May 20 20:18:45 2008: ---- end
+Tue May 20 20:20:13 2008: ---- begin
+Tue May 20 20:20:14 2008: -:6: error: Tag front invalid
+Tue May 20 20:20:14 2008: -:7: error: Tag contents invalid
+Tue May 20 20:20:14 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Tue May 20 20:20:14 2008: -:38: error: Unexpected end tag : code
+Tue May 20 20:20:14 2008: finished: success
+Tue May 20 20:20:14 2008: ---- end
+Tue May 20 20:21:32 2008: ---- begin
+Tue May 20 20:21:33 2008: -:6: error: Tag front invalid
+Tue May 20 20:21:33 2008: -:7: error: Tag contents invalid
+Tue May 20 20:21:33 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Tue May 20 20:21:33 2008: -:38: error: Unexpected end tag : code
+Tue May 20 20:21:33 2008: finished: success
+Tue May 20 20:21:33 2008: ---- end
+Tue May 20 20:22:10 2008: ---- begin
+Tue May 20 20:22:11 2008: -:6: error: Tag front invalid
+Tue May 20 20:22:11 2008: -:7: error: Tag contents invalid
+Tue May 20 20:22:11 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Tue May 20 20:22:11 2008: -:38: error: Unexpected end tag : code
+Tue May 20 20:22:11 2008: finished: success
+Tue May 20 20:22:11 2008: ---- end
+Tue May 20 20:23:59 2008: ---- begin
+Tue May 20 20:24:00 2008: -:6: error: Tag front invalid
+Tue May 20 20:24:00 2008: -:7: error: Tag contents invalid
+Tue May 20 20:24:00 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Tue May 20 20:24:00 2008: -:38: error: Unexpected end tag : code
+Tue May 20 20:24:00 2008: finished: success
+Tue May 20 20:24:00 2008: ---- end
+Tue May 20 20:25:38 2008: ---- begin
+Tue May 20 20:25:39 2008: -:6: error: Tag front invalid
+Tue May 20 20:25:39 2008: -:7: error: Tag contents invalid
+Tue May 20 20:25:39 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Tue May 20 20:25:39 2008: -:38: error: Unexpected end tag : code
+Tue May 20 20:25:39 2008: finished: success
+Tue May 20 20:25:39 2008: ---- end
