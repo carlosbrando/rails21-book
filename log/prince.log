@@ -1,0 +1,78 @@
+Tue May 20 01:56:14 2008: ---- begin
+Tue May 20 01:56:14 2008: -:1: error: Name file:0x31f95c is not XML Namespace compliant
+Tue May 20 01:56:14 2008: -:1: warning: Namespace prefix file is not defined
+Tue May 20 01:56:14 2008: -:1: error: Tag file:0x31f95c invalid
+Tue May 20 01:56:15 2008: finished: success
+Tue May 20 01:56:15 2008: ---- end
+Tue May 20 01:57:24 2008: ---- begin
+Tue May 20 01:57:25 2008: -:1: error: Name file:0x31f880 is not XML Namespace compliant
+Tue May 20 01:57:25 2008: -:1: warning: Namespace prefix file is not defined
+Tue May 20 01:57:25 2008: -:1: error: Tag file:0x31f880 invalid
+Tue May 20 01:57:25 2008: finished: success
+Tue May 20 01:57:25 2008: ---- end
+Tue May 20 01:57:39 2008: ---- begin
+Tue May 20 01:57:39 2008: -:29: error: Unexpected end tag : code
+Tue May 20 01:57:40 2008: finished: success
+Tue May 20 01:57:40 2008: ---- end
+Tue May 20 01:58:53 2008: ---- begin
+Tue May 20 01:58:53 2008: -:20: error: Unexpected end tag : code
+Tue May 20 01:58:53 2008: -:26: error: Unexpected end tag : code
+Tue May 20 01:58:54 2008: finished: success
+Tue May 20 01:58:54 2008: ---- end
+Tue May 20 02:01:58 2008: ---- begin
+Tue May 20 02:01:59 2008: -:29: error: Unexpected end tag : code
+Tue May 20 02:01:59 2008: finished: success
+Tue May 20 02:01:59 2008: ---- end
+Tue May 20 02:09:21 2008: ---- begin
+Tue May 20 02:09:22 2008: -:29: error: Unexpected end tag : code
+Tue May 20 02:09:22 2008: finished: success
+Tue May 20 02:09:22 2008: ---- end
+Tue May 20 02:11:53 2008: ---- begin
+Tue May 20 02:11:54 2008: -:29: error: Unexpected end tag : code
+Tue May 20 02:11:54 2008: finished: success
+Tue May 20 02:11:54 2008: ---- end
+Tue May 20 02:12:35 2008: ---- begin
+Tue May 20 02:12:36 2008: -:29: error: Unexpected end tag : code
+Tue May 20 02:12:36 2008: finished: success
+Tue May 20 02:12:36 2008: ---- end
+Tue May 20 02:13:07 2008: ---- begin
+Tue May 20 02:13:08 2008: -:29: error: Unexpected end tag : code
+Tue May 20 02:13:08 2008: finished: success
+Tue May 20 02:13:08 2008: ---- end
+Tue May 20 02:13:43 2008: ---- begin
+Tue May 20 02:13:44 2008: -:29: error: Unexpected end tag : code
+Tue May 20 02:13:44 2008: finished: success
+Tue May 20 02:13:44 2008: ---- end
+Tue May 20 02:14:48 2008: ---- begin
+Tue May 20 02:14:49 2008: -:29: error: Unexpected end tag : code
+Tue May 20 02:14:49 2008: finished: success
+Tue May 20 02:14:49 2008: ---- end
+Tue May 20 02:15:07 2008: ---- begin
+Tue May 20 02:15:07 2008: -:29: error: Unexpected end tag : code
+Tue May 20 02:15:07 2008: finished: success
+Tue May 20 02:15:07 2008: ---- end
+Tue May 20 02:15:18 2008: ---- begin
+Tue May 20 02:15:19 2008: -:29: error: Unexpected end tag : code
+Tue May 20 02:15:19 2008: finished: success
+Tue May 20 02:15:19 2008: ---- end
+Tue May 20 02:17:36 2008: ---- begin
+Tue May 20 02:17:37 2008: -:29: error: Unexpected end tag : code
+Tue May 20 02:17:37 2008: layout/coderay.csslayout/default.css: warning: can't open input file: No such file or directory
+Tue May 20 02:17:37 2008: finished: success
+Tue May 20 02:17:37 2008: ---- end
+Tue May 20 02:18:03 2008: ---- begin
+Tue May 20 02:18:04 2008: -:29: error: Unexpected end tag : code
+Tue May 20 02:18:04 2008: finished: success
+Tue May 20 02:18:04 2008: ---- end
+Tue May 20 02:21:37 2008: ---- begin
+Tue May 20 02:21:38 2008: -:29: error: Unexpected end tag : code
+Tue May 20 02:21:38 2008: finished: success
+Tue May 20 02:21:38 2008: ---- end
+Tue May 20 03:09:15 2008: ---- begin
+Tue May 20 03:09:16 2008: -:32: error: Unexpected end tag : code
+Tue May 20 03:09:16 2008: finished: success
+Tue May 20 03:09:16 2008: ---- end
+Tue May 20 03:11:24 2008: ---- begin
+Tue May 20 03:11:25 2008: -:32: error: Unexpected end tag : code
+Tue May 20 03:11:25 2008: finished: success
+Tue May 20 03:11:25 2008: ---- end

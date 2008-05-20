@@ -10,12 +10,11 @@ def directory(dir_name, output)
   dir.each do |file_name|
     unless file_name =~ /^\./
       file = "#{dir_name}/#{file_name}"
-      
       if File.stat(file).directory?
         directory(file, output)
       else
         merge_output(file, output)
-      end
+      end 
     end
   end
 end

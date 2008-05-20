@@ -1,0 +1,8 @@
+h1 { page-break-before: always }
+
+@page table-of-contents {
+    @top { content: "Table of Contents" }
+    @bottom {
+        content: counter(page, lower-alpha)
+    }
+}
