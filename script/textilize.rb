@@ -19,14 +19,29 @@ class RedCloth
   ##
   # Take a block starting with ruby. and add proper tags for styling.
   #
-  #   ruby. def blah()
+  #   ruby. my_code.rb
   def textile_ruby(tag, atts, cite, content)
     # %(<pre><code class="ruby">#{content}</pre></code>)
+    ret = if content =~ /#(.+)/
+      tag = $1
+      file_name = content.gsub("##{tag}", '')
 
-    code_file = File.new("code/#{content}").read
+      tmp, find_end = '', false
+      File.new("code/#{file_name}").readlines.each do |line|
+        unless find_end
+          find_end = true if line =~ /BEGIN #{tag}/
+        else
+          break if line =~ /END #{tag}/
+          tmp += line
+        end
+      end
+      CodeRay.scan(tmp, :ruby).html.div
+    else
+      code_file = File.new("code/#{content}").read
+      CodeRay.scan(code_file, :ruby).html.div
+    end
 
-    ret = CodeRay.scan(code_file, :ruby).html.div
-    # ret.gsub!('&quot;', '"')
+    ret.gsub!('&quot;', '"')
     # ret.gsub!('    ', '  ')
     ret.gsub('&gt;', '>')
   end

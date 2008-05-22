@@ -1,3 +1,7 @@
 h2. Introdução
 
 Apenas um teste.
+
+Aqui apenas um trecho do código:
+
+ruby. teste.rb#special

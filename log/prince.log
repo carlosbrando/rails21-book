@@ -153,3 +153,10 @@ Tue May 20 20:25:39 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
 Tue May 20 20:25:39 2008: -:38: error: Unexpected end tag : code
 Tue May 20 20:25:39 2008: finished: success
 Tue May 20 20:25:39 2008: ---- end
+Thu May 22 17:48:32 2008: ---- begin
+Thu May 22 17:48:33 2008: -:6: error: Tag front invalid
+Thu May 22 17:48:33 2008: -:7: error: Tag contents invalid
+Thu May 22 17:48:33 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 17:48:33 2008: -:60: error: Unexpected end tag : code
+Thu May 22 17:48:33 2008: finished: success
+Thu May 22 17:48:33 2008: ---- end
