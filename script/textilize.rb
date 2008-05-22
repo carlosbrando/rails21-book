@@ -22,9 +22,12 @@ class RedCloth
   #   ruby. def blah()
   def textile_ruby(tag, atts, cite, content)
     # %(<pre><code class="ruby">#{content}</pre></code>)
-    ret = CodeRay.scan(content, :ruby).html.div
-    ret.gsub!('&quot;', '"')
-    ret.gsub!('    ', '  ')
+
+    code_file = File.new("code/#{content}").read
+
+    ret = CodeRay.scan(code_file, :ruby).html.div
+    # ret.gsub!('&quot;', '"')
+    # ret.gsub!('    ', '  ')
     ret.gsub('&gt;', '>')
   end
 

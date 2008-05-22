@@ -2,13 +2,7 @@ h1. Estou dentro da pasta "2"
 
 Um exemplo de código:
 
-ruby. module Life 
-  def answer(teste)
-    # teste de número
-    @nome.teste { :caracas => 45 }
-		@@nome.teste = true
-  end 
-end
+ruby. teste.rb
 
 Mais um trecho de texto qualquer
 
