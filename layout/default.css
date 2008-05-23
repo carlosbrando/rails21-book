@@ -1,5 +1,5 @@
 /*@page { size: 22.86cm 17.78cm }*/
-/*@page { size: A4 landscape }*/
+@page { size: A4 landscape }
 
 h1 { page-break-before: always }
 

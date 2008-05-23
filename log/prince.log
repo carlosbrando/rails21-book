@@ -160,3 +160,172 @@ Thu May 22 17:48:33 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
 Thu May 22 17:48:33 2008: -:60: error: Unexpected end tag : code
 Thu May 22 17:48:33 2008: finished: success
 Thu May 22 17:48:33 2008: ---- end
+Thu May 22 23:29:37 2008: ---- begin
+Thu May 22 23:29:38 2008: -:6: error: Tag front invalid
+Thu May 22 23:29:38 2008: -:7: error: Tag contents invalid
+Thu May 22 23:29:38 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:29:38 2008: -:269: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:29:38 2008: -:269: error: Tag feed invalid
+Thu May 22 23:29:38 2008: -:308: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:29:38 2008: -:356: error: Unexpected end tag : strong
+Thu May 22 23:29:39 2008: finished: success
+Thu May 22 23:29:39 2008: ---- end
+Thu May 22 23:33:36 2008: ---- begin
+Thu May 22 23:33:37 2008: -:6: error: Tag front invalid
+Thu May 22 23:33:37 2008: -:7: error: Tag contents invalid
+Thu May 22 23:33:37 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:33:37 2008: -:274: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:33:37 2008: -:274: error: Tag feed invalid
+Thu May 22 23:33:37 2008: -:313: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:33:37 2008: -:361: error: Unexpected end tag : strong
+Thu May 22 23:33:37 2008: finished: success
+Thu May 22 23:33:37 2008: ---- end
+Thu May 22 23:34:27 2008: ---- begin
+Thu May 22 23:34:28 2008: -:6: error: Tag front invalid
+Thu May 22 23:34:28 2008: -:7: error: Tag contents invalid
+Thu May 22 23:34:28 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:34:28 2008: -:274: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:34:28 2008: -:274: error: Tag feed invalid
+Thu May 22 23:34:28 2008: -:313: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:34:28 2008: -:361: error: Unexpected end tag : strong
+Thu May 22 23:34:28 2008: finished: success
+Thu May 22 23:34:28 2008: ---- end
+Thu May 22 23:37:14 2008: ---- begin
+Thu May 22 23:37:15 2008: -:6: error: Tag front invalid
+Thu May 22 23:37:15 2008: -:7: error: Tag contents invalid
+Thu May 22 23:37:15 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:37:15 2008: -:29: error: Unexpected end tag : p
+Thu May 22 23:37:15 2008: -:272: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:37:15 2008: -:272: error: Tag feed invalid
+Thu May 22 23:37:15 2008: -:311: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:37:15 2008: -:359: error: Unexpected end tag : strong
+Thu May 22 23:37:15 2008: finished: success
+Thu May 22 23:37:15 2008: ---- end
+Thu May 22 23:38:49 2008: ---- begin
+Thu May 22 23:38:50 2008: -:6: error: Tag front invalid
+Thu May 22 23:38:50 2008: -:7: error: Tag contents invalid
+Thu May 22 23:38:50 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:38:50 2008: -:29: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:38:50 2008: -:41: error: Unexpected end tag : strong
+Thu May 22 23:38:50 2008: -:272: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:38:50 2008: -:272: error: Tag feed invalid
+Thu May 22 23:38:50 2008: -:311: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:38:50 2008: -:359: error: Unexpected end tag : strong
+Thu May 22 23:38:50 2008: finished: success
+Thu May 22 23:38:50 2008: ---- end
+Thu May 22 23:39:43 2008: ---- begin
+Thu May 22 23:39:44 2008: -:6: error: Tag front invalid
+Thu May 22 23:39:44 2008: -:7: error: Tag contents invalid
+Thu May 22 23:39:44 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:39:44 2008: -:272: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:39:44 2008: -:272: error: Tag feed invalid
+Thu May 22 23:39:44 2008: -:311: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:39:44 2008: -:359: error: Unexpected end tag : strong
+Thu May 22 23:39:44 2008: finished: success
+Thu May 22 23:39:44 2008: ---- end
+Thu May 22 23:39:51 2008: ---- begin
+Thu May 22 23:39:52 2008: -:6: error: Tag front invalid
+Thu May 22 23:39:52 2008: -:7: error: Tag contents invalid
+Thu May 22 23:39:52 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:39:52 2008: -:272: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:39:52 2008: -:272: error: Tag feed invalid
+Thu May 22 23:39:52 2008: -:311: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:39:52 2008: -:359: error: Unexpected end tag : strong
+Thu May 22 23:39:53 2008: finished: success
+Thu May 22 23:39:53 2008: ---- end
+Thu May 22 23:40:00 2008: ---- begin
+Thu May 22 23:40:01 2008: -:6: error: Tag front invalid
+Thu May 22 23:40:01 2008: -:7: error: Tag contents invalid
+Thu May 22 23:40:01 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:40:01 2008: -:272: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:40:01 2008: -:272: error: Tag feed invalid
+Thu May 22 23:40:01 2008: -:311: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:40:01 2008: -:359: error: Unexpected end tag : strong
+Thu May 22 23:40:01 2008: finished: success
+Thu May 22 23:40:01 2008: ---- end
+Thu May 22 23:40:11 2008: ---- begin
+Thu May 22 23:40:12 2008: -:6: error: Tag front invalid
+Thu May 22 23:40:12 2008: -:7: error: Tag contents invalid
+Thu May 22 23:40:12 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:40:12 2008: -:29: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:40:12 2008: -:41: error: Unexpected end tag : strong
+Thu May 22 23:40:12 2008: -:272: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:40:12 2008: -:272: error: Tag feed invalid
+Thu May 22 23:40:12 2008: -:311: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:40:12 2008: -:359: error: Unexpected end tag : strong
+Thu May 22 23:40:12 2008: finished: success
+Thu May 22 23:40:12 2008: ---- end
+Thu May 22 23:40:36 2008: ---- begin
+Thu May 22 23:40:37 2008: -:6: error: Tag front invalid
+Thu May 22 23:40:37 2008: -:7: error: Tag contents invalid
+Thu May 22 23:40:37 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:40:37 2008: -:41: error: Opening and ending tag mismatch: p and b
+Thu May 22 23:40:37 2008: -:90: error: Unexpected end tag : b
+Thu May 22 23:40:37 2008: -:90: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:40:37 2008: -:272: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:40:37 2008: -:272: error: Tag feed invalid
+Thu May 22 23:40:37 2008: -:305: error: Unexpected end tag : strong
+Thu May 22 23:40:37 2008: -:305: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:40:37 2008: -:311: error: Unexpected end tag : strong
+Thu May 22 23:40:37 2008: finished: success
+Thu May 22 23:40:37 2008: ---- end
+Thu May 22 23:40:47 2008: ---- begin
+Thu May 22 23:40:48 2008: -:6: error: Tag front invalid
+Thu May 22 23:40:48 2008: -:7: error: Tag contents invalid
+Thu May 22 23:40:48 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:40:48 2008: -:272: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:40:48 2008: -:272: error: Tag feed invalid
+Thu May 22 23:40:48 2008: -:311: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:40:48 2008: -:359: error: Unexpected end tag : strong
+Thu May 22 23:40:48 2008: finished: success
+Thu May 22 23:40:48 2008: ---- end
+Thu May 22 23:42:11 2008: ---- begin
+Thu May 22 23:42:11 2008: -:6: error: Tag front invalid
+Thu May 22 23:42:11 2008: -:7: error: Tag contents invalid
+Thu May 22 23:42:11 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:42:11 2008: -:265: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:42:11 2008: -:265: error: Tag feed invalid
+Thu May 22 23:42:11 2008: -:304: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:42:11 2008: -:352: error: Unexpected end tag : strong
+Thu May 22 23:42:12 2008: finished: success
+Thu May 22 23:42:12 2008: ---- end
+Thu May 22 23:43:56 2008: ---- begin
+Thu May 22 23:43:57 2008: -:6: error: Tag front invalid
+Thu May 22 23:43:57 2008: -:7: error: Tag contents invalid
+Thu May 22 23:43:57 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:43:57 2008: -:260: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:43:57 2008: -:260: error: Tag feed invalid
+Thu May 22 23:43:57 2008: -:299: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:43:57 2008: -:347: error: Unexpected end tag : strong
+Thu May 22 23:43:57 2008: finished: success
+Thu May 22 23:43:57 2008: ---- end
+Thu May 22 23:44:35 2008: ---- begin
+Thu May 22 23:44:36 2008: -:6: error: Tag front invalid
+Thu May 22 23:44:36 2008: -:7: error: Tag contents invalid
+Thu May 22 23:44:36 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:44:36 2008: -:260: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:44:36 2008: -:260: error: Tag feed invalid
+Thu May 22 23:44:36 2008: -:299: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:44:36 2008: -:347: error: Unexpected end tag : strong
+Thu May 22 23:44:37 2008: finished: success
+Thu May 22 23:44:37 2008: ---- end
+Thu May 22 23:44:54 2008: ---- begin
+Thu May 22 23:44:55 2008: -:6: error: Tag front invalid
+Thu May 22 23:44:55 2008: -:7: error: Tag contents invalid
+Thu May 22 23:44:55 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:44:55 2008: -:260: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:44:55 2008: -:260: error: Tag feed invalid
+Thu May 22 23:44:55 2008: -:299: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:44:55 2008: -:347: error: Unexpected end tag : strong
+Thu May 22 23:44:55 2008: finished: success
+Thu May 22 23:44:55 2008: ---- end
+Thu May 22 23:45:11 2008: ---- begin
+Thu May 22 23:45:12 2008: -:6: error: Tag front invalid
+Thu May 22 23:45:12 2008: -:7: error: Tag contents invalid
+Thu May 22 23:45:12 2008: -:8: error: htmlParseStartTag: misplaced <body> tag
+Thu May 22 23:45:12 2008: -:260: error: Namespace prefix xmlns of attribute app is not defined
+Thu May 22 23:45:12 2008: -:260: error: Tag feed invalid
+Thu May 22 23:45:12 2008: -:299: error: Opening and ending tag mismatch: p and strong
+Thu May 22 23:45:12 2008: -:347: error: Unexpected end tag : strong
+Thu May 22 23:45:12 2008: finished: success
+Thu May 22 23:45:12 2008: ---- end

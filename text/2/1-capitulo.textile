@@ -1,9 +1,0 @@
-h1. Estou dentro da pasta "2"
-
-Um exemplo de código:
-
-ruby. teste.rb
-
-Mais um trecho de texto qualquer
-
-code. sudo gem install autotest

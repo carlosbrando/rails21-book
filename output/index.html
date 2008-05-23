@@ -5,60 +5,582 @@
 </head>
 <front></front>
 <contents>#contents</contents>
-<body><h1>Rails 2.1 &#8211; O que tem de novo?</h1>
+<body><h1>Ruby on Rails 2.1 &#8211; O que tem de novo?</h1>
 
 
-	<h2>Introdução</h2>
+	<h1>ActiveRecord</h1>
 
 
-	<p>Apenas um teste.</p>
+	<h1>ActiveSupport</h1>
 
 
-	<p>Aqui apenas um trecho do código:</p>
+	<h1>ActiveResource</h1>
+
+
+	<h1>ActionPack</h1>
+
+
+	<h2>TimeZone</h2>
+
+
+	<h3>Definindo um fuso-horário padrão</h3>
+
+
+	<p>Uma nova opção foi acrescentada ao método <strong>time_zone_select</strong>, agora você pode indicar um valor padrão para os casos em que o seu usuário ainda não tenha selecionado nenhum <strong>TimeZone</strong>, ou quando a coluna no banco de dados for nula. Para isto foi criada a opção :<strong>default</strong>, então você poderá usar o método das seguintes maneiras:</p>
 
 
 <div class="CodeRay">
-  <div class="code"><pre>  <span class="r">def</span> <span class="fu">teste</span>
-    x = a &gt; <span class="i">5</span> ? <span class="s"><span class="dl">"</span><span class="k">caramba</span><span class="dl">"</span></span> : lambda <span class="r">do</span> |teste|
-      <span class="s"><span class="dl">"</span><span class="k">aiaiai</span><span class="dl">"</span></span>
-    <span class="r">end</span>
-  <span class="r">end</span>
+  <div class="code"><pre>time_zone_select(<span class="s"><span class="dl">"</span><span class="k">user</span><span class="dl">"</span></span>, <span class="s"><span class="dl">"</span><span class="k">time_zone</span><span class="dl">"</span></span>, <span class="pc">nil</span>, <span class="sy">:include_blank</span> =&gt; <span class="pc">true</span>) 
+time_zone_select(<span class="s"><span class="dl">"</span><span class="k">user</span><span class="dl">"</span></span>, <span class="s"><span class="dl">"</span><span class="k">time_zone</span><span class="dl">"</span></span>, <span class="pc">nil</span>, <span class="sy">:default</span> =&gt; <span class="s"><span class="dl">"</span><span class="k">Pacific Time (US &amp;amp; Canada)</span><span class="dl">"</span></span> ) 
+time_zone_select( <span class="s"><span class="dl">"</span><span class="k">user</span><span class="dl">"</span></span>, <span class="s"><span class="dl">'</span><span class="k">time_zone</span><span class="dl">'</span></span>, <span class="co">TimeZone</span>.us_zones, <span class="sy">:default</span> =&gt; <span class="s"><span class="dl">"</span><span class="k">Pacific Time (US &amp;amp; Canada)</span><span class="dl">"</span></span>)
 </pre></div>
 </div>
 
 
 
-	<h1>Estou dentro da pasta &#8220;2&#8221;</h1>
+	<p>Nos casos onde usamos a opção :<strong>default</strong> deve aparecer com o <strong>TimeZone</strong> informado já selecionado.</p>
 
 
-	<p>Um exemplo de código:</p>
+	<h2>Auto Link</h2>
+
+
+	<p>Para quem não conhece, o método <strong>auto_link</strong> recebe um texto qualquer como parâmetro e se o texto tiver algum endereço de email ou de um site ele retorna o mesmo texto com hyperlinks.</p>
+
+
+	<p>Por exemplo:</p>
 
 
 <div class="CodeRay">
-  <div class="code"><pre><span class="r">module</span> <span class="cl">Life</span> 
-  <span class="r">def</span> <span class="fu">answer</span>(teste)
-    <span class="c"># teste de número</span>
-    <span class="iv">@nome</span>.teste { <span class="sy">:caracas</span> =&gt; <span class="i">45</span> }
-    <span class="cv">@@nome</span>.teste = <span class="pc">true</span>
-  <span class="r">end</span>
-
-  <span class="c"># BEGIN special</span>
-  <span class="r">def</span> <span class="fu">teste</span>
-    x = a &gt; <span class="i">5</span> ? <span class="s"><span class="dl">"</span><span class="k">caramba</span><span class="dl">"</span></span> : lambda <span class="r">do</span> |teste|
-      <span class="s"><span class="dl">"</span><span class="k">aiaiai</span><span class="dl">"</span></span>
-    <span class="r">end</span>
-  <span class="r">end</span>
-  <span class="c"># END special</span>
-<span class="r">end</span></pre></div>
+  <div class="code"><pre>auto_link(<span class="s"><span class="dl">"</span><span class="k">Acesse este endereço: http://www.rubyonrails.com</span><span class="dl">"</span></span>)
+<span class="c"># =&gt; Acesse este endereço: http://www.rubyonrails.com</span>
+</pre></div>
 </div>
 
 
 
-	<p>Mais um trecho de texto qualquer</p>
+	<p>Acontece que alguns sites como o Amazon estão usando também o sinal de &#8221;=&#8221; (igual) em suas URLs, e este método não reconhece este sinal. Veja como o método se comporta neste caso:</p>
 
 
-<pre><code>sudo gem install autotest</pre></code>
+<div class="CodeRay">
+  <div class="code"><pre>auto_link(<span class="s"><span class="dl">"</span><span class="k">Acesse este endereço: http://www.amazon.com/Testing-Equal-Sign-In-Path/ref=pd_bbs_sr_1?ie=UTF8&amp;amp;s=books&amp;amp;qid=1198861734&amp;amp;sr=8-1</span><span class="dl">"</span></span>)
+<span class="c"># =&gt; Acesse este endereço: http://www.amazon.com/Testing-Equal-Sign-In-Path/ref=pd_bbs_sr_1?ie=UTF8&amp;amp;s=books&amp;amp;qid=1198861734&amp;amp;sr=8-1</span>
+</pre></div>
+</div>
 
 
-	<h1>Final</h1></body>
+
+	<p>Note que o método terminou o hyperlink exatamente antes do sinal de &#8221;=&#8221;, pois ele não suporta este sinal. Quer dizer, não suportava. Nesta nova versão do Rails já temos este problema resolvido.</p>
+
+
+	<h2>Rótulos</h2>
+
+
+	<p>Ao criar um novo formulário usando <b>scaffold</b> ele será criado com o seguinte código:</p>
+
+
+	<pre><code>&lt;% form_for(@post) do |f| %&gt;
+  <p>
+    &lt;%= f.label :title %&gt;<br />
+    &lt;%= f.text_field :title %&gt;
+  </p>
+  <p>
+    &lt;%= f.label :body %&gt;<br />
+    &lt;%= f.text_area :body %&gt;
+  </p>
+  <p>
+    &lt;%= f.submit "Update" %&gt;
+  </p>
+&lt;% end %&gt;</code></pre>
+
+
+	<p>Desta forma faz muito mais sentido. O método `label` foi incluído. Este método retorna uma `string` com o título da coluna dentro de uma tag <span class="caps">HTML</span> `<label>`.</p>
+
+
+<blockquote>
+	<blockquote>
+	<p>f.label :title
+	=&gt; <label for="post_title">Title</label></p>
+
+	</blockquote>
+
+
+
+</blockquote>
+
+
+
+
+<blockquote>
+	<blockquote>
+	<p>f.label :title, &#8220;A short title&#8221; 
+	=&gt; <label for="post_title">A short title</label></p>
+
+	</blockquote>
+
+
+
+</blockquote>
+
+
+
+
+<blockquote>
+	<blockquote>
+	<p>label :title, &#8220;A short title&#8221;, :class =&gt; &#8220;title_label&#8221; 
+	=&gt; <label for="post_title" class="title_label">A short title</label></p>
+
+	</blockquote>
+
+
+
+</blockquote>
+
+
+
+
+	<p>Percebeu o parâmetro `for` dentro da tag? O &#8220;post_title&#8221; é o nome da caixa de texto que contém o título do nosso post. A tag `<label>` é na verdade um rótulo associado ao objeto `post_title`. Quando se clica no rótulo (ele não é um link) o controle associado à ele recebe o foco.</p>
+
+
+	<p>Robby Russell escreveu um artigo interessante em seu blog sobre este assunto. Você pode lê-lo no endereço: <a href="http://www.robbyonrails.com/articles/2007/12/02/that-checkbox-needs-a-label">http://www.robbyonrails.com/articles/2007/12/02/that-checkbox-needs-a-label</a></p>
+
+
+	<p>Também foi incluído o método `label_tag` no `FormTagHelper`. Este método funciona exatamente como o label mas de uma forma mais simplista:</p>
+
+
+<blockquote>
+	<blockquote>
+	<p>label_tag &#8216;nome&#8217;
+	=&gt; <label for="nome">Nome</label></p>
+
+	</blockquote>
+
+
+
+</blockquote>
+
+
+
+
+<blockquote>
+	<blockquote>
+	<p>label_tag &#8216;nome&#8217;, &#8216;Seu nome&#8217;
+	=&gt; <label for="nome">Seu Name</label></p>
+
+	</blockquote>
+
+
+
+</blockquote>
+
+
+
+
+<blockquote>
+	<blockquote>
+	<p>label_tag &#8216;nome&#8217;, nil, :class =&gt; &#8216;small_label&#8217;
+	=&gt; <label for="nome" class="small_label">Nome</label></p>
+
+	</blockquote>
+
+
+
+</blockquote>
+
+
+
+
+	<h2>Uma nova forma de usar partials</h2>
+
+
+	<p>Algo muito normal no desenvolvimento de softwares em Rails é o uso de partials para evitar a repetição de código. Vejamos um exemplo de seu uso:</p>
+
+
+	<pre><code>&lt;% form_for :user, :url =&gt; users_path do %&gt;
+    &lt;%= render :partial =&gt; 'form' %&gt;
+    &lt;%= submit_tag 'Create' %&gt;
+&lt;% end %&gt;</code></pre>
+
+
+	<p>Partial é um fragmento de código (um template). A vantagem de se usar uma partial é evitar a repetição desnecessária de código. Para usar uma partial é muito simples, você pode começar com algo mais ou menos assim: `render :partial =&gt; “name”`. Depois deve criar um arquivo com o mesmo nome da partial, mas com um underscore na frente, só isso.</p>
+
+
+	<p>O código acima é a forma como estamos acostumados a fazer hoje, mas nesta nova versão do Rails, faremos a mesma coisa de uma forma um pouco diferente, assim:</p>
+
+
+	<pre><code>&lt;% form_for(@user) do |f| %&gt;
+    &lt;%= render :partial =&gt; f %&gt;
+    &lt;%= submit_tag 'Create' %&gt;
+&lt;% end %&gt;</code></pre>
+
+
+	<p>Neste exemplo nós vamos renderizar a partial “users/_form”, que receberá uma variável chamada form com as referências criadas pelo `FormBuilder`.</p>
+
+
+	<p>A forma antiga também vai continuar funcionando.</p>
+
+
+	<h2>Novos namespaces no Atom Feed</h2>
+
+
+	<p>Conhece o método `atom_feed`? Ele é uma novidade no Rails 2.0, que facilitou muito a criação de feeds Atom. Veja um exemplo de uso:</p>
+
+
+	<p>Em um arquivo `index.atom.builder`:</p>
+
+
+	<pre><code>atom_feed do |feed|
+  feed.title("Nome do Jogo")
+  feed.updated((@posts.first.created_at))
+end</code></pre>
+
+
+	<pre><code>for post in @posts
+  feed.entry(post) do |entry|
+    entry.title(post.title)
+    entry.content(post.body, :type =&gt; 'html')
+end</code></pre>
+	<pre><code>entry.author do |author|
+    author.name("Carlos Brando")
+  end
+end</code></pre>
+
+
+	<p>O que é um atom feed? Atom é o nome de um estilo baseado em <span class="caps">XML</span> e meta data. Em outras palavras é um protocolo quer serve para publicar conteúdo na internet que é sempre atualizado, como um blog, por exemplo. Os feeds sempre são publicados em <span class="caps">XML</span> e no caso do Atom Feed ele é identificado como application/atom+xml media type.</p>
+
+
+	<p>Nas primeiras versões do Rails 2.0 este método aceitava como parâmetros as opções `:language`, `:root_url` e `:url`, você pode obter mais informações sobre estes métodos na documentação do Rails. Mas com a alteração realizada, agora podemos incluir novos namespaces ao elemento root do feed. Por exemplo, se fizermos assim:</p>
+
+
+	<pre><code>atom_feed('xmlns:app' =&gt; 'http://www.w3.org/2007/app') do |feed|</code></pre>
+
+
+	<p>Ele retornará isto:</p>
+
+
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" xmlns:app="http://www.w3.org/2007/app">
+
+	<p>Adaptando o exemplo anterior, poderíamos usá-lo assim:</p>
+
+
+	<pre><code>atom_feed({'xmlns:app' =&gt; 'http://www.w3.org/2007/app',
+           'xmlns:openSearch' =&gt; 'http://a9.com/-/spec/opensearch/1.1/'}) do |feed| 
+end</code></pre>
+
+
+	<pre><code>feed.title("Nome do Jogo")
+feed.updated((@posts.first.created_at))
+feed.tag!(openSearch:totalResults, 10)</code></pre>
+
+
+	<pre><code>for post in @posts
+  feed.entry(post) do |entry|
+    entry.title(post.title)
+    entry.content(post.body, :type =&gt; 'html')
+    entry.tag!('app:edited', Time.now) 
+end</code></pre>
+	<pre><code>entry.author do |author|
+    author.name("Carlos Brando")
+  end
+end</code></pre>
+
+
+	<h2>Cache</h2>
+
+
+	<p>Todos os métodos `fragment_cache_key` agora retornam por padrão o namespace &#8216;view/&#8217; como prefixo.</p>
+
+
+	<p>Todos os caching stores foram retirados de `ActionController::Caching::Fragments::<strong>` e agora estão em `ActiveSupport::Cache::</strong>`. Neste caso se você faz referência a um store, como `ActionController::Caching::Fragments::MemoryStore`, por exemplo, será necessário alterar sua referência para `ActiveSupport::Cache::MemoryStore`.</p>
+
+
+	<p>`ActionController::Base.fragment_cache_store` deixa de existir e dá lugar à `ActionController::Base.cache_store`.</p>
+
+
+	<p>Foi incluído no `ActiveRecord::Base` o método `cache_key` para facilitar o armazenamento em cache de Active Records pelas novas bibliotecas `ActiveSupport::Cache::<strong>`. Este método funciona assim:</p>
+
+
+<blockquote>
+	<blockquote>
+	<p>Product.new.cache_key
+	=&gt; &#8220;products/new&#8221;</p>
+
+	</blockquote>
+
+
+
+</blockquote>
+
+
+
+
+<blockquote>
+	<blockquote>
+	<p>Product.find(5).cache_key
+	=&gt; &#8220;products/5&#8221;</p>
+
+	</blockquote>
+
+
+
+</blockquote>
+
+
+
+
+<blockquote>
+	<blockquote>
+	<p>Person.find(5).cache_key
+	=&gt; &#8220;people/5-20071224150000&#8221;</p>
+
+	</blockquote>
+
+
+
+</blockquote>
+
+
+
+
+	<p>Foi incluído o `ActiveSupport::Gzip.decompress/compress` para facilitar o wrapper para o <b>Zlib</b>.</p>
+
+
+	<p>Agora você pode usar entre as opções de environment o `config.cache_store` para informar o local padrão de armazenamento do cache. Vale lembrar que se o diretório *tmp/cache</strong> existir o padrão é o `FileStore`, caso contrário o `MemoryStore` é usado. Você pode configurar das seguintes formas:</p>
+
+
+	<pre><code>config.cache_store = :memory_store
+config.cache_store = :file_store, "/path/to/cache/directory" 
+config.cache_store = :drb_store, "druby://localhost:9192" 
+config.cache_store = :mem_cache_store, "localhost" 
+config.cache_store = MyOwnStore.new("parameter")</code></pre>
+
+
+	<p>Para facilitar as coisas, foi incluído o comentário abaixo no arquivo `environments/production.rb`, afim de lembrá-lo desta opção.</p>
+
+
+	<ol>
+	<li>Use a different cache store in production</li>
+		<li>config.cache_store = :mem_cache_store</li>
+	</ol>
+
+
+	<h1>Railties</h1>
+
+
+	<h1>Rake Tasks</h1>
+
+
+	<h1>Ruby 1.9</h1>
+
+
+	<h2>Detalhes</h2>
+
+
+	<p>O principal foco das alterações do Rails foi o Ruby 1.9, mesmo os menores detalhes foram analisados para deixar o Rails o mais compatível possível com a nova versão do Ruby. Detalhes como alterar de `File.exists?` para `File.exist?` não foram deixados de fora.</p>
+
+
+	<p>Também, no Ruby 1.9, o módulo `Base64` (base64.rb) foi removido, por isto todas as referencias a ele foram substituídas por `ActiveSupport::Base64`.</p>
+
+
+	<h2>Novos métodos para a classe DateTime</h2>
+
+
+	<p>Outra alteração interessante para a nova versão. Para manter a compatibilidade (duck-typing) com a classe `Time`, três métodos novos foram adicionados à classe `DateTime`. Os métodos são `#utc`, `#utc?` e `#utc_offset`. Vamos ver um exemplo de uso de cada um:</p>
+
+
+<blockquote>
+	<blockquote>
+	<p>date = DateTime.civil(2005, 2, 21, 10, 11, 12, Rational(-6, 24))
+	#=&gt; Mon, 21 Feb 2005 10:11:12 -0600</p>
+
+	</blockquote>
+
+
+
+</blockquote>
+
+
+
+
+<blockquote>
+	<blockquote>
+	<p>date.utc
+	#=&gt; Mon, 21 Feb 2005 16:11:12 +0000</p>
+
+	</blockquote>
+
+
+
+</blockquote>
+
+
+
+
+<blockquote>
+	<blockquote>
+	<p>DateTime.civil(2005, 2, 21, 10, 11, 12, Rational(-6, 24)).utc?
+	#=&gt; false</p>
+
+	</blockquote>
+
+
+
+</blockquote>
+
+
+
+
+<blockquote>
+	<blockquote>
+	<p>DateTime.civil(2005, 2, 21, 10, 11, 12, 0).utc?
+	#=&gt; true</p>
+
+	</blockquote>
+
+
+
+</blockquote>
+
+
+
+
+<blockquote>
+	<blockquote>
+	<p>DateTime.civil(2005, 2, 21, 10, 11, 12, Rational(-6, 24)).utc_offset
+	#=&gt; -21600</p>
+
+	</blockquote>
+
+
+
+</blockquote>
+
+
+
+
+	<h1>Prototype e script.aculo.us</h1>
+
+
+	<h2>Atualizações</h2>
+
+
+	<p>O Rails passa a usar a partir de agora a versão 1.6.0.1 do Prototype. Isto serve como um preparatório para a versão 1.8.1 do script.aculo.us.</p>
+
+
+	<h1>Debug</h1>
+
+
+	<h2>Ruby-debug nativo</h2>
+
+
+	<p>Foi habilitada novamente a opção de usar o <b>ruby-debug</b> nos testes do Rails.</p>
+
+
+	<p>Se antes você desejasse usá-lo nos testes seria necessário incluir um `require &#8216;ruby-debug&#8217;` na classe e logo em seguida usar o método `debugger` no local desejado. Agora só se preocupe com o método `debugger`, o resto é nativo, desde que você já tenha o gem instalado.</p>
+
+
+	<h1>Bugs e Correções</h1>
+
+
+	<h2>Adicionar colunas no PostgreSQL</h2>
+
+
+	<p>Havia um bug ao se usar o banco de dados <b>PostgreSQL</b>. O bug ocorria quando se criava uma migration para adicionar uma coluna em uma tabela já existente, veja um exemplo:</p>
+
+
+	<p>Arquivo: `db/migrate/002_add_cost.rb`</p>
+
+
+	<pre><code>class AddCost &lt; ActiveRecord::Migration
+  def self.up
+    add_column :items, :cost, :decimal, :precision =&gt; 6, 
+   :scale =&gt; 2
+  end
+end</code></pre>
+
+
+	<pre><code>def self.down
+  remove_column :items, :cost
+end</code></pre>
+
+
+	<p>Note que estou criando uma coluna com `:precision =&gt; 6` e `:scale =&gt; 2`. Agora é hora de rodar o `rake db:migrate` e vamos ver como ficou nossa tabela no banco:</p>
+
+
+<table border="0" cellspacing="5" cellpadding="5">
+    <tr>
+        <th>Column</th>
+        <th>Type</th>
+        <th>Modifiers</th>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>integer</td>
+        <td>not null</td>
+    </tr>
+    <tr>
+        <td>descr</td>
+        <td>character varying(255)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>price</td>
+        <td>numeric(5,2)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>cost</td>
+        <td>numeric</td>
+        <td></td>
+    </tr>
+</table>
+
+	<p>Veja a coluna &#8220;cost&#8221; que acabamos de criar. Ela é um `numeric` comum, mas deveria ser uma coluna como a &#8220;price&#8221;, logo acima dela, mais precisamente um `numeric(6,2)`. Nesta versão este erro não existe mais, a coluna será criada da forma correta neste banco de dados.</p>
+
+
+	<h1>Informações Adicionais</h1>
+
+
+	<h2>Protegendo-se de Cross Site Scripting</h2>
+
+
+	<p>No Rails 2.0 o arquivo application.rb ficou desta maneira:</p>
+
+
+	<pre><code>class ApplicationController &lt; ActionController::Base
+  helper :all
+end</code></pre>
+
+
+	<pre><code>protect_from_forgery</code></pre>
+
+
+	<p>Note a chamada para o método `protect_from_forgery`.</p>
+
+
+	<p>Já ouviu falar de Cross Site Scripting? Este é o nome de uma falha de segurança encontrada facilmente em grande parte dos websites e aplicações web que permite à pessoas maldosas (aqui estou me referindo à adolescentes sem nada para fazer e sem vida social) alterarem o conteúdo de páginas web, incluírem conteúdo hostil, executarem ataques de phishing, obterem o controle do navegador através de códigos JavaScript e na maioria dos casos forçarem o usuário a executar algum comando que eles desejem. Este último tipo de ataque se chama cross­site request forgeries.</p>
+
+
+	<p>O Cross Site Request Forgeries é um tipo de ataque que consiste em obrigar usuários legítimos a executarem uma série de comandos sem nem mesmo saberem disto. E agora com o aumento do uso de Ajax, a coisa tem ficado ainda pior.</p>
+
+
+	<p>Na verdade, este método serve para nos assegurar de que todos os formulários que sua aplicação está recebendo estão vindo dela mesma, e não de um link perdido de algum outro site. Ele consegue isto incluindo um token baseado na sessão em todos os formulários e requisições Ajax geradas pelo Rails, e depois verifica a autenticidade deste token no controller.</p>
+
+
+	<p>Lembre-se que requisições via <span class="caps">GET</span> não são protegidas. Mas isto não será um problema se somente à usarmos para nos trazer dados, e nunca para alterar ou gravar algo em nosso banco de dados.</p>
+
+
+	<p>Se quiser aprender mais sobre <acronym title="Cross-Site Request Forgery">CSRF</acronym> use os endereços abaixo:</p>
+
+
+	<ul>
+	<li><a href="http://www.nomedojogo.com/2008/01/14/como-um-garoto-chamado-samy-pode-derrubar-seu-site/isc.sans.org/diary.html?storyid=1750">http://www.nomedojogo.com/2008/01/14/como-um-garoto-chamado-samy-pode-derrubar-seu-site/isc.sans.org/diary.html?storyid=1750</a></li>
+	</ul>
+
+
+	<ul>
+	<li><a href="http://www.nomedojogo.com/2008/01/14/como-um-garoto-chamado-samy-pode-derrubar-seu-site/isc.sans.org/diary.html?storyid=1750">http://www.nomedojogo.com/2008/01/14/como-um-garoto-chamado-samy-pode-derrubar-seu-site/isc.sans.org/diary.html?storyid=1750</a></li>
+	</ul>
+
+
+	<p>Mas lembre-se que isto não é uma solução definitiva para nosso problema, ou como costumamos dizer, não é uma bala de prata.</p></body>
 </html>
