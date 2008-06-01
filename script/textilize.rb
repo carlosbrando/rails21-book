@@ -41,9 +41,48 @@ class RedCloth
       CodeRay.scan(code_file, :ruby).html.div
     end
 
-    ret.gsub!('&quot;', '"')
-    # ret.gsub!('    ', '  ')
-    ret.gsub('&gt;', '>')
+    ret.gsub! '&quot;', '"'
+    ret.gsub  '&gt;'  , '>'
+  end
+
+  ##
+  # Take a block starting with ruby. and add proper tags for styling.
+  #
+  #   html. my_code.rb
+  def textile_html(tag, atts, cite, content)
+    ret = if content =~ /#(.+)/
+      tag = $1
+      file_name = content.gsub("##{tag}", '')
+
+      tmp, find_end = '', false
+      File.new("code/#{file_name}").readlines.each do |line|
+        unless find_end
+          find_end = true if line =~ /BEGIN #{tag}/
+        else
+          break if line =~ /END #{tag}/
+          tmp += line
+        end
+      end
+      # CodeRay.scan(tmp, :html).html.div
+      temp
+    else
+      code_file = File.new("code/#{content}").read
+      # CodeRay.scan(code_file, :html).div
+      code_file
+    end
+    require "ruby-debug"
+    debugger
+    # ret.gsub! '&quot;', '"'
+    # ret.gsub! '&lt;p&gt;'  , '|p|'
+    # ret.gsub! '&lt;/p&gt;'  , '[/p|'
+    # ret.gsub! '&lt;'  , '&#60;'
+    # ret.gsub! '&gt;'  , '&#60;'
+    # ret.gsub  '&amp;', '&'
+    # ret.gsub '&amp;', '&'
+    ret.gsub! '<p>', '<code><p></code>'
+    # ret.gsub! '>', '&gt;'
+    "<pre><code>#{ret}</code></pre>"
+    # ret
   end
 
   ##
