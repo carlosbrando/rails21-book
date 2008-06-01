@@ -30,3 +30,21 @@ Para entender como esse método foi implementado basta olhar um dos seus testes:
 	  last  = Developer.find :last
 	  assert_equal last, Developer.find(:first, :order => ‘id desc‘)
 	end
+	
+### All
+
+O método estático **all** é um alias para o, também estático, **find(:all)**. Exemplo:
+	
+	Topic.all é equivalente ao Topic.find(:all)
+
+### First
+
+O método estático **first** é um alias para o, também estático, **find(:first)**. Exemplo:
+
+	Topic.first é equivalente ao Topic.find(:first)
+
+### Last
+
+O método estático **last** é um alias para o, também estático, **find(:last)**. Exemplo:
+
+	Topic.last é equivalente ao Topic.find(:last)
