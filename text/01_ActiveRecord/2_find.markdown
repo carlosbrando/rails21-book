@@ -1,3 +1,5 @@
+## Find
+
 A partir de agora é possível passar um objeto como parâmetro no método **find** de uma classe **ActiveRecord**. Veja este caso como exemplo:
 
 	class Account < ActiveRecord::Base
