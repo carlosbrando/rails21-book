@@ -88,6 +88,21 @@ Foi incluído o método between? na classe TimeWithZone para verificar se a inst
 
 	@twz.between?(Time.utc(1999,12,31,23,59,59),
 	              Time.utc(2000,1,1,0,0,1))
+	
+### TimeZone#parse
+	
+Este método cria uma nova instância de **ActiveSupport::TimeWithZone** à partir uma string. Exemplos:
+
+	Time.zone = “Hawaii“
+	# => “Hawaii”
+	Time.zone.parse(‘1999-12-31 14:00:00‘)
+	# => Fri, 31 Dec 1999 14:00:00 HST -10:00
+
+
+	Time.zone.now
+	# => Fri, 31 Dec 1999 14:00:00 HST -10:00
+	Time.zone.parse(‘22:30:00‘)
+	# => Fri, 31 Dec 1999 22:30:00 HST -10:00
 
 ### Mais métodos 
 
