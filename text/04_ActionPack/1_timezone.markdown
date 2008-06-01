@@ -80,3 +80,11 @@ Foi criado o método **compare\_with\_coercion** (com um alias para <=>) nas cla
 	Time.utc(2000) <=> ActiveSupport::TimeWithZone.new( Time.utc(1999, 12, 31, 23, 59, 59) ) # 1
 	Time.utc(2000) <=> ActiveSupport::TimeWithZone.new( Time.utc(2000, 1, 1, 0, 0, 0) ) # 0
 	Time.utc(2000) <=> ActiveSupport::TimeWithZone.new( Time.utc(2000, 1, 1, 0, 0, 1) )) # -1
+
+
+### TimeWithZone#between?
+
+Foi incluído o método between? na classe TimeWithZone para verificar se a instância está entre duas datas. Exemplo:
+
+	@twz.between?(Time.utc(1999,12,31,23,59,59),
+	              Time.utc(2000,1,1,0,0,1))
