@@ -29,3 +29,26 @@ Agora a partir de um Time:
 	Time.local(2000).formatted_offset(false)  # => “-0600″
 
 Note que este método retorna uma **string**, que pode ser formatada ou não dependendo do valor passado como parâmetro.
+
+### O método with\_env\_tz
+
+O método **with\_env\_tz** permite realizar testes com fusos-horários diferentes de um uma forma bem simples:
+
+	def test_local_offset
+	  with_env_tz ‘US/Eastern‘ do
+	    assert_equal Rational(-5, 24), DateTime.local_offset
+	  end
+	  with_env_tz ‘US/Central‘ do
+	    assert_equal Rational(-6, 24), DateTime.local_offset
+	  end
+	end
+
+Este helper era para se chamar **with\_timezone**, mas foi renomeado para **with\_env\_tz** para evitar uma confusão com o fuso-horário informado via **ENV['TZ']** e **Time.zone**.
+
+### Time.zone_reset!
+
+Esse método foi removido poque não estava mais sendo usado.
+
+
+
+
