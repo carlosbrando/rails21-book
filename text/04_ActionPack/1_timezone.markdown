@@ -9,3 +9,23 @@ Uma nova opção foi acrescentada ao método **time\_zone\_select**, agora você
 	time_zone_select( "user", 'time_zone', TimeZone.us_zones, :default => "Pacific Time (US & Canada)")
 
 Nos casos onde usamos a opção **:default** deve aparecer com o **TimeZone** informado já selecionado.
+
+
+### O método formatted_offset
+
+O método **formatted\_offset** foi incluído nas classes **Time** e **DateTime** para retornar no formato **+HH:MM** o desvio da hora UTC. Por exemplo, em nosso fuso-horário (hora de Brasília) o desvio retornado pelo método seria uma string com o valor **“-03:00″**.
+
+Vamos aos exemplos:
+
+Recuperando o desvio a partir de um DateTime:
+
+	datetime = DateTime.civil(2000, 1, 1, 0, 0, 0, Rational(-6, 24))
+	datetime.formatted_offset         # => “-06:00″
+	datetime.formatted_offset(false)  # => “-0600″
+
+Agora a partir de um Time:
+
+	Time.local(2000).formatted_offset         # => “-06:00″
+	Time.local(2000).formatted_offset(false)  # => “-0600″
+
+Note que este método retorna uma **string**, que pode ser formatada ou não dependendo do valor passado como parâmetro.
