@@ -119,3 +119,16 @@ Esse método serve para criar uma nova instância de **ActiveSupport::TimeWithZo
 
 Os métodos to_a, to_f, to_i, httpdate, rfc2822, to_yaml, to_datetime e eql? foram adicionados na classe TimeWithZone. Para maiores informações sobre esses métodos verifique na documentação do **Rails**
 
+### Algumas Tasks
+
+#### rake time:zones:all
+
+Retorna todos os time zones que o Rails reconhece, agrupados por offset. Você também pode filtrar o retorno usando o parâmetro opcional OFFSET, por exemplo: OFFSET=-6.
+
+#### rake time:zones:us
+
+Exibe uma lista com todos os time zones dos USA. A opção OFFSET também vale aqui.
+
+#### rake time:zones:local
+
+Retorna os time zones que o Rails conhece que estão no mesmo offset do seu sistema operacional.
