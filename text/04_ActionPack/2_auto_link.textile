@@ -1,4 +1,4 @@
-h2. Auto Link
+## Auto Link
 
 Para quem não conhece, o método *auto_link* recebe um texto qualquer como parâmetro e se o texto tiver algum endereço de email ou de um site ele retorna o mesmo texto com hyperlinks.
 

@@ -1,4 +1,4 @@
-h2. Novos namespaces no Atom Feed
+## Novos namespaces no Atom Feed
 
 Conhece o método *atom_feed*? Ele é uma novidade no Rails 2.0, que facilitou muito a criação de feeds Atom. Veja um exemplo de uso:
 

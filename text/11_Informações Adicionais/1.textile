@@ -1,4 +1,4 @@
-h2. Protegendo-se de Cross Site Scripting
+## Protegendo-se de Cross Site Scripting
 
 No Rails 2.0 o arquivo application.rb ficou desta maneira:
 

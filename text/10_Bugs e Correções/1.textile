@@ -1,4 +1,4 @@
-h2. Adicionar colunas no PostgreSQL
+## Adicionar colunas no PostgreSQL
 
 Havia um bug ao se usar o banco de dados **PostgreSQL**. O bug ocorria quando se criava uma migration para adicionar uma coluna em uma tabela já existente, veja um exemplo:
 

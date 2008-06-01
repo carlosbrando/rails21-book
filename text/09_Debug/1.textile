@@ -1,4 +1,4 @@
-h2. Ruby-debug nativo
+## Ruby-debug nativo
 
 Foi habilitada novamente a opção de usar o **ruby-debug** nos testes do Rails.
 

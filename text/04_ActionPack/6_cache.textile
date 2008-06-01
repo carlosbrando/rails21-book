@@ -1,4 +1,4 @@
-h2. Cache
+## Cache
 
 Todos os métodos *fragment_cache_key* agora retornam por padrão o namespace 'view/' como prefixo.
 

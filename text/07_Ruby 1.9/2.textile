@@ -1,4 +1,4 @@
-h2. Novos métodos para a classe DateTime
+## Novos métodos para a classe DateTime
 
 Outra alteração interessante para a nova versão. Para manter a compatibilidade (duck-typing) com a classe *Time*, três métodos novos foram adicionados à classe *DateTime*. Os métodos são *#utc*, *#utc?* e *#utc_offset*. Vamos ver um exemplo de uso de cada um:
 

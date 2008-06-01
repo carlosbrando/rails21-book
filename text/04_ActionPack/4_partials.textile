@@ -1,4 +1,4 @@
-h2. Uma nova forma de usar partials
+## Uma nova forma de usar partials
 
 Algo muito normal no desenvolvimento de softwares em Rails é o uso de partials para evitar a repetição de código. Vejamos um exemplo de seu uso:
 

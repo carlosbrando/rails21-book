@@ -1,1 +1,1 @@
-h1. Prototype e script.aculo.us
+# Prototype e script.aculo.us

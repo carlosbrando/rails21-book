@@ -1,8 +1,20 @@
-h2. Rótulos
+## Rótulos
 
 Ao criar um novo formulário usando **scaffold** ele será criado com o seguinte código:
 
-code. <p>
+	<% form_for(@post) do |f| %>
+	  <p>
+	    <%= f.label :title %><br />
+	    <%= f.text_field :title %>
+	  </p>
+	  <p>
+	    <%= f.label :body %><br />
+	    <%= f.text_area :body %>
+	  </p>
+	  <p>
+	    <%= f.submit "Update" %>
+	  </p>
+	<% end %>
 
 Desta forma faz muito mais sentido. O método *label* foi incluído. Este método retorna uma *string* com o título da coluna dentro de uma tag HTML *<label>*.
 
