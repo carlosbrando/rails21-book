@@ -1,2 +1,4 @@
 output/full_book.texttile
+output/book.pdf
+output/index.html
 .DS_Store
