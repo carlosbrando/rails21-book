@@ -8,7 +8,7 @@ No Rails 2.0 o arquivo application.rb ficou desta maneira:
 	  protect_from_forgery
 	end
 
-Note a chamada para o método *protect_from_forgery*.
+Note a chamada para o método **protect\_from\_forgery**.
  
 Já ouviu falar de Cross Site Scripting? Este é o nome de uma falha de segurança encontrada facilmente em grande parte dos websites e aplicações web que permite à pessoas maldosas (aqui estou me referindo à adolescentes sem nada para fazer e sem vida social) alterarem o conteúdo de páginas web, incluírem conteúdo hostil, executarem ataques de phishing, obterem o controle do navegador através de códigos JavaScript e na maioria dos casos forçarem o usuário a executar algum comando que eles desejem. Este último tipo de ataque se chama cross­site request forgeries.
 

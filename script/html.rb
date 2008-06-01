@@ -2,7 +2,7 @@ require 'discount'
 # require 'coderay'
 
 desc 'Transforma o arquivo em HTML'
-task :textilize => :merge do
+task :html => :merge do
   if File.exists?('output/full_book.texttile')
     output = File.new('output/full_book.texttile').read
     output = Discount.new(output).to_html

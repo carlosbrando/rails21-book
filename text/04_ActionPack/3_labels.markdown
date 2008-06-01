@@ -16,7 +16,7 @@ Ao criar um novo formulário usando **scaffold** ele será criado com o seguinte
 	  </p>
 	<% end %>
 
-Desta forma faz muito mais sentido. O método *label* foi incluído. Este método retorna uma *string* com o título da coluna dentro de uma tag HTML *<label>*.
+Desta forma faz muito mais sentido. O método **label** foi incluído. Este método retorna uma *string* com o título da coluna dentro de uma tag HTML **\<label\>**.
 
 	>> f.label :title
 	=> <label for="post_title">Title</label>
@@ -27,11 +27,11 @@ Desta forma faz muito mais sentido. O método *label* foi incluído. Este métod
 	>> label :title, "A short title", :class => "title_label"
 	=> <label for="post_title" class="title_label">A short title</label>
 
-Percebeu o parâmetro *for* dentro da tag? O "post_title" é o nome da caixa de texto que contém o título do nosso post. A tag *<label>* é na verdade um rótulo associado ao objeto *post_title*. Quando se clica no rótulo (ele não é um link) o controle associado à ele recebe o foco.
+Percebeu o parâmetro **for** dentro da tag? O "post\_title" é o nome da caixa de texto que contém o título do nosso post. A tag **\<label\>** é na verdade um rótulo associado ao objeto **post\_title**. Quando se clica no rótulo (ele não é um link) o controle associado à ele recebe o foco.
 
 Robby Russell escreveu um artigo interessante em seu blog sobre este assunto. Você pode lê-lo no endereço: [http://www.robbyonrails.com/articles/2007/12/02/that-checkbox-needs-a-label](http://www.robbyonrails.com/articles/2007/12/02/that-checkbox-needs-a-label)
 
-Também foi incluído o método *label_tag* no *FormTagHelper*. Este método funciona exatamente como o label mas de uma forma mais simplista:
+Também foi incluído o método **label\_tag** no **FormTagHelper**. Este método funciona exatamente como o label mas de uma forma mais simplista:
 
 	>> label_tag 'nome'
 	=> <label for="nome">Nome</label> 

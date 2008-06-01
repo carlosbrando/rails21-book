@@ -27,3 +27,9 @@ Sun Jun  1 01:43:09 2008: -:289: error: Opening and ending tag mismatch: p and s
 Sun Jun  1 01:43:09 2008: -:334: error: Unexpected end tag : strong
 Sun Jun  1 01:43:09 2008: finished: success
 Sun Jun  1 01:43:09 2008: ---- end
+Sun Jun  1 02:15:51 2008: ---- begin
+Sun Jun  1 02:15:52 2008: -:8: error: Tag front invalid
+Sun Jun  1 02:15:52 2008: -:9: error: Tag contents invalid
+Sun Jun  1 02:15:52 2008: -:10: error: htmlParseStartTag: misplaced <body> tag
+Sun Jun  1 02:15:53 2008: finished: success
+Sun Jun  1 02:15:53 2008: ---- end

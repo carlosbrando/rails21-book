@@ -1,5 +1,5 @@
 desc 'Cria um arquivo pdf à partir do html gerado'
-task :to_pdf => :textilize do
+task :pdf => :html do
   prince = Prince.new()
   prince.add_style_sheets 'layout/coderay.css', 'layout/default.css'
   

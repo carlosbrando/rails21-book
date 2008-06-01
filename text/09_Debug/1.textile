@@ -1,5 +1,0 @@
-## Ruby-debug nativo
-
-Foi habilitada novamente a opção de usar o **ruby-debug** nos testes do Rails.
-
-Se antes você desejasse usá-lo nos testes seria necessário incluir um *require 'ruby-debug'* na classe e logo em seguida usar o método *debugger* no local desejado. Agora só se preocupe com o método *debugger*, o resto é nativo, desde que você já tenha o gem instalado.
