@@ -88,3 +88,8 @@ Foi incluído o método between? na classe TimeWithZone para verificar se a inst
 
 	@twz.between?(Time.utc(1999,12,31,23,59,59),
 	              Time.utc(2000,1,1,0,0,1))
+
+### Mais métodos 
+
+Os métodos to_a, to_f, to_i, httpdate, rfc2822, to_yaml, to_datetime e eql? foram adicionados na classe TimeWithZone. Para maiores informações sobre esses métodos verifique na documentação do **Rails**
+
