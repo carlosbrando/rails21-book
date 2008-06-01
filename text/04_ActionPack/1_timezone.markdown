@@ -103,6 +103,17 @@ Este método cria uma nova instância de **ActiveSupport::TimeWithZone** à part
 	# => Fri, 31 Dec 1999 14:00:00 HST -10:00
 	Time.zone.parse(‘22:30:00‘)
 	# => Fri, 31 Dec 1999 22:30:00 HST -10:00
+	
+
+### TimeZone#at
+
+Esse método serve para criar uma nova instância de **ActiveSupport::TimeWithZone** à partir do número de segundos desde o Unix epoch. Exemplo:
+
+	Time.zone = “Hawaii“ # => “Hawaii”
+	Time.utc(2000).to_f  # => 946684800.0
+
+	Time.zone.at(946684800.0)
+	# => Fri, 31 Dec 1999 14:00:00 HST -10:00
 
 ### Mais métodos 
 
