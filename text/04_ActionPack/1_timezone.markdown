@@ -49,6 +49,34 @@ Este helper era para se chamar **with\_timezone**, mas foi renomeado para **with
 
 Esse método foi removido poque não estava mais sendo usado.
 
+### Time#in\_current\_time\_zone
 
+Esse método foi modificado para retornar **self** quando **Time.zone** for nulo. 
 
+### Time#change\_time\_zone\_to\_current
 
+Esse método foi modificado para retornar **self** quando **Time.zone** for nulo. 
+
+### TimeZone#now
+
+o método **TimeZone#now** foi alterado para retornar um **ActiveSupport::TimeWithZone** representando a hora corrente no fuso horário configurado no **Time.zone**. Exemplo:
+
+	Time.zone = ‘Hawaii‘  # => “Hawaii”
+	Time.zone.now         # => Wed, 23 Jan 2008 20:24:27 HST -10:00
+	
+	
+### Compare\_with\_coercion
+	
+Foi criado o método **compare\_with\_coercion** (com um alias para <=>) nas classes **Time** e **DateTime**, tornando possível realizar uma comparação cronológica entre as classes **Time**, **DateTime** e instâncias do **ActiveSupport::TimeWithZone**. Para entender melhor como funciona, veja os exemplos abaixo (o resultado de cada linha está no comentário logo depois do código):
+
+	Time.utc(2000) <=> Time.utc(1999, 12, 31, 23, 59, 59, 999) # 1
+	Time.utc(2000) <=> Time.utc(2000, 1, 1, 0, 0, 0) # 0
+	Time.utc(2000) <=> Time.utc(2000, 1, 1, 0, 0, 0, 001)) # -1
+
+	Time.utc(2000) <=> DateTime.civil(1999, 12, 31, 23, 59, 59) # 1
+	Time.utc(2000) <=> DateTime.civil(2000, 1, 1, 0, 0, 0) # 0
+	Time.utc(2000) <=> DateTime.civil(2000, 1, 1, 0, 0, 1)) # -1
+
+	Time.utc(2000) <=> ActiveSupport::TimeWithZone.new( Time.utc(1999, 12, 31, 23, 59, 59) ) # 1
+	Time.utc(2000) <=> ActiveSupport::TimeWithZone.new( Time.utc(2000, 1, 1, 0, 0, 0) ) # 0
+	Time.utc(2000) <=> ActiveSupport::TimeWithZone.new( Time.utc(2000, 1, 1, 0, 0, 1) )) # -1
