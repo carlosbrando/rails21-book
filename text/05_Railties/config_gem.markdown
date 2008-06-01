@@ -29,3 +29,26 @@ E se algum dos gems tiver um arquivo rails/init.rb e você quiser levar o gem ju
 	rake gems:unpack GEM=nome_do_gem
 
 E o gem será copiado para o diretório vendor/gems/gem\_name-x.x.x.
+
+## config.gem em plugins
+
+Hoje de manhã eu falei do config.gem. Agora vai uma dica para os construtores de plugins. Principalmente se o seu plugin depende de algum gem.
+
+Até agora o arquivo init.rb de um plugin se parece com isto:
+
+	# init.rb do plugin open_id_authentication
+	require ‘yadis‘ 
+	require ‘openid‘ 
+	ActionController::Base.send :include, OpenIdAuthentication 
+
+Mas no Rails 2.1 um arquivo init.rb como este deve ser criado assim:
+
+	# Novo formato
+	config.gem “ruby-openid“, :lib => “openid“, :version => “1.1.4“
+	config.gem “ruby-yadis“,  :lib => “yadis“,  :version => “0.3.4“ 
+
+	config.after_initialize do
+	  ActionController::Base.send :include, OpenIdAuthentication
+	end
+
+Assim, quando você rodar a tarefa para instalar todos os gems necessários, estes gems estarão entre eles.
