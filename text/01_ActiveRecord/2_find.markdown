@@ -23,3 +23,10 @@ Agora teremos um quarto operador o **:last**. Veja alguns exemplos:
 	Person.find(:last)
 	Person.find(:last, :conditions => [ "user_name = ?", user_name])
 	Person.find(:last, :order => “created_on DESC“, :offset => 5)
+	
+Para entender como esse método foi implementado basta olhar um dos seus testes:
+
+	def test_find_last
+	  last  = Developer.find :last
+	  assert_equal last, Developer.find(:first, :order => ‘id desc‘)
+	end
