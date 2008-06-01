@@ -32,3 +32,24 @@ Agora é possível testar uma rota com um método HTTP. Veja o exemplo:
 	               { :controller => “product“,
 	                 :action => “update“,
 	                 :id => “321“ })
+	
+
+### Map.resources
+	
+Imagine o seguinte cenário, você tem um site todo em português e que deixar seus rotas também em português para facilitar a vida de seus usuários. Em outras palavras ao invés de ter algo como:
+
+	http://www.meusite.com.br/products/1234/reviews
+
+Você gostaria de ter algo assim:
+
+	http://www.meusite.com.br/produtos/1234/comentarios
+
+Isto era possível nas versões anteriores, mas não de uma forma muito simples, não pelo menos sem comprometer algumas convenções do Rails.
+
+Agora ganharemos a opção **:as** no **map.resources** para personalizar nossas rotas. Veja um exemplo, para conseguir a URL acima totalmente em português:
+
+	map.resources :products, :as => ‘produtos‘ do |product|
+	  # product_reviews_path(product) ==
+	  # ‘/produtos/1234/comentarios’
+	  product.resources :product_reviews, :as => ‘comentarios‘
+	end
