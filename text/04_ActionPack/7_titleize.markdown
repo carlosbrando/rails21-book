@@ -1,8 +1,11 @@
 ## Aplicando formatação de título em strings
 
-Existia um bug no método **String#titleize** quando tentávamos usá-lo em uma string que continha o 's. Faça um teste no console de sua aplicação Rails executando o código abaixo:
+Existia um bug ao se utilizar o método **String#titleize** em uma string que continha 's. O bug retornava o 's maiúsculo. Veja um exemplo:
 
-	>> "brando's blog".titleize
-	#=> "Brando'S Blog"
+	>> “brando’s blog“.titleize
+	=> “Brando’S Blog“
+	
+Veja como ficou o mesmo exemplo só que agora com a correção desse bug.
 
-Notou que o 's retornou maiúsculo? Este problema foi corrigido. Se você executar o mesmo código na nova versão do Rails, o retorno será o texto correto: "Brando's Blog".
+	>> “brando’s blog“.titleize
+	=> “Brando’s Blog“
