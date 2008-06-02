@@ -1,4 +1,6 @@
-## ActionView::Helpers::AssetTagHelper#register\_javascript\_expansion
+## ActionView::Helpers::AssetTagHelper
+
+### register\_javascript\_expansion
 
 Este método registra um ou mais arquivos javascript para serem incluídos quando um símbolo, determinado por você, for passado como parâmetro para o método **javascript\_include\_tag**. A idéia é que este método seja chamado no arquivo **init.rb** do seu plugin para registrar os arquivos javascript que seu plugin instalou na pasta **public/javascripts**. Veja como funciona:
 
@@ -14,7 +16,7 @@ Este método registra um ou mais arquivos javascript para serem incluídos quand
 	<script type=“text/javascript“ src=“/javascripts/tail.js“></script>
 
 
-## ActionView::Helpers::AssetTagHelper#register\_stylesheet\_expansion
+### register\_stylesheet\_expansion
 
 Este método faz exatamente a mesma coisa que o método **ActionView::Helpers::AssetTagHelper#register\_javascript\_expansion**, mas criando um símbolo para ser usado nas chamadas ao método **stylesheet\_link\_tag**. Veja um exemplo:
 
