@@ -1,4 +1,4 @@
-## ActiveRecord#Sum
+## O método sum
 
 ### Expressões no método sum
 

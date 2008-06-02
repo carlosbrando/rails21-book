@@ -1,6 +1,6 @@
 ## Named_scope
 
-O gem **has\_finder** foi incorporado ao Rails, mas com um nome diferente: **named\_scope**.
+O gem *has\_finder* foi incorporado ao Rails, mas com um nome diferente: **named\_scope**.
 
 Para entender o que isto acrescentou de novo ao Rails veja os exemplos abaixo:
 

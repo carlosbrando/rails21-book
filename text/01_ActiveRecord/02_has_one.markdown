@@ -1,6 +1,8 @@
 ## Has\_one
 
-O método **has\_one** recebeu suporte a opção **through**. Ele funciona exatamente como o has_many :through, mas para apenas um relacionamento. Exemplo:
+### Suporte à opção through
+
+O método **has\_one** recebeu suporte à opção **through**. Ele funciona exatamente como o **has_many :through**, mas para apenas um relacionamento. Exemplo:
 
 	class Magazine < ActiveRecord::Base
 	  has_many :subscriptions
@@ -16,9 +18,9 @@ O método **has\_one** recebeu suporte a opção **through**. Ele funciona exata
 	  has_one :magazine, :through => : subscriptions, :conditions => ['subscriptions.active = ?', true]
 	end
 	
-## Has\_one com :source\_type
+### Has\_one com :source\_type
 
-O método **has\_one :through** suporta o **:source\_type**. Vou tentar explicar isto através de exemplos. Vamos começar com estas duas classes:
+O método **has\_one :through**, citado acima, suporta o **:source\_type**. Vou tentar explicar isto através de exemplos. Vamos começar com estas duas classes:
 
 	class Client < ActiveRecord::Base
 	  has_many :contact_cards 
