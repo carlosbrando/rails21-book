@@ -20,7 +20,7 @@ O método **has\_one** recebeu suporte à opção **through**. Ele funciona exat
 	
 ### Has\_one com :source\_type
 
-O método **has\_one :through**, citado acima, suporta o **:source\_type**. Vou tentar explicar isto através de exemplos. Vamos começar com estas duas classes:
+O método **has\_one :through**, citado acima, também suporta a opção **:source\_type**. Vou tentar explicar isto através de exemplos. Vamos começar com estas duas classes:
 
 	class Client < ActiveRecord::Base
 	  has_many :contact_cards 
