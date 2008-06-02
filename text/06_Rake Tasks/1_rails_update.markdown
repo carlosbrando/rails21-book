@@ -1,3 +1,0 @@
-## Rails:update
-
-A partir de agora toda vez que rodarmos a tarefa **rake rails:freeze:edge** também será executado o **rails:update**, atualizando os arquivos de configuração e *JavaScript*. Esta é uma alteração simples mas importante, porque na maioria das vezes que congelamos uma versão do Rails em nosso projeto, precisamos rodar um **rake rails:update**, mas muita gente se esquece disso. Agora não será mais necessário.
