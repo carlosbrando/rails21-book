@@ -65,26 +65,24 @@ end
 #           tmp += line
 #         end
 #       end
-#       # CodeRay.scan(tmp, :html).html.div
-#       temp
+#       CodeRay.scan(tmp, :html).html.div
 #     else
 #       code_file = File.new("code/#{content}").read
-#       # CodeRay.scan(code_file, :html).div
-#       code_file
+#       CodeRay.scan(code_file, :html).html.div
 #     end
-#     require "ruby-debug"
-#     debugger
-#     # ret.gsub! '&quot;', '"'
+# 
+#     ret.gsub! '&quot;', '"'
 #     # ret.gsub! '&lt;p&gt;'  , '|p|'
 #     # ret.gsub! '&lt;/p&gt;'  , '[/p|'
 #     # ret.gsub! '&lt;'  , '&#60;'
 #     # ret.gsub! '&gt;'  , '&#60;'
 #     # ret.gsub  '&amp;', '&'
 #     # ret.gsub '&amp;', '&'
-#     ret.gsub! '<p>', '<code><p></code>'
-#     # ret.gsub! '>', '&gt;'
-#     "<pre><code>#{ret}</code></pre>"
-#     # ret
+#     # ret.gsub! '<p>', '<code><p></code>'
+#     ret.gsub! '<', '&lt;'
+#     ret.gsub! '>', '&gt;'
+#     # "<pre><code>#{ret}</code></pre>"
+#     ret
 #   end
 # 
 #   ##
