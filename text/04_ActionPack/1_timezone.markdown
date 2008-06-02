@@ -132,3 +132,27 @@ Exibe uma lista com todos os time zones dos USA. A opção OFFSET também vale a
 #### rake time:zones:local
 
 Retorna os time zones que o Rails conhece que estão no mesmo offset do seu sistema operacional.
+
+### TimeWithZone se preparando para o Ruby 1.9
+
+No Ruby 1.9 teremos alguns métodos novos na classe Time, métodos como:
+
+	Time.now
+	# => Thu Nov 03 18:58:25 CET 2005
+
+	Time.now.sunday?
+	# => false
+
+Existe um para cada dia da semana.
+
+Outra curiosidade é que o método to\_s do objeto Time também vai ter um retorno um pouco diferente. Hoje quando executamos Time.new.to\_s, temos o seguite:
+
+	Time.new.to_s
+	# => “Thu Oct 12 10:39:27 +0200 2006″
+
+No Ruby 1.9 teremos:
+
+	Time.new.to_s
+	# => “2006-10-12 10:39:24 +0200″
+
+Estou escrevendo isto apenas para dizer que o Rails já está sendo preparado para lidar com estas alterações. A classe TimeWithZone, por exemplo, acabou de receber uma implementação para funcionar com os métodos do primeiro exemplo.
