@@ -1,18 +1,22 @@
 /*@page { size: 22.86cm 17.78cm }*/
-@page { size: A4 landscape }
+@page { 
+	size: A4 landscape;
+/*	prince-bookmark-label: none;*/
+}
 
 h1 { 	page-break-before: always }
 
 body {
-/*    display: block;*/
-/*    page: main;*/
-/*    counter-reset: page 1*/
+    display: block;
+    page: main;
+    counter-reset: page 1;
 }
 
 @page main {
-    @top { content: string(chapter-title) }
-    @bottom {
-        content: counter(page)
+/*    @top { content: string(chapter-title) }*/
+    @bottom-right-corner {
+        content: counter(page);
+				font-weight: bold;
     }
 }
 
@@ -40,9 +44,7 @@ h2 {
 	padding-bottom: 0;
 }
 
-
 h1,h2,h3,
 h4,h5,h6  { font-family: Constantia, "Palatino Linotype", Palatino, Georgia, "Times New Roman", Times, serif; }
 body      { font-family: Frutiger, Univers, "Helvetica Neue", "Lucida Grande", Calibri, Helvetica, Arial, sans-serif; } 
-/*pre       { font-family: Corbel, Verdana, "Bitstream Vera Sans", sans-serif; } */
 pre, code      { font-family: Consolas, "Bitstream Vera Sans Mono", "Courier New", Monaco, Courier, monospace; } 
