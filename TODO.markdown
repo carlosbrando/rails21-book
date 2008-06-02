@@ -5,3 +5,4 @@
 * http://www.nomedojogo.com/2008/03/26/edge-rails-timewithzone-se-preparando-para-o-ruby-19/
 * http://www.nomedojogo.com/2008/04/08/edge-rails-obtendo-informacoes-sobre-um-plugin/
 * Reorganizar as numerações.
+* Rever as descrições dos capitulos.
