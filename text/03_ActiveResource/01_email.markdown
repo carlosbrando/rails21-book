@@ -1,4 +1,4 @@
-## Usando e-mail num ActiveResource
+## Usando e-mail como nome de usuário.
 
 Alguns serviços usam o e-mail como nome do usuário, o que nos obrigaria a usar uma URL mais ou menos assim:
 

@@ -1,6 +1,6 @@
 ## O método clone
 
-Agora poderemos clonar um resource existente:
+Agora poderemos clonar um resource existente da seguinte forma:
 
 	ryan = Person.find(1)
 	not_ryan = ryan.clone
