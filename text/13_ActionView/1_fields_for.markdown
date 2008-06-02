@@ -1,6 +1,6 @@
 ## ActionView::Helpers::FormHelper#Fields\_for e ActionView::Helpers::FormHelper#Form\_for com a opção index.
 
-Os métodos **ActionView::Helpers::FormHelper#Fields\_for** e **ActionView::Helpers::FormHelper#Form\_for** receberam a opção **:index**, removendo a necessidade de usar o **:index => nil** em cada objeto do formulário. Veja os exemplos:
+Os métodos **#fields\_for** e **form\_for** receberam a opção **:index**, removendo a necessidade de usar o **:index => nil** em cada objeto do formulário. Veja os exemplos:
 
 O código ficava assim:
 
