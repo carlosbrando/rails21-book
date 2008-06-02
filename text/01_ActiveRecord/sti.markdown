@@ -10,7 +10,7 @@ Quando usamos models com namespace e STI, o ActiveRecord armazena apenas o nome 
 	class ComicCollection::Item < CollectionItem; end
 
 	item = ComicCollection::Item.new
-	item.type # => ‘Item’
+	item.type # => 'Item’
 
 	item2 = CollectionItem.find(item.id) # retorna um erro, porque não encontrou a classe Item
 

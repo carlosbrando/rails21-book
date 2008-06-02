@@ -4,4 +4,4 @@ Também já quebrei a cabeça por causa disto. O problema é que durante os test
 
 No Rails 2.1 este problema foi resolvido. Agora você pode incluir linhas como esta em seus testes:
 
-	assert_equal ‘>value_now<‘, flash['test_now']
+	assert_equal '>value_now<', flash['test_now']

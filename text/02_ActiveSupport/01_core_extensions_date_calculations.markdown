@@ -20,11 +20,11 @@ Retorna dia 31 de dezembro às 23:59:59
 
 Este método é similar ao **Time#localtime**, exceto pelo fato de que usa o **Time.zone** no lugar do fuso-horário do sistema operacional. Você pode passar como parâmetro um **TimeZone** ou uma **String**. Vejamos alguns exemplos:
 
-	Time.zone = ‘Hawaii‘
+	Time.zone = 'Hawaii'
 	Time.utc(2000).in_time_zone
 	# => Fri, 31 Dec 1999 14:00:00 HST -10:00
 
-	Time.utc(2000).in_time_zone(‘Alaska‘)
+	Time.utc(2000).in_time_zone('Alaska')
 	# => Fri, 31 Dec 1999 15:00:00 AKST -09:00
 
 ### Time#days\_in\_month

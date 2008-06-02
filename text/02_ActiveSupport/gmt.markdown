@@ -4,4 +4,4 @@ Uma alteração simples, mas interessante. Até agora o Rails tem usado muito a 
 
 Se você olhar no painel de controle do Windows, onde você escolhe o fuso-horário, verá que a sigla usada é GMT. Google e Yahoo também usam GMT em seus produtos.
 
-	TimeZone['Moscow'].to_s #=> “(GMT+03:00) Moscow”
+	TimeZone['Moscow'].to_s #=> "(GMT+03:00) Moscow"

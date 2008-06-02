@@ -7,7 +7,7 @@ Porém tem algo muito importante que muita gente se esquece. Veja por exemplo es
 	class Cachorro
 	  def method_missing(method, *args, &block)
 	    if method.to_s =~ /^latir/
-	      puts “auau!“
+	      puts "auau!"
 	    else
 	      super
 	    end
@@ -19,7 +19,7 @@ Porém tem algo muito importante que muita gente se esquece. Veja por exemplo es
 	rex.latir! #=> auau!
 	rex.latir_e_correr #=> auau!
 
-Acho que você já deve conhecer o method\_missing, não? Veja que no exemplo acima eu estou criando uma instância da classe Cachorro e chamando os métodos latir, latir! e latir\_e\_correr que não existem. Por isto o método method\_missing é disparado, onde eu uso uma expressão regular simples para retornar “auau!” caso o nome do método comece com a expressão latir.
+Acho que você já deve conhecer o method\_missing, não? Veja que no exemplo acima eu estou criando uma instância da classe Cachorro e chamando os métodos latir, latir! e latir\_e\_correr que não existem. Por isto o método method\_missing é disparado, onde eu uso uma expressão regular simples para retornar "auau!" caso o nome do método comece com a expressão latir.
 
 Mas veja o que acontece quando tento usar o método respond\_to?:
 
@@ -38,7 +38,7 @@ Ele retorna false, e isto faz todo o sentido já que o método realmente não ex
 
 	  def method_missing(method, *args, &block)
 	    if method.to_s =~ METODO_LATIR
-	      puts “auau!“
+	      puts "auau!"
 	    else
 	      super
 	    end

@@ -6,7 +6,7 @@ Os métodos **#fields\_for** e **form\_for** receberam a opção **:index**, rem
 
 O código ficava assim:
 
-	<% fields_for “project[task_attributes][]“, task do |f| %>
+	<% fields_for "project[task_attributes][]", task do |f| %>
 	  <%= f.text_field :name, :index => nil %>
 	  <%= f.hidden_field :id, :index => nil %>
 	  <%= f.hidden_field :should_destroy, :index => nil %>
@@ -14,7 +14,7 @@ O código ficava assim:
 
 Agora fica assim:
 
-	<% fields_for “project[task_attributes][]“, task,
+	<% fields_for "project[task_attributes][]", task,
 	              :index => nil do |f| %>
 	  <%= f.text_field :name %>
 	  <%= f.hidden_field :id %>

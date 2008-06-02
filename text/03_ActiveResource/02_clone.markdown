@@ -10,9 +10,9 @@ Só vale tomar nota que a cópia não clona nenhum atributo da classe, apenas os
 
 	ryan = Person.find(1)
 	ryan.address = StreetAddress.find(1, :person_id => ryan.id)
-	ryan.hash = {:not => “an ARes instance“} 
+	ryan.hash = {:not => "an ARes instance"} 
 
 	not_ryan = ryan.clone
 	not_ryan.new?            # => true
 	not_ryan.address         # => NoMethodError
-	not_ryan.hash            # => {:not => “an ARes instance”}
+	not_ryan.hash            # => {:not => "an ARes instance"}

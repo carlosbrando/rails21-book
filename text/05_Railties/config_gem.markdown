@@ -4,14 +4,14 @@ Também falamos disto no podcast #12. No Rails 2.1 teremos outro problema que d�
 
 Toda vez que você entra em um projeto novo, existe uma seqüência inicial que precisa ser seguida, e os dois primeiros passos são: baixar o fonte na sua máquina e instalar todos os gems necessários. Este segundo passo é especialmente chato.
 
-Era chato, porque agora no Rails podemos usar o novo recurso config.gem. No arquivo environment.rb você “deve” adicionar quais gems seu projeto depende, assim:
+Era chato, porque agora no Rails podemos usar o novo recurso config.gem. No arquivo environment.rb você "deve" adicionar quais gems seu projeto depende, assim:
 
-	config.gem “bj“ 
+	config.gem "bj" 
 
-	config.gem “hpricot“, :version => ‘0.6‘,
-	                      :source => “http://code.whytheluckystiff.net“ 
+	config.gem "hpricot", :version => '0.6',
+	                      :source => "http://code.whytheluckystiff.net" 
 
-	config.gem “aws-s3“, :lib => “aws/s3“
+	config.gem "aws-s3", :lib => "aws/s3"
 
 Depois sua equipe, ou você mesmo, pode instalar todas as dependências de uma só vez com o comando:
 
@@ -37,15 +37,15 @@ Hoje de manhã eu falei do config.gem. Agora vai uma dica para os construtores d
 Até agora o arquivo init.rb de um plugin se parece com isto:
 
 	# init.rb do plugin open_id_authentication
-	require ‘yadis‘ 
-	require ‘openid‘ 
+	require 'yadis' 
+	require 'openid' 
 	ActionController::Base.send :include, OpenIdAuthentication 
 
 Mas no Rails 2.1 um arquivo init.rb como este deve ser criado assim:
 
 	# Novo formato
-	config.gem “ruby-openid“, :lib => “openid“, :version => “1.1.4“
-	config.gem “ruby-yadis“,  :lib => “yadis“,  :version => “0.3.4“ 
+	config.gem "ruby-openid", :lib => "openid", :version => "1.1.4"
+	config.gem "ruby-yadis",  :lib => "yadis",  :version => "0.3.4" 
 
 	config.after_initialize do
 	  ActionController::Base.send :include, OpenIdAuthentication

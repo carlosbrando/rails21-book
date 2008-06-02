@@ -4,13 +4,13 @@ O adaptador de MySQL do ActiveRecord ficou um pouco mais esperto na hora de cria
 
 	case limit
 	when 0..3
-	  “smallint(#{limit})“
+	  "smallint(#{limit})"
 	when 4..8
-	  “int(#{limit})“
+	  "int(#{limit})"
 	when 9..20
-	  “bigint(#{limit})“
+	  "bigint(#{limit})"
 	else
-	  ‘int(11)‘
+	  'int(11)'
 	end
 
 O trecho acima foi extraído do arquivo activerecord/lib/active\_record/connection\_adapters/mysql\_adapter.rb à partir da linha 470.

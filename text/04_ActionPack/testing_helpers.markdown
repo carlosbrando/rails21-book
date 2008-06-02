@@ -19,17 +19,17 @@ Veja como faremos para testar isto no Rails 2.1:
 	class PeopleHelperTest < ActionView::TestCase
 	  def setup
 	    ActionController::Routing::Routes.draw do |map|
-	      map.people ‘people‘, :controller => ‘people‘, :action => ‘index‘
-	      map.connect ‘:controller/:action/:id‘
+	      map.people 'people', :controller => 'people', :action => 'index'
+	      map.connect ':controller/:action/:id'
 	    end
 	  end
 
 	  def test_title
-	    assert_equal “<h1>Ruby on Rails</h1>“, title(“Ruby on Rails“)
+	    assert_equal "<h1>Ruby on Rails</h1>", title("Ruby on Rails")
 	  end
 
 	  def test_homepage_path
-	    assert_equal “/people“, homepage_path
+	    assert_equal "/people", homepage_path
 	  end
 	end
 

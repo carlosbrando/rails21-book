@@ -9,12 +9,12 @@ Nós falamos sobre isto no último podcast, mas agora no Rails podemos rastrear 
 	article = Article.find(:first)
 	article.changed?  #=> false
 
-	article.title  #=> “Title”
-	article.title = “New Title“
+	article.title  #=> "Title"
+	article.title = "New Title"
 	article.title_changed? #=> true
 
 	# Recupera o valor anterior do atributo
-	article.title_was  #=> “Title”
+	article.title_was  #=> "Title"
 
 	# Veja o antes de depois da alteração
 	article.title_change  #=> ["Title", "New Title"]
@@ -25,7 +25,7 @@ Como você pode ver é bem simples. Você também pode listar todas as alteraç�
 	article.changed  #=> ['title']
 
 	# Devolve um Hash com os atributos alterados e um antes e depois
-	article.changes  #=> { ‘title’ => ["Title", "New Title"] }
+	article.changes  #=> { 'title’ => ["Title", "New Title"] }
 
 Note que quando o objeto é salvo, o status dele é alterado. Veja:
 

@@ -3,7 +3,7 @@
 Já estamos acostumados com o método ActiveRecord::Base.new que aceita o uso de blocos na criação de um novo registro. Agora podemos fazer o mesmo com o método create:
 
 	# Criando um objeto, usando um bloco para informar seus atributos.
-	User.create(:first_name => ‘Jamie‘) do |u|
+	User.create(:first_name => 'Jamie') do |u|
 	  u.is_admin = false
 	end
 

@@ -13,20 +13,20 @@ Nos casos onde usamos a opção **:default** deve aparecer com o **TimeZone** in
 
 ### O método formatted_offset
 
-O método **formatted\_offset** foi incluído nas classes **Time** e **DateTime** para retornar no formato **+HH:MM** o desvio da hora UTC. Por exemplo, em nosso fuso-horário (hora de Brasília) o desvio retornado pelo método seria uma string com o valor **“-03:00″**.
+O método **formatted\_offset** foi incluído nas classes **Time** e **DateTime** para retornar no formato **+HH:MM** o desvio da hora UTC. Por exemplo, em nosso fuso-horário (hora de Brasília) o desvio retornado pelo método seria uma string com o valor **"-03:00″**.
 
 Vamos aos exemplos:
 
 Recuperando o desvio a partir de um DateTime:
 
 	datetime = DateTime.civil(2000, 1, 1, 0, 0, 0, Rational(-6, 24))
-	datetime.formatted_offset         # => “-06:00″
-	datetime.formatted_offset(false)  # => “-0600″
+	datetime.formatted_offset         # => "-06:00″
+	datetime.formatted_offset(false)  # => "-0600″
 
 Agora a partir de um Time:
 
-	Time.local(2000).formatted_offset         # => “-06:00″
-	Time.local(2000).formatted_offset(false)  # => “-0600″
+	Time.local(2000).formatted_offset         # => "-06:00″
+	Time.local(2000).formatted_offset(false)  # => "-0600″
 
 Note que este método retorna uma **string**, que pode ser formatada ou não dependendo do valor passado como parâmetro.
 
@@ -35,10 +35,10 @@ Note que este método retorna uma **string**, que pode ser formatada ou não dep
 O método **with\_env\_tz** permite realizar testes com fusos-horários diferentes de um uma forma bem simples:
 
 	def test_local_offset
-	  with_env_tz ‘US/Eastern‘ do
+	  with_env_tz 'US/Eastern' do
 	    assert_equal Rational(-5, 24), DateTime.local_offset
 	  end
-	  with_env_tz ‘US/Central‘ do
+	  with_env_tz 'US/Central' do
 	    assert_equal Rational(-6, 24), DateTime.local_offset
 	  end
 	end
@@ -61,7 +61,7 @@ Esse método foi modificado para retornar **self** quando **Time.zone** for nulo
 
 o método **TimeZone#now** foi alterado para retornar um **ActiveSupport::TimeWithZone** representando a hora corrente no fuso horário configurado no **Time.zone**. Exemplo:
 
-	Time.zone = ‘Hawaii‘  # => “Hawaii”
+	Time.zone = 'Hawaii'  # => "Hawaii"
 	Time.zone.now         # => Wed, 23 Jan 2008 20:24:27 HST -10:00
 	
 	
@@ -93,15 +93,15 @@ Foi incluído o método between? na classe TimeWithZone para verificar se a inst
 	
 Este método cria uma nova instância de **ActiveSupport::TimeWithZone** à partir uma string. Exemplos:
 
-	Time.zone = “Hawaii“
-	# => “Hawaii”
-	Time.zone.parse(‘1999-12-31 14:00:00‘)
+	Time.zone = "Hawaii"
+	# => "Hawaii"
+	Time.zone.parse('1999-12-31 14:00:00')
 	# => Fri, 31 Dec 1999 14:00:00 HST -10:00
 
 
 	Time.zone.now
 	# => Fri, 31 Dec 1999 14:00:00 HST -10:00
-	Time.zone.parse(‘22:30:00‘)
+	Time.zone.parse('22:30:00')
 	# => Fri, 31 Dec 1999 22:30:00 HST -10:00
 	
 
@@ -109,7 +109,7 @@ Este método cria uma nova instância de **ActiveSupport::TimeWithZone** à part
 
 Esse método serve para criar uma nova instância de **ActiveSupport::TimeWithZone** à partir do número de segundos desde o Unix epoch. Exemplo:
 
-	Time.zone = “Hawaii“ # => “Hawaii”
+	Time.zone = "Hawaii" # => "Hawaii"
 	Time.utc(2000).to_f  # => 946684800.0
 
 	Time.zone.at(946684800.0)
@@ -148,11 +148,11 @@ Existe um para cada dia da semana.
 Outra curiosidade é que o método to\_s do objeto Time também vai ter um retorno um pouco diferente. Hoje quando executamos Time.new.to\_s, temos o seguite:
 
 	Time.new.to_s
-	# => “Thu Oct 12 10:39:27 +0200 2006″
+	# => "Thu Oct 12 10:39:27 +0200 2006″
 
 No Ruby 1.9 teremos:
 
 	Time.new.to_s
-	# => “2006-10-12 10:39:24 +0200″
+	# => "2006-10-12 10:39:24 +0200″
 
 Estou escrevendo isto apenas para dizer que o Rails já está sendo preparado para lidar com estas alterações. A classe TimeWithZone, por exemplo, acabou de receber uma implementação para funcionar com os métodos do primeiro exemplo.

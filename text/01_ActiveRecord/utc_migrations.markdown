@@ -4,7 +4,7 @@ Quando se está estudando Rails ou desenvolvendo algo sozinho, migrations parece
 
 O problema é que quando se cria uma migration, ela recebe um número. Mas o que acontece se duas pessoas criarem uma migration ao mesmo tempo, ou pior ainda, se várias pessoas começarem a criar migrations e só derem commit depois? Você terá um monte de migrations com o mesmo número com códigos diferentes. Conflito!
 
-Hoje existe várias formas de “tentar” solucionar isto. Existem alguns plugins com abordagens diferentes para resolver este impasse. Mas independente do plugin ou abordagem que você use, uma coisa fica bem clara, a forma atual simplesmente não funciona.
+Hoje existe várias formas de "tentar" solucionar isto. Existem alguns plugins com abordagens diferentes para resolver este impasse. Mas independente do plugin ou abordagem que você use, uma coisa fica bem clara, a forma atual simplesmente não funciona.
 
 Se você estiver usando Git isto é pior ainda, porque provavelmente sua equipe terá alguns branches de trabalho e podem criar migrations em todos eles, e você terá os mesmo conflitos na hora de fazer o merge.
 
@@ -16,7 +16,7 @@ Ainda, caso você esteja trabalhando sozinho, ou seja louco e prefira o formato 
 
 	config.active_record.timestamped_migrations = false
 
-Também foram criadas novas tarefas rake para “andar” pelos migrations:
+Também foram criadas novas tarefas rake para "andar" pelos migrations:
 
 	rake db:migrate:up
 	rake db:migrate:down

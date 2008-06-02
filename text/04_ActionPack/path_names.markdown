@@ -6,6 +6,6 @@ Já faz algum tempo que um desenvolvedor chamado Ivan Vega me procurou por email
 
 No Rails você já podia incluir a opção :as na suas rotas (coisa que fiz questão de implementar igual no meu plugin, para manter a compatibilidade), agora você também terá a opção :path\_names para alterar os nomes das actions.
 
-	map.resource :schools, :as => ‘escolas‘, :path_names => { :new => ‘nova‘ }
+	map.resource :schools, :as => 'escolas', :path_names => { :new => 'nova' }
 
 Para entender como funciona o meu plugin, clique aqui.

@@ -6,7 +6,7 @@ Para entender o que isto acrescentou de novo ao Rails veja os exemplos abaixo:
 
 	class Article < ActiveRecord::Base
 	  named_scope :published, :conditions => {:published => true}
-	  named_scope :containing_the_letter_a, :conditions => “body LIKE ‘%a%’“
+	  named_scope :containing_the_letter_a, :conditions => "body LIKE '%a%’"
 	end 
 
 	Article.published.paginate(:page => 1)

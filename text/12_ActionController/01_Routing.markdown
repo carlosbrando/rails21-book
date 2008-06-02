@@ -6,12 +6,12 @@ Agora na hora de informar o **map.root** você pode ser um pouco mais **DRY** us
 
 Nas versões anteriores do Rails você fazia assim:
 
-	map.new_session :controller => ‘sessions‘, :action => ‘new‘
-	map.root :controller => ‘sessions‘, :action => ‘new‘
+	map.new_session :controller => 'sessions', :action => 'new'
+	map.root :controller => 'sessions', :action => 'new'
 	
 Agora você pode fazer assim:
 
-	map.new_session :controller => ‘sessions‘, :action => ‘new‘
+	map.new_session :controller => 'sessions', :action => 'new'
 	map.root :new_session
 	
 ### Reconhecimento de rotas
@@ -24,11 +24,11 @@ Toda a nova implementação está no arquivo **recognition\_optimisation.rb** e 
 
 Agora é possível testar uma rota com um método HTTP. Veja o exemplo:
 
-	assert_routing({ :method => ‘put‘,
-	                 :path => ‘/product/321‘ },
-	               { :controller => “product“,
-	                 :action => “update“,
-	                 :id => “321“ })
+	assert_routing({ :method => 'put',
+	                 :path => '/product/321' },
+	               { :controller => "product",
+	                 :action => "update",
+	                 :id => "321" })
 	
 ### Map.resources
 	
@@ -44,8 +44,8 @@ Isto já era possível, mas não de uma forma muito simples, não pelo menos sem
 
 Agora ganharemos a opção **:as** no **map.resources** para personalizar nossas rotas. Veja um exemplo, para conseguir a URL acima totalmente em português:
 
-	map.resources :products, :as => ‘produtos‘ do |product|
+	map.resources :products, :as => 'produtos' do |product|
 	  # product_reviews_path(product) ==
-	  # ‘/produtos/1234/comentarios’
-	  product.resources :product_reviews, :as => ‘comentarios‘
+	  # '/produtos/1234/comentarios’
+	  product.resources :product_reviews, :as => 'comentarios'
 	end

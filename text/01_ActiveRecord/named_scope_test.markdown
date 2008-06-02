@@ -1,6 +1,6 @@
 ## Testando named\_scope com proxy\_options
 
-Uma novidade legal no Rails 2.1, que inclusive já foi assunto desta série é o named\_scope. Depois de “brincar” um pouco com este recurso, fomos descobrindo que era muito difícil testar se o escopo estava sendo gerado corretamente, principalmente quando usávamos estruturas mais complexas.
+Uma novidade legal no Rails 2.1, que inclusive já foi assunto desta série é o named\_scope. Depois de "brincar" um pouco com este recurso, fomos descobrindo que era muito difícil testar se o escopo estava sendo gerado corretamente, principalmente quando usávamos estruturas mais complexas.
 
 Veja um exemplo:
 
@@ -16,9 +16,9 @@ Para facilitar isto foi criado o método proxy\_options, que permite examinar as
 
 	class ShirtTest < Test::Unit
 	  def test_colored_scope
-	    red_scope = { :conditions => { :colored => ‘red‘ } }
-	    blue_scope = { :conditions => { :colored => ‘blue‘ } }
-	    assert_equal red_scope, Shirt.colored(‘red‘).scope_options
-	    assert_equal blue_scope, Shirt.colored(‘blue‘).scope_options
+	    red_scope = { :conditions => { :colored => 'red' } }
+	    blue_scope = { :conditions => { :colored => 'blue' } }
+	    assert_equal red_scope, Shirt.colored('red').scope_options
+	    assert_equal blue_scope, Shirt.colored('blue').scope_options
 	  end
 	end

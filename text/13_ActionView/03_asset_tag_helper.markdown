@@ -11,9 +11,9 @@ Este método registra um ou mais arquivos javascript para serem incluídos quand
 	javascript_include_tag :monkey
 
 	# Teremos isto:
-	<script type=“text/javascript“ src=“/javascripts/head.js“></script>
-	<script type=“text/javascript“ src=“/javascripts/body.js“></script>
-	<script type=“text/javascript“ src=“/javascripts/tail.js“></script>
+	<script type="text/javascript" src="/javascripts/head.js"></script>
+	<script type="text/javascript" src="/javascripts/body.js"></script>
+	<script type="text/javascript" src="/javascripts/tail.js"></script>
 
 
 ### register\_stylesheet\_expansion
@@ -27,6 +27,6 @@ Este método faz exatamente a mesma coisa que o método **ActionView::Helpers::A
 	stylesheet_link_tag :monkey
 
 	# Teremos isto:
-	<link href=“/stylesheets/head.css“  media=“screen“ rel=“stylesheet“ type=“text/css“ />
-	<link href=“/stylesheets/body.css“  media=“screen“ rel=“stylesheet“ type=“text/css“ />
-	<link href=“/stylesheets/tail.css“  media=“screen“ rel=“stylesheet“ type=“text/css“ />
+	<link href="/stylesheets/head.css"  media="screen" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/body.css"  media="screen" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/tail.css"  media="screen" rel="stylesheet" type="text/css" />

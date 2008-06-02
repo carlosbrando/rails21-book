@@ -3,7 +3,7 @@
 O Active Resource usa HTTP para acessar APIs RESTful e por isto está suscetível a problemas de lentidão ou servidores fora do ar. Em alguns casos, suas chamadas ao ActiveResource podem expirar (timeout). Agora você pode controlar o tempo de expiração com a propriedade timeout.
 
 	class Person < ActiveResource::Base
-	  self.site = “http://api.people.com:3000/“
+	  self.site = "http://api.people.com:3000/"
 	  self.timeout = 5 # espera 5 segundos antes de expirar
 	end
 
