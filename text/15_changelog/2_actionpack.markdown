@@ -33,13 +33,13 @@
  
 \* Automatically parse posted JSON content for Mime::JSON requests.  [rick]
  
-  POST /posts
-  {"post": {"title": "Breaking News"}}
+	POST /posts
+		{"post": {"title": "Breaking News"}}
  
-  def create
-    @post = Post.create params[:post]
-    # ...
-  end
+	def create
+		@post = Post.create params[:post]
+		# ...
+	end
  
 \* add json\_escape ERB util to escape html entities in json strings that are output in HTML pages. [rick]
  
@@ -176,10 +176,10 @@
  
 \* Fix atom\_feed\_helper to comply with the atom spec.  Closes #10672 [xaviershay]
  
-  \* The tags created do not contain a date (http://feedvalidator.org/docs/error/InvalidTAG.html)
-  \* IDs are not guaranteed unique
-  \* A default self link was not provided, contrary to the documentation
-  \* NOTE:  This changes tags for existing atom entries, but at least they validate now.
+	The tags created do not contain a date (http://feedvalidator.org/docs/error/InvalidTAG.html)
+	IDs are not guaranteed unique
+	A default self link was not provided, contrary to the documentation
+	NOTE:  This changes tags for existing atom entries, but at least they validate now.
  
 \* Correct indentation in tests.  Closes #10671 [l.guidi]
  

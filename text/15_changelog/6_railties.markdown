@@ -20,11 +20,11 @@
  
 \* Flesh out rake gems:unpack to unpack all gems, and add rake gems:build for native extensions. #11513 [ddollar]
  
-  rake gems:unpack             # unpacks all gems
-  rake gems:unpack GEM=mygem   # unpacks only the gem 'mygem'
+	rake gems:unpack             # unpacks all gems
+	rake gems:unpack GEM=mygem   # unpacks only the gem 'mygem'
   
-  rake gems:build              # builds all unpacked gems
-  rake gems:build GEM=mygem    # builds only the gem 'mygem'
+	rake gems:build              # builds all unpacked gems
+	rake gems:build GEM=mygem    # builds only the gem 'mygem'
  
 \* Add config.active\_support for future configuration options.  Also, add more new Rails 3 config settings to new\_rails\_defaults.rb [rick]
  
@@ -32,50 +32,48 @@
  
 \* Allow files in plugins to be reloaded like the rest of the application.  [rick]
  
-  Enables or disables plugin reloading.
+Enables or disables plugin reloading.
   
-    config.reload\_plugins = true
+	config.reload\_plugins = true
   
-  You can get around this setting per plugin.
-  If #reload\_plugins? == false (DEFAULT), add this to your plugin's init.rb to make it reloadable:
-  
-    Dependencies.load\_once\_paths.delete lib\_path
-  
-  If #reload\_plugins? == true, add this to your plugin's init.rb to only load it once:
-  
-    Dependencies.load\_once\_paths << lib\_path
- 
+You can get around this setting per plugin.
+
+	If #reload_plugins? == false (DEFAULT), add this to your plugin's init.rb to make it reloadable:
+    Dependencies.load_once_paths.delete lib\_path
+    If #reload_plugins? == true, add this to your plugin's init.rb to only load it once:
+    Dependencies.load_once_paths << lib_path
+
 \* Small tweak to allow plugins to specify gem dependencies.  [rick]
  
-  # OLD open\_id\_authentication plugin init.rb
-  require 'yadis'
-  require 'openid'
-  ActionController::Base.send :include, OpenIdAuthentication
+	# OLD open\_id\_authentication plugin init.rb
+	require 'yadis'
+	require 'openid'
+	ActionController::Base.send :include, OpenIdAuthentication
  
-  # NEW
-  config.gem "ruby-openid", :lib => "openid", :version => "1.1.4"
-  config.gem "ruby-yadis",  :lib => "yadis",  :version => "0.3.4"
+	# NEW
+	config.gem "ruby-openid", :lib => "openid", :version => "1.1.4"
+	config.gem "ruby-yadis",  :lib => "yadis",  :version => "0.3.4"
  
-  config.after\_initialize do
-    ActionController::Base.send :include, OpenIdAuthentication
-  end
+	config.after_initialize do
+    	ActionController::Base.send :include, OpenIdAuthentication
+  	end
  
 \* Added config.gem for specifying which gems are required by the application, as well as rake tasks for installing and freezing gems. [rick]
  
-  Rails::Initializer.run do |config|
-    config.gem "bj"
-    config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
-    config.gem "aws-s3", :lib => "aws/s3"
-  end
+	Rails::Initializer.run do |config|
+    	config.gem "bj"
+    	config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
+    	config.gem "aws-s3", :lib => "aws/s3"
+  	end
   
-  # List required gems.
-  rake gems
+	# List required gems.
+		rake gems
   
-  # Install all required gems:
-  rake gems:install
+	# Install all required gems:
+		rake gems:install
   
-  # Unpack specified gem to vendor/gems/gem\_name-x.x.x
-  rake gems:unpack GEM=bj
+	# Unpack specified gem to vendor/gems/gem\_name-x.x.x
+		rake gems:unpack GEM=bj
  
 \* Removed the default .htaccess configuration as there are so many good deployment options now (kept it as an example in README) [DHH]
  
@@ -89,7 +87,7 @@
  
 \* Added Plugin#about method to programmatically access the about.yml in a plugin #10979 [lazyatom]
  
-    plugin = Rails::Plugin.new(path\_to\_my\_plugin)
+	plugin = Rails::Plugin.new(path\_to\_my\_plugin)
     plugin.about["author"] # => "James Adam"
     plugin.about["url"] # => "http://interblah.net"
  

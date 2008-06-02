@@ -20,9 +20,9 @@
  
 \* Added change\_table for migrations (Jeff Dean) [#71]. Example:
  
-    change\_table :videos do |t|
-      t.timestamps                          # adds created\_at, updated\_at
-      t.belongs\_to :goat                    # adds goat\_id integer
+    change_table :videos do |t|
+      t.timestamps                          # adds created_at, updated_at
+      t.belongs_to :goat                    # adds goat_id integer
       t.string :name, :email, :limit => 20  # adds name and email both with a 20 char limit
       t.remove :name, :email                # removes the name and email columns
     end
@@ -57,9 +57,9 @@
  
 \* Tweak ActiveRecord::Base#to\_json to include a root value in the returned hash: {"post": {"title": ...}} [rick]
  
-  Post.find(1).to\_json # => {"title": ...}
-  config.active\_record.include\_root\_in\_json = true
-  Post.find(1).to\_json # => {"post": {"title": ...}}
+	Post.find(1).to_json # => {"title": ...}
+	config.active_record.include_root_in_json = true
+	Post.find(1).to_json # => {"post": {"title": ...}}
  
 \* Add efficient #include? to AssociationCollection (for has\_many/has\_many :through/habtm).  [stopdropandrew]
  
@@ -93,17 +93,17 @@
  
 \* Merge the has\_finder gem, renamed as 'named\_scope'.  #11404 [nkallen]
  
-  class Article < ActiveRecord::Base
-    named\_scope :published, :conditions => {:published => true}
-    named\_scope :popular, :conditions => ...
-  end
+	class Article < ActiveRecord::Base
+		named_scope :published, :conditions => {:published => true}
+		named_scope :popular, :conditions => ...
+  	end
  
-  Article.published.paginate(:page => 1)
-  Article.published.popular.count
-  Article.popular.find(:first)
-  Article.popular.find(:all, :conditions => {...})
+	Article.published.paginate(:page => 1)
+	Article.published.popular.count
+	Article.popular.find(:first)
+	Article.popular.find(:all, :conditions => {...})
  
-  See http://pivots.pivotallabs.com/users/nick/blog/articles/284-hasfinder-it-s-now-easier-than-ever-to-create-complex-re-usable-sql-queries
+See http://pivots.pivotallabs.com/users/nick/blog/articles/284-hasfinder-it-s-now-easier-than-ever-to-create-complex-re-usable-sql-queries
  
 \* Add has\_one :through support.  #4756 [thechrisoshow]
  
