@@ -1,6 +1,6 @@
 #Railties
 
-*2.1.0 (May 31st, 2008)*
+
  
 \* script/dbconsole fires up the command-line database client.  #102 [Steve Purcell]
  

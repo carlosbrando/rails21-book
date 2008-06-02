@@ -1,6 +1,6 @@
 ## ActionPack
 
-*2.1.0 (May 31st, 2008)*
+
  
 \* InstanceTag#default\_time\_from\_options overflows to DateTime [Geoff Buesing]
  

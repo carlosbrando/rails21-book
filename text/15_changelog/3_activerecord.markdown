@@ -1,6 +1,6 @@
 ## ActiveRecord
 
-*2.1.0 (May 31st, 2008)*
+
  
 \* Add ActiveRecord::Base.sti\_name that checks ActiveRecord::Base#store\_full\_sti\_class? and returns either the full or demodulized name. [rick]
  

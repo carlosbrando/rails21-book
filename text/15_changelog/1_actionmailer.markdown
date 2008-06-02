@@ -1,6 +1,6 @@
 ## ActionMailer
 
-*2.1.0 (May 31st, 2008)*
+
  
 \* Fixed that a return-path header would be ignored #7572 [joost]
  

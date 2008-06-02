@@ -1,6 +1,6 @@
 ##ActiveSupport
 
-*2.1.0 (May 31st, 2008)*
+
  
 \* TimeZone#to\_s shows offset as GMT instead of UTC, because GMT will be more familiar to end users (see time zone selects used by Windows OS, google.com and yahoo.com.) Reverts [8370] [Geoff Buesing]
  
