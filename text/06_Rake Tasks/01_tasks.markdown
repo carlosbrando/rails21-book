@@ -7,3 +7,10 @@ A partir de agora toda vez que se executar a tarefa **rake rails:freeze:edge** t
 ### Banco de dados em 127.0.0.1
 
 Foi feita uma alteração no arquivo databases.rake que antes só considerava um banco de dados local como estando em localhost para considerar também o IP **127.0.0.1**. Isto funciona tanto para a tarefa **create** como para **drop**. O arquivo databases.rake também foi refeito para tornar o código menos repetitivo.
+
+### Congelando um release específico do Rails
+
+Até ao Rails 2.1 não era possível congelar o Rails em seu projeto pela versão, somente pela revisão. No Rails 2.1, poderemos congelar um release específico com o comando abaixo:
+
+	rake rails:freeze:edge RELEASE=1.2.0
+
