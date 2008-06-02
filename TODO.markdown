@@ -6,3 +6,4 @@
 * http://www.nomedojogo.com/2008/04/08/edge-rails-obtendo-informacoes-sobre-um-plugin/
 * Reorganizar as numerações.
 * Rever as descrições dos capitulos.
+* Rever o 02\_caching\_fragments.markdown pois não entendi 100%.
