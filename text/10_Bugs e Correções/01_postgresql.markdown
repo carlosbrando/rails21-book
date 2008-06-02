@@ -15,7 +15,7 @@ Arquivo: *db/migrate/002\_add\_cost.rb*
 	  end
 	end
 
-Note que estou criando uma coluna com **:precision => 6** e **:scale => 2**. Agora é hora de rodar o **rake db:migrate** e vamos ver como ficou nossa tabela no banco:
+Note que estamos criando uma coluna com **:precision => 6** e **:scale => 2**. Agora é hora de rodar o **rake db:migrate** e vamos ver como ficou nossa tabela no banco:
 
 <table border="1" cellspacing="0" cellpadding="5">
 	<tr>
@@ -45,4 +45,4 @@ Note que estou criando uma coluna com **:precision => 6** e **:scale => 2**. Ago
 	</tr>
 </table>
 
-Veja a coluna "cost" que acabamos de criar. Ela é um **numeric** comum, mas deveria ser uma coluna como a "price", logo acima dela, mais precisamente um **numeric(6,2)**. Nesta versão este erro não existe mais, a coluna será criada da forma correta neste banco de dados.
+Veja a coluna "cost" que acabamos de criar. Ela é um **numeric** comum, mas deveria ser uma coluna como a "price", logo acima dela, mais precisamente um **numeric(6,2)**. No Rails 2.1 este erro não existe mais, a coluna será criada da forma correta.
