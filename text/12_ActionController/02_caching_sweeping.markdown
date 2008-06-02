@@ -1,4 +1,4 @@
-## Sweeper
+## ActionController::Caching::Sweeping
 
 Nas versões anteriores, quando íamos declarar um **sweeper** tínhamos de informar a classe usando símbolos, assim:
 
