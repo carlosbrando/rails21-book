@@ -16,7 +16,6 @@ Retorna um Date/Datime representando o final do trimestre. Em outras palavras o 
 
 Retorna dia 31 de dezembro às 23:59:59
 
-
 ### Time#in\_time\_zone
 
 Este método é similar ao **Time#localtime**, exceto pelo fato de que usa o **Time.zone** no lugar do fuso-horário do sistema operacional. Você pode passar como parâmetro um **TimeZone** ou uma **String**. Vejamos alguns exemplos:
@@ -29,6 +28,19 @@ Este método é similar ao **Time#localtime**, exceto pelo fato de que usa o **T
 	Time.utc(2000).in_time_zone(‘Alaska‘)
 	# => Fri, 31 Dec 1999 15:00:00 AKST -09:00
 
+### Time#days\_in\_month
+
+Foi corrigido um bug no método **days\_in\_month** que informava o número de dias no mês de fevereiro de forma errônea quando o ano não era informado. 
+
+A alteração consiste em usar o ano corrente quando não se informa um ano ao chamar o método. Supondo que você esteja em um ano bissexto, veja:
+
+	Loading development environment (Rails 2.0.2)
+	>> Time.days_in_month(2)
+	=> 28
+
+	Loading development environment (Rails 2.1.0)
+	>> Time.days_in_month(2)
+	=> 29
 
 ## DateTime#to_f_
 
