@@ -43,8 +43,8 @@ A alteração consiste em usar o ano corrente quando não se informa um ano ao c
 
 ### DateTime#to_f
 
-A classe DateTime ganhou um novo método o to_f que retorna a data como um ponto flutuante que representa a quantidade de segundos desde o Unix epoch (época Unix). Isto é, a quantidade de segundos desde 1 de janeiro de 1970 às zero hora.
+A classe **DateTime** ganhou um novo método o **to_f** que retorna a data como um ponto flutuante que representa a quantidade de segundos desde o Unix epoch (época Unix). Isto é, a quantidade de segundos desde 1 de janeiro de 1970 às zero hora.
 
 ### Date.current
 
-A classe Date ganhou um método **current** que deve ser usado com substituto do **Date.today**, pois leva em conta o fuso-horário caso o config.time\_zone tenha sido configurado, retornando um Time.zone.today. Caso não tenha sido configurado ele retornará um Date.today.
+A classe **Date** ganhou um método **current** que deve ser usado com substituto do **Date.today**, pois leva em conta o fuso-horário caso o **config.time\_zone** tenha sido configurado, retornando um **Time.zone.today**. Caso não tenha sido configurado ele retornará um **Date.today**.
