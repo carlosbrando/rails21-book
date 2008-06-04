@@ -4,7 +4,7 @@ Para explicar esta nova funcionalidade vou precisar mostrar na prática. Vamos p
 
 	Author.find(:all, :include => [:posts, :comments])
 	
-Estou fazendo uma pesquisa na tabela **authors**, mas incluindo na minha query as tabelas **posts** e **comments**, relacionado-as pela coluna **author_id**. Para entender melhor veja a query gerada pelo Rails:
+Estou fazendo uma pesquisa na tabela **authors**, mas incluindo na minha query as tabelas **posts** e **comments**, relacionado-as pela coluna **author_id**. Para entender melhor veja a *query* gerada pelo Rails:
 
 	SELECT
 	  authors."id"          AS t0_r0,
@@ -25,7 +25,7 @@ Estou fazendo uma pesquisa na tabela **authors**, mas incluindo na minha query a
 	
 Uma única query SQL foi criada contendo **joins** entre as tabelas **authors**, **posts** e **comments**. Chamamos isto de **produto cartesiano**.
 
-Acontece que isto nem sempre é performático, por isto foi alterado. Para a nova versão do Rails ao executar a mesma pesquisa na classe **Author**, o Rails usará uma outra estratégia para recuperar os dados das três tabelas. Ao invés de usar apenas uma query com todas as tabelas relacionadas, ele usará três querys menores, uma para cada tabela. Veja o resultado no log, após executar o mesmo código acima:
+Acontece que isto nem sempre é performático, por isto foi alterado. Nesta versão do Rails ao executar a mesma pesquisa na classe **Author**, o Rails usará uma outra estratégia para recuperar os dados das três tabelas. Ao invés de usar apenas uma query com todas as tabelas relacionadas, ele usará três querys menores, uma para cada tabela. Veja o resultado no log, após executar o mesmo código acima:
 
 	SELECT * FROM "authors"
 	SELECT posts.* FROM "posts" WHERE (posts.author_id IN (1))

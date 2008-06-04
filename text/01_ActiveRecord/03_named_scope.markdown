@@ -29,3 +29,28 @@ Ao invés de criar um método **published** para retornar os posts já publicado
 	named_scope :named_extension, :extend => NamedExtension 
 
 	named_scope :multiple_extensions, :extend => [MultipleExtensionTwo, MultipleExtensionOne]
+
+## Testando named\_scope com proxy\_options
+
+**Named scopes** é uma novidade muito interessante no Rails 2.1, mas após usar por um tempo este recurso, você pode descobrir que criar testes para estruturas mais complexas pode ser muito díficil.
+
+Vamos pegar um exemplo:
+
+		class Shirt < ActiveRecord::Base
+		  named_scope :colored, lambda { |color|
+		    { :conditions => { :color => color } }
+		  }
+		end
+
+Como criar um teste que valide a geração correta do escopo?
+
+Para facilitar isto foi criado o método **proxy\_options**, que permite examinar as opções que estão sendo usadas no **named\_scope**. Para testar o exemplo acima, poderíamos fazer assim:
+
+		class ShirtTest < Test::Unit
+		  def test_colored_scope
+		    red_scope = { :conditions => { :colored => 'red' } }
+		    blue_scope = { :conditions => { :colored => 'blue' } }
+		    assert_equal red_scope, Shirt.colored('red').scope_options
+		    assert_equal blue_scope, Shirt.colored('blue').scope_options
+		  end
+		end

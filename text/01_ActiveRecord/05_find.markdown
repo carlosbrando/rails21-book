@@ -8,7 +8,7 @@ A partir de agora é possível passar um objeto como parâmetro no método **fin
 	  composed_of :balance, :class_name => "Money", :mapping => %w(balance amount)
 	end
 
-Nesse caso, você pode passar um objeto Money como parâmetro no método find da classe Account, assim:
+Nesse caso, você pode passar um objeto **Money** como parâmetro no método **find** da classe **Account**, assim:
 
 	amount = 500
 	currency = "USD"
@@ -48,3 +48,10 @@ O método estático **first** é um alias para o, também estático, **find(:fir
 O método estático **last** é um alias para o, também estático, **find(:last)**. Exemplo:
 
 	Topic.last é equivalente ao Topic.find(:last)
+
+
+## Usando os métodos first e last em named\_scope
+
+Os métodos mencionados acima também funcionam em **named\_scopes**. Imagine que eu criei um **named\_scope** chamado **recent**, então eu poderei fazer isto:
+
+		post.comments.recent.last

@@ -16,17 +16,16 @@ O funcionamento é bem simples, veja alguns exemplos (nos comentários estão as
 	record = Comment.new
 	polymorphic_url(record)  #->  comments_url()
 	
-Veja que o método reconhece o registro usado e monta a rota corretamente. Nested resources e namespaces também são suportados:
+Veja que o método reconhece o registro usado e monta a rota corretamente. **Nested resources** e **namespaces** também são suportados:
 
 	polymorphic_url([:admin, @article, @comment])
 	#-> vai devolver:
 	admin_article_comment_url(@article, @comment)
 	
-Você também pode usar prefixos como new, edit e formatted, veja alguns exemplos:
+Você também pode usar prefixos como **new**, **edit** e **formatted**, veja alguns exemplos:
 
 	edit_polymorphic_path(@post)
 	#=> /posts/1/edit
 
 	formatted_polymorphic_path([@post, :pdf])
 	#=> /posts/1.pdf
-	

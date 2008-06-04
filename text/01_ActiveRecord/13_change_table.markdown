@@ -1,8 +1,8 @@
 ## change\_table
 
-Criar migrations ficou muito mais sexy depois do lançamento do Rails 2.0, mas alterar uma tabela usando migrations continuou sendo da forma antiga, nada sexy.
+Criar **migrations** ficou muito mais sexy depois do lançamento do Rails 2.0, mas alterar uma tabela usando **migrations** continuou sendo da forma antiga, nada sexy.
 
-No Rails 2.1 (que já está para sair) alterar uma tabela também será sexy, com o novo método change\_table. Veja um exemplo:
+No Rails 2.1, alterar uma tabela também é sexy, com o novo método **change\_table**. Veja um exemplo:
 
 	change_table :videos do |t|
 	  t.timestamps # adiciona as colunas created_at e updated_at
@@ -11,7 +11,7 @@ No Rails 2.1 (que já está para sair) alterar uma tabela também será sexy, co
 	  t.remove :name, :email # remove as colunhas name e email
 	end
 
-Funciona como o create\_table, mas ao invés de criar uma nova tabela, apenas altera uma tabela existente, adicionando ou removendo colunas e índices. Veja uma lista das opções existentes:
+Funciona como o **create\_table**, mas ao invés de criar uma nova tabela, apenas altera uma tabela existente, adicionando ou removendo colunas e índices. Veja uma lista das opções existentes:
 
 	change_table :table do |t|
 	  t.column # cria uma coluna simples. Ex: t.column(:name, :string)
