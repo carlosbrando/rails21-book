@@ -1,6 +1,6 @@
 ## Protegendo-se de Cross Site Scripting
 
-No Rails 2.0 o arquivo application.rb ficou desta maneira:
+No Rails 2.0 o arquivo *application.rb* ficou desta maneira:
 
 	class ApplicationController < ActionController::Base
 	  helper :all

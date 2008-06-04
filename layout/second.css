@@ -8,7 +8,7 @@ html {
 }
 
 body { 
-  margin: 0 0 0 15%;
+  margin: 0 0 0 13%;
 }
 
 h1, h2, h3, h4, h5, h6 { 
@@ -44,8 +44,8 @@ q::after {
   content: "\201D";
 }
 
-p { margin: 0 }
-p + p { text-indent: 1.3em }
+/*p { margin: 0 }*/
+/*p + p { text-indent: 1.3em }*/
 p.sidenote + p, p.caption, p.art { text-indent: 0 }
 
 p.author {
