@@ -7,7 +7,7 @@ end
 
 def directory(dir_name, output)
   dir = Dir.new(dir_name)
-  dir.each do |file_name|
+  dir.sort.each do |file_name|
     unless file_name =~ /^\./
       file = "#{dir_name}/#{file_name}"
       if File.stat(file).directory?
