@@ -13,3 +13,9 @@ Acontece que alguns sites como o Amazon estão usando também o sinal de "=" (ig
 	# => Acesse este endereço: http://www.amazon.com/Testing-Equal-Sign-In-Path/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1198861734&sr=8-1
 
 Note que o método terminou o hyperlink exatamente antes do sinal de "=", pois ele não suporta este sinal. Quer dizer, não suportava. Nesta nova versão do Rails já temos este problema resolvido.
+
+O mesmo método foi alterado mais tarde para também permitir o uso de URLs com o sinal de parênteses.
+
+Um exemplo de URL com parênteses:
+
+	http://en.wikipedia.org/wiki/Sprite_(computer_graphics)

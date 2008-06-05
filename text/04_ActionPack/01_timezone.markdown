@@ -10,7 +10,6 @@ Uma nova opção foi acrescentada ao método **time\_zone\_select**, agora você
 
 Nos casos onde usamos a opção **:default** deve aparecer com o **TimeZone** informado já selecionado.
 
-
 ### O método formatted_offset
 
 O método **formatted\_offset** foi incluído nas classes **Time** e **DateTime** para retornar no formato **+HH:MM** o desvio da hora UTC. Por exemplo, em nosso fuso-horário (hora de Brasília) o desvio retornado pelo método seria uma string com o valor **"-03:00″**.
@@ -63,8 +62,7 @@ o método **TimeZone#now** foi alterado para retornar um **ActiveSupport::TimeWi
 
 	Time.zone = 'Hawaii'  # => "Hawaii"
 	Time.zone.now         # => Wed, 23 Jan 2008 20:24:27 HST -10:00
-	
-	
+
 ### Compare\_with\_coercion
 	
 Foi criado o método **compare\_with\_coercion** (com um alias para <=>) nas classes **Time** e **DateTime**, tornando possível realizar uma comparação cronológica entre as classes **Time**, **DateTime** e instâncias do **ActiveSupport::TimeWithZone**. Para entender melhor como funciona, veja os exemplos abaixo (o resultado de cada linha está no comentário logo depois do código):
@@ -80,7 +78,6 @@ Foi criado o método **compare\_with\_coercion** (com um alias para <=>) nas cla
 	Time.utc(2000) <=> ActiveSupport::TimeWithZone.new( Time.utc(1999, 12, 31, 23, 59, 59) ) # 1
 	Time.utc(2000) <=> ActiveSupport::TimeWithZone.new( Time.utc(2000, 1, 1, 0, 0, 0) ) # 0
 	Time.utc(2000) <=> ActiveSupport::TimeWithZone.new( Time.utc(2000, 1, 1, 0, 0, 1) )) # -1
-
 
 ### TimeWithZone#between?
 
@@ -103,7 +100,6 @@ Este método cria uma nova instância de **ActiveSupport::TimeWithZone** à part
 	# => Fri, 31 Dec 1999 14:00:00 HST -10:00
 	Time.zone.parse('22:30:00')
 	# => Fri, 31 Dec 1999 22:30:00 HST -10:00
-	
 
 ### TimeZone#at
 
@@ -117,25 +113,11 @@ Esse método serve para criar uma nova instância de **ActiveSupport::TimeWithZo
 
 ### Mais métodos 
 
-Os métodos to_a, to_f, to_i, httpdate, rfc2822, to_yaml, to_datetime e eql? foram adicionados na classe TimeWithZone. Para maiores informações sobre esses métodos verifique na documentação do **Rails**
-
-### Algumas Tasks
-
-#### rake time:zones:all
-
-Retorna todos os time zones que o Rails reconhece, agrupados por offset. Você também pode filtrar o retorno usando o parâmetro opcional OFFSET, por exemplo: OFFSET=-6.
-
-#### rake time:zones:us
-
-Exibe uma lista com todos os time zones dos USA. A opção OFFSET também vale aqui.
-
-#### rake time:zones:local
-
-Retorna os time zones que o Rails conhece que estão no mesmo offset do seu sistema operacional.
+Os métodos **to\_a**, **to\_f**, **to\_i**, **httpdate**, **rfc2822**, **to\_yaml**, **to\_datetime** e **eql?** foram adicionados na classe TimeWithZone. Para maiores informações sobre esses métodos verifique na documentação do **Rails**
 
 ### TimeWithZone se preparando para o Ruby 1.9
 
-No Ruby 1.9 teremos alguns métodos novos na classe Time, métodos como:
+No Ruby 1.9 teremos alguns métodos novos na classe **Time**, métodos como:
 
 	Time.now
 	# => Thu Nov 03 18:58:25 CET 2005
@@ -145,7 +127,7 @@ No Ruby 1.9 teremos alguns métodos novos na classe Time, métodos como:
 
 Existe um para cada dia da semana.
 
-Outra curiosidade é que o método to\_s do objeto Time também vai ter um retorno um pouco diferente. Hoje quando executamos Time.new.to\_s, temos o seguite:
+Outra curiosidade é que o método **to\_s** do objeto **Time** também vai ter um retorno um pouco diferente. Hoje quando executamos **Time.new.to\_s**, temos o seguite:
 
 	Time.new.to_s
 	# => "Thu Oct 12 10:39:27 +0200 2006″
@@ -155,4 +137,4 @@ No Ruby 1.9 teremos:
 	Time.new.to_s
 	# => "2006-10-12 10:39:24 +0200″
 
-Estou escrevendo isto apenas para dizer que o Rails já está sendo preparado para lidar com estas alterações. A classe TimeWithZone, por exemplo, acabou de receber uma implementação para funcionar com os métodos do primeiro exemplo.
+O que isto tem há ver com Rails 2.1? Tudo, já que o Rails já está sendo preparado para lidar com estas alterações. A classe **TimeWithZone**, por exemplo, acabou de receber uma implementação para funcionar com os métodos do primeiro exemplo.

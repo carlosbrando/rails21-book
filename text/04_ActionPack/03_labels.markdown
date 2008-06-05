@@ -41,3 +41,11 @@ Também foi incluído o método **label\_tag** no **FormTagHelper**. Este métod
 
 	>> label_tag 'nome', nil, :class => 'small_label'
 	=> <label for="nome" class="small_label">Nome</label>
+
+O método também aceita a opção **:for**, veja um exemplo:
+
+	label(:post, :title, nil, :for => "my_for")
+
+Isto vai retornar algo assim:
+
+	<label for="my_for">Title</label>

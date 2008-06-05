@@ -1,8 +1,8 @@
 ## Testando Helpers de forma simples
 
-Uma coisa muito chata de se fazer hoje no Rails é testar helpers. Eu mesmo já sofri um bocado para garantir 100% de cobertura, criando testes para alguns helpers.
+Uma coisa muito chata de ser fazer nas versões anteriores do Rails era testar **helpers**. Eu mesmo já sofri um bocado para garantir 100% de cobertura, criando testes para alguns **helpers**.
 
-Isto deve ficar mais simples no Rails 2.1 com a nova classe ActionView::TestCase. Vamos pegar o código abaixo como exemplo:
+Isto ficou muito simples no Rails 2.1 com a nova classe **ActionView::TestCase**. Vamos pegar o código abaixo como exemplo:
 
 	module PeopleHelper
 	  def title(text)
@@ -32,5 +32,3 @@ Veja como faremos para testar isto no Rails 2.1:
 	    assert_equal "/people", homepage_path
 	  end
 	end
-
-Muito simples. Ainda bem que o projeto em que estou trabalhando agora está usando o edge rails, assim não preciso esperar o lançamento do 2.1.
