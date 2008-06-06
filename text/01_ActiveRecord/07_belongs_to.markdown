@@ -6,4 +6,5 @@ Exemplos:
 
 	belongs_to :author_address
 	belongs_to :author_address, :dependent => :destroy
-	belongs_to :author_address_extra, :dependent => :delete, :class_name => "AuthorAddress"
+	belongs_to :author_address_extra, :dependent => :delete, 
+		:class_name => "AuthorAddress"
