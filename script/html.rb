@@ -1,4 +1,6 @@
+require 'rubygems'
 require 'discount'
+# require "ruby-debug"
 # require 'coderay'
 # require "script/tm_syntax_highlighting"
 require "uv"
@@ -11,11 +13,18 @@ task :html => :merge do
 
     File.open('output/index.html', 'w') do |f|
       html_template = File.new("layout/pdf_template.html").read
-      # html_template = Uv.parse( html_template, "xhtml", "html", true, "slush_poppies")
+      # html_template = Uv.parse( html_template, "xhtml", "ruby", false, "mac_classic")
       
       html_template.gsub!("#body", output)
-      html_template.gsub!("<pre><code>", "<pre name=\"code\" class=\"ruby\">")
-      html_template.gsub!("</code>", "")
+      
+      html_template.gsub! /<pre><code>.*?<\/code><\/pre>/m do |code|
+        code = code.gsub('<pre><code>', '').gsub('</code></pre>', '').gsub('&lt;', '<').gsub('&gt;', '>').gsub('&amp;', '&')
+        Uv.parse(code, "xhtml", "ruby", false, "mac_classic")
+      end
+      
+      # debugger
+      #       html_template.gsub!("<pre><code>", "<pre name=\"code\" class=\"ruby\">")
+      #       html_template.gsub!("</code>", "")
       f.puts html_template
     end
   end
