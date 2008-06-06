@@ -15,7 +15,8 @@ O método **has\_one** recebeu suporte à opção **through**. Ele funciona exat
 
 	class User < ActiveRecord::Base
 	  has_many :subscriptions
-	  has_one :magazine, :through => : subscriptions, :conditions => ['subscriptions.active = ?', true]
+	  has_one :magazine, :through => : subscriptions, 
+		        :conditions => ['subscriptions.active = ?', true]
 	end
 	
 ### Has\_one com :source\_type

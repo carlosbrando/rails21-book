@@ -303,7 +303,16 @@ div.dedication, div.foreword, div.toc, div.preface, div.chapter, div.reference,
 div.appendix, div.bibliography, div.glossary, div.index, div.colophon { 
   page-break-before: always 
 }
-div.backcover { page-break-before: left }
+
+div.backcover { 
+	page-break-before: left;
+	page: cover; 
+	background-image: url(../images/c_capa.jpg);
+	position: absolute;
+	width: 9.25in; height: 7in;
+  left: 0; top: 0;
+  z-index: -1;
+}
 
 /* the front cover; this code is probably not very reusable by other books */
 
@@ -410,7 +419,7 @@ ul.toc > li.chapter::before {
 
 /* chapter numbers */
 
-div.chapter h1 { counter-increment: chapter; }
+div.chapter h1 { counter-increment: chapter }
 
 h1::before {
   white-space: pre;
@@ -457,3 +466,6 @@ code, span.css, span.value, span.declaration {
   div.frontcover, div.halftitlepage, div.titlepage, div.imprint, 
   div.dedication, div.foreword, div.toc, div.index { display: none }
 }
+
+
+div.white_page { page: cover; }

@@ -28,7 +28,8 @@ Ao invés de criar um método **published** para retornar os posts já publicado
 
 	named_scope :named_extension, :extend => NamedExtension 
 
-	named_scope :multiple_extensions, :extend => [MultipleExtensionTwo, MultipleExtensionOne]
+	named_scope :multiple_extensions, 
+		:extend => [MultipleExtensionTwo, MultipleExtensionOne]
 
 ## Testando named\_scope com proxy\_options
 
