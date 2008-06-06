@@ -410,7 +410,7 @@ ul.toc > li.chapter::before {
 
 /* chapter numbers */
 
-div.chapter { counter-increment: chapter; }
+div.chapter h1 { counter-increment: chapter; }
 
 h1::before {
   white-space: pre;
@@ -446,8 +446,10 @@ span.element, span.attribute {
   font-size: 80%;
 }
 span.property { font-weight: bold }
-code, span.css, span.value, span.declaration {
-  font: 90% "Lucida Console", "Lucida Sans Typewriter", monospace;
+code, pre, span.css, span.value, span.declaration {
+  color: #600;
+  font-size: 8pt;
+  font-family: Monaco, "Lucida Console", "Lucida Sans Typewriter", monospace;
 }
 
 
