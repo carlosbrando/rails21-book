@@ -6,8 +6,10 @@ A inclusão do **Memcache-Client** no **ActiveSupport::Cache** facilitou muito a
 
 	ActiveSupport::Cache.lookup_store :mem_cache_store, "localhost"
 
-	ActiveSupport::Cache.lookup_store :mem_cache_store, "localhost", '192.168.1.1', :namespace => 'foo'
+	ActiveSupport::Cache.lookup_store :mem_cache_store, "localhost", '192.168.1.1', 
+		:namespace => 'foo'
 
 ou
 
-	config.action_controller.fragment_cache_store = :mem_cache_store, 'localhost', {:compression => true, :debug => true, :namespace =>'foo'}
+	config.action_controller.fragment_cache_store = :mem_cache_store, 'localhost', 
+		{:compression => true, :debug => true, :namespace =>'foo'}

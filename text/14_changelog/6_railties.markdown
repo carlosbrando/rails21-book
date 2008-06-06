@@ -38,9 +38,9 @@ Enables or disables plugin reloading.
   
 You can get around this setting per plugin.
 
-	If #reload_plugins? == false (DEFAULT), add this to your plugin's init.rb to make it reloadable:
+If #reload_plugins? == false (DEFAULT), add this to your plugin's init.rb to make it reloadable:
     Dependencies.load_once_paths.delete lib\_path
-    If #reload_plugins? == true, add this to your plugin's init.rb to only load it once:
+If #reload_plugins? == true, add this to your plugin's init.rb to only load it once:
     Dependencies.load_once_paths << lib_path
 
 \* Small tweak to allow plugins to specify gem dependencies.  [rick]

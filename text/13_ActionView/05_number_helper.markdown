@@ -7,12 +7,14 @@ O método **number\_to\_currency** passou a aceitar a opção **:format** como p
 	number_to_currency(9.99, :separator => ",", :delimiter => ".", :unit => "R$")
 	# => "R$9,99″
 
-	number_to_currency(9.99, :format => "%u %n", :separator => ",", :delimiter => ".", :unit => "R$")
+	number_to_currency(9.99, :format => "%u %n", :separator => ",", 
+		:delimiter => ".", :unit => "R$")
 	# => "R$ 9,99″
 	
 Além disto, podemos personalizar de outras formas, por exemplo:
 
-	number_to_currency(9.99, :format => "%n em reais", :separator => ",", :delimiter => ".", :unit => "R$")
+	number_to_currency(9.99, :format => "%n em reais", :separator => ",", 
+		:delimiter => ".", :unit => "R$")
 	# => "9,99 em reais"
 
 Ao montar sua própria string de formatação, você pode usar os seguintes parâmetros:

@@ -28,12 +28,13 @@ Nas primeiras versões do Rails 2.0 este método aceitava como parâmetros as op
 
 Ele retornará isto:
 
-	<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" xmlns:app="http://www.w3.org/2007/app">
+	<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" 
+		xmlns:app="http://www.w3.org/2007/app">
 
 Adaptando o exemplo anterior, poderíamos usá-lo assim:
 
 	atom_feed({'xmlns:app' => 'http://www.w3.org/2007/app',
-	           'xmlns:openSearch' => 'http://a9.com/-/spec/opensearch/1.1/'}) do |feed| 
+		'xmlns:openSearch' => 'http://a9.com/-/spec/opensearch/1.1/'}) do |feed| 
 
 	  feed.title("Nome do Jogo")
 	  feed.updated((@posts.first.created_at))

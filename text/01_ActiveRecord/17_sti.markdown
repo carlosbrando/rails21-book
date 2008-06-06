@@ -8,7 +8,8 @@ Quando usamos **models** com **namespace** e **STI**, o **ActiveRecord** armazen
 	item = ComicCollection::Item.new
 	item.type # => 'Item’
 
-	item2 = CollectionItem.find(item.id) # retorna um erro, porque não encontrou a classe Item
+	item2 = CollectionItem.find(item.id)
+	# retorna um erro, porque não encontrou a classe Item
 
 Esta alteração adiciona uma nova opção de configuração que faz com que o **ActiveRecord** armazene o nome completo da classe.
 
