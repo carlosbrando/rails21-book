@@ -1,5 +1,7 @@
 require 'discount'
 # require 'coderay'
+# require "script/tm_syntax_highlighting"
+require "uv"
 
 desc 'Transforma o arquivo em HTML'
 task :html => :merge do
@@ -9,6 +11,8 @@ task :html => :merge do
 
     File.open('output/index.html', 'w') do |f|
       html_template = File.new("layout/pdf_template.html").read
+      # html_template = Uv.parse( html_template, "xhtml", "html", true, "slush_poppies")
+      
       html_template.gsub!("#body", output)
       html_template.gsub!("<pre><code>", "<pre name=\"code\" class=\"ruby\">")
       html_template.gsub!("</code>", "")
