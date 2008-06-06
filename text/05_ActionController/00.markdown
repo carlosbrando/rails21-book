@@ -1,0 +1,4 @@
+# ActionController
+
+O ActionController é a camada responsável por receber as requisições web e de tomar as decisões do quê será executado e renderizado ou de redirecionar para outra ação.
+Uma ação é definido como métodos públicos nos controladores que são automaticamente disponíveis através das rotas.
