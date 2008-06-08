@@ -1,10 +1,10 @@
 ## Rails.version
 
-Nas versões anteriores para descobrir, durante a execução do seu código, qual é a versão do Rails em uso, bastava usar:
+In earlier versions to discover, during running time, what's the Rails version in use, we used:
 
 	Rails::VERSION::STRING
 
-No Rails 2.1 isso mudou para:
+In Rails 2.1 changed to:
 
 	Rails.version
 
