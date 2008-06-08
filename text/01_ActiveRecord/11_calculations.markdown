@@ -1,6 +1,6 @@
 ## Calculations 
-
-O **ActiveRecord::Calculations** mudou um pouquinho para aceitar além do nome da coluna, também o nome da tabela. Isto é útil quando temos relacionamentos entre tabelas que contém uma ou mais colunas com o mesmo nome. Os métodos afetados são métodos como **sum** ou **maximum** do **ActiveRecord**. Resumindo, você pode fazer destas duas formas:
+                         
+**ActiveRecord::Calculations**' has changed a bit to also support table names. This comes in handy when we have relationships among different tables with the same column name. You have these two options now:
 
 	authors.categories.maximum(:id)
 	authors.categories.maximum("categories.id")

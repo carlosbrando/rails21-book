@@ -2,7 +2,7 @@
 
 ### Support for the option through   
 
-The method **has\_one** now has the option **through**. It works just like **has_many :through**, but it represents the association to a single **ActiveRecord** object.
+The **has\_one** method now has the option **through**. It works just like **has_many :through**, but it represents the association to a single **ActiveRecord** object.
 
 	class Magazine < ActiveRecord::Base
 	  has_many :subscriptions
@@ -21,7 +21,7 @@ The method **has\_one** now has the option **through**. It works just like **has
 	
 ### Has\_one with :source\_type             
                                
-The method **has\_one :through**, just mentioned above, can also take **:source\_type**. I will try to explain this through some examples. Let's start with these two classes:
+The **has\_one :through** method, just mentioned above, can also take **:source\_type**. I will try to explain this through some examples. Let's start with these two classes:
 
 	class Client < ActiveRecord::Base
 	  has_many :contact_cards 
@@ -29,7 +29,7 @@ The method **has\_one :through**, just mentioned above, can also take **:source\
 	  has_many :contacts, :through => :contact_cards
 	end 
          
-What we're looking at here is a **Client** class which **has_many** kinds of contacts, since the **ContactCard** class has a polymorphic relationship.
+What we are looking at here is a **Client** class which **has_many** kinds of contacts, since the **ContactCard** class has a polymorphic relationship.
 
 Next step in our example, let's create two classes to represent a **ContactCard**.
 

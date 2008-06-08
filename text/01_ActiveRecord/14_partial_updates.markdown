@@ -1,10 +1,12 @@
 ## Partial Updates
 
-A implementação de **Dirty Objects** foi o gancho para outra novidade também muito interessante.
+The implementation of **Dirty Objects** was the starting point for another very interesting functionality.
+                                                                                                         
+Since we can now track down what has changed in an object state, why not use it to avoid unnecessary updates to the database ?
+  
+On previous versions of Rails when we called **save** from an already existing **ActiveRecord** object, all of its fields would be updated in the database.
 
-Já que agora podemos rastrear quais atributos foram alterados na instancia do objeto, porque não usar isto para evitar atualizações desnecessários no banco de dados?
-
-Nas versões anteriores do Rails quando executávamos o método **save** em um **ActiveRecord** já existente, era executado no banco de dados um **UPDATE** em todas as colunas da tabela, mesmo para as que não sofreram alterações.
+This action could be greatly enhanced with the use of **Dirty Objects** and it is exactly what happened. Take a loot at the SQL query generated when trying to save an object that suffered a slight change in Rails 2.1 
 
 Com o **Dirty Objects** isto poderia ser melhorado, e foi exatamente o que aconteceu. Veja o SQL gerado ao tentar salvar um registro que sofreu apenas uma leve alteração no Rails 2.1:
 

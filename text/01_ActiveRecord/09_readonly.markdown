@@ -1,6 +1,6 @@
-## Relacionamentos com readonly
+## Readonly relationships
 
-Uma nova opção está presente nos relacionamentos entre modelos. Afim de impedir que seus registros possam ser alterados, podemos usar a opção **:readonly** ao associar modelos. Veja alguns exemplos:
+A new feature is added to the relationship among models. To avoid change in a models' state you can now use **:readonly** when describing associations. Let's take a look at a few examples:
 
 	has_many :reports, :readonly => true
 
@@ -9,5 +9,5 @@ Uma nova opção está presente nos relacionamentos entre modelos. Afim de imped
 	belongs_to :project, :readonly => true
 
 	has_and_belongs_to_many :categories, :readonly => true
-	
-Feito isto, os registros protegidos não poderão ser alterados. Se você tentar, terá uma excessão do tipo **ActiveRecord::ReadOnlyRecord** disparada.
+	      
+This way your associated models are safe from being edited from within this model. If you try editing any of them you will get an **ActiveRecord::ReadOnlyRecord** exception.
