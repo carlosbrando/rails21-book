@@ -1,6 +1,6 @@
 ## ActionController::Caching::Sweeping
 
-Nas versões anteriores, quando íamos declarar um **sweeper** tínhamos de informar a classe usando símbolos, assim:
+In the earlier versions of rails, when we were declaring a **sweeper**, we had to inform the class using symbols:
 
 	class ListsController < ApplicationController
 	  caches_action :index, :show, :public, :feed
@@ -8,7 +8,7 @@ Nas versões anteriores, quando íamos declarar um **sweeper** tínhamos de info
 	                :only => [ :edit, :destroy, :share ]
 	end
 	
-Agora é possível declarar explicitamente uma classe ao invés de usar um símbolo. Isto é necessário se o seu **sweeper** estiver em um módulo, por exemplo. Embora você possa continuar usando símbolos para os demais casos, a partir de agora você também pode fazer assim:
+Now it's possible to explicit declare a class instead of using a symbol. This is necessary if your **sweeper** is inside a module for example. Though you can still use symbols for other cases, from now on you can also do it this way:
 
 	class ListsController < ApplicationController
 	  caches_action :index, :show, :public, :feed

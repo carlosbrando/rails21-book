@@ -1,4 +1,3 @@
 # ActionController
-
-O ActionController é a camada responsável por receber as requisições web e de tomar as decisões do quê será executado e renderizado ou de redirecionar para outra ação.
-Uma ação é definido como métodos públicos nos controladores que são automaticamente disponíveis através das rotas.
+ActionController is the responsible layer by receiving web requests and taking decisions of what is going to be run and rendered or to redirect the request to another action.
+An Action is defined as public methods within controllers which are automatically available through routes.
