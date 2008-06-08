@@ -1,7 +1,7 @@
 ## UTC ou GMT?
 
-Uma alteração simples, mas interessante. Até agora o Rails tem usado muito a sigla UTC, mas quando se executa o método **to\_s** do objeto **TimeZone** ele mostrará GMT e não UTC. Isto se dá porque a sigla GMT é mais familiar para o usuário final.
+An amendment, but interesting. Untill now Rails has been using very much UTC symbol, but when we run the method **to\_s** of **TimeZone** object it will show GMT and not UTC. This happens because GMT symbol is more familiar to end users.
 
-Se você olhar no painel de controle do Windows, onde você escolhe o fuso-horário, verá que a sigla usada é GMT. Google e Yahoo também usam GMT em seus produtos.
+If you take a look in Windows control panel, where you can choose timezone, you'll notice the symbol used is GMT. Google and Yahoo also have been using GMT within their products.
 
 	TimeZone['Moscow'].to_s #=> "(GMT+03:00) Moscow"
