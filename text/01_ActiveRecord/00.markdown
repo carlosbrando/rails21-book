@@ -1,4 +1,4 @@
 # ActiveRecord
               
-ActiveRecord is an object-relational mapping layer responsible for the interoperability among the application
-and the database and also responsible for data abstraction. (wikipedia)
+ActiveRecord is an object-relational mapping layer responsible for the interoperability among application
+and database and also responsible for data abstraction. (wikipedia)

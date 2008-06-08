@@ -31,7 +31,7 @@ The **has\_one :through** method, just mentioned above, can also take **:source\
          
 What we are looking at here is a **Client** class which **has_many** kinds of contacts, since the **ContactCard** class has a polymorphic relationship.
 
-Next step in our example, let's create two classes to represent a **ContactCard**.
+Next step in our example, let's create two classes to represent a **ContactCard**:
 
 	class Person < ActiveRecord::Base
 	  has_many :contact_cards, :as => :contact
@@ -41,7 +41,9 @@ Next step in our example, let's create two classes to represent a **ContactCard*
 	  has_many :contact_cards, :as => :contact
 	end
           
-**Person** e **Business** relate to my **Client** class through the **ContactCard** table. In other words, I have two kinds of contacts, personal and business. This is not going to work, however. Watch what happens when I try to retrieve a contact:
+**Person** and **Business** relate to my **Client** class through the **ContactCard** table. In other words, I have two kinds of contacts, personal and business. 
+
+This is not going to work, however. Watch what happens when I try to retrieve a contact:
 
 	>> Client.find(:first).contacts
 	# ArgumentError: /…/active_support/core_ext/hash/keys.rb:48:
@@ -61,7 +63,7 @@ To make this work we have to use **:source_type**. Let's change our **Client** c
 	           :source_type => :business
 	end
 	                       
-Notice that we now have two different ways to retrieve our contacts and we can say what contact **:source_type** we are expecting.
+Notice how we now have two different ways of retrieving our contacts and we can say what contact **:source_type** we are expecting.
 
 	Client.find(:first).people_contacts
 	Client.find(:first).business_contacts

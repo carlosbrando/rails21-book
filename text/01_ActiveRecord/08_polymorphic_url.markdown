@@ -1,10 +1,10 @@
 ## Polymorphic url
 
-Helper methods for polymorphic URL are used as a more elegant solution to renamed routes when you're working with an object from **ActiveRecord**.
+Helper methods for polymorphic URL are used as a more elegant solution to renamed routes when you're working with **ActiveRecord**.
                                     
 These methods come in handy when you want to generate the URL for a **RESTful** resource without specifying the type it is going to be associated with.
                                       
-It is very simple to work with them. Take a look at a few examples (commented out is how the same thing is done in Rails' versions prior to 2.1):                             
+It is very simple to work with them. Take a look at a few examples (commented out is how the same thing is done in versions of Rails prior to 2.1):                             
 
 	record = Article.find(:first) 
 	polymorphic_url(record) #-> article_url(record)

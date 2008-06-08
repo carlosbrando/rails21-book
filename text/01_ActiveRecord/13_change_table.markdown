@@ -1,6 +1,6 @@
 ## change\_table
         
-The creation of **migrations** in Rails 2.0 was a lot sexier than in previous verions, but to alter a table using **migrations** was not sexy at all.
+The creation of **migrations** in Rails 2.0 was a lot sexier than on previous verions, but to alter a table using **migrations** was not sexy at all.
 
 In Rails 2.1, alter table became also sexy with the new method **change\_table**. Let's take a look at an example:
 

@@ -12,19 +12,19 @@ This action could be greatly enhanced with the use of **Dirty Objects** and it i
 	article.title  #=> "Title"
 	article.subject  #=> "Edge Rails"
 
-	# Vamos atualizar um atributo…
+	# Let's change the title
 	article.title = "New Title"
 
-	# Veja o SQL criado ao persistir o objeto
+	# it creates the following SQL
 	article.save
 	#=>  "UPDATE articles SET title = 'New Title’ WHERE id = 1″
            
-Only the fields that were changed in the application were also update in the database. If no field had been updated in the application, then **ActiveRecord** would not execute any update.
+Notice how only the fields that were changed in the application were also update in the database. If no field had been updated in the application, then **ActiveRecord** would not execute any update.
                                 
 To enable/disable this new feature you change the **partial\_updates** property related to your model.
 
 	# To enable it
-	MinhaClasse.partial_updates = true
+	MyClass.partial_updates = true
          
 If you wish to enable/disable this feature to all of your models, then you must edit the file *config/initializers/new\_rails\_defaults.rb*:
 
@@ -34,7 +34,7 @@ If you wish to enable/disable this feature to all of your models, then you must 
 Don't forget to also inform Rails through *config/initializers/new\_rails\_defaults.rb* if you plan to edit a field without using the method **attr=**, like this:
 
 	# If you use **attr=**, 
-	# then it's ok not telling
+	# then it's ok not informing
 	person.name = 'bobby'
 	person.name_change    # => ['bob', 'bobby']
 	
@@ -45,4 +45,4 @@ Don't forget to also inform Rails through *config/initializers/new\_rails\_defau
 	person.name << 'by'
 	person.name_change    # => ['bob', 'bobby']
          
-If you don't inform changes like these will occur, then they won't be able to be tracked down and your database table won't be correctly updated.
+If you don't inform changes like these will be occurring, then they won't be able to be tracked down and your database table won't be correctly updated.

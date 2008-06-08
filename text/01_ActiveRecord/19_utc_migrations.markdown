@@ -1,6 +1,6 @@
 ## Timestamped Migrations
               
-When you are studying Rails or developing something on your own, **migrations** seem to be the best solution to all of your problems. However, when you are part of a team working on a project and have everyone creating **migrations**, you will find out (if you haven't already) that it simply does not work. That was before Rails 2.1.
+When you are just studying Rails or developing something on your own, **migrations** seem to be the best solution to all of your problems. However, when you are part of a team working on a project and have everyone creating **migrations**, you will find out (if you haven't already) that it simply does not work. This was before Rails 2.1.
 
 When you created a **migration**, it had a number associated with it. But what happened when two people created a **migration** at the same time or, even worse, when many people started creating **migrations** and only commited later in the day ? You would end up with a bunch of **migrations** sharing the same number but different code. Conflict!
         
@@ -18,7 +18,7 @@ There is an option to disable this feature by including the following line in **
 
 	config.active_record.timestamped_migrations = false
 
-There were also created new rake tasks to "walk through" **migrations**:
+There are also new rake tasks to "walk through" **migrations**:
 
 	rake db:migrate:up
 	rake db:migrate:down

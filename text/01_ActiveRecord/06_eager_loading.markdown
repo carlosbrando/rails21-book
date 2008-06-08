@@ -1,10 +1,10 @@
 ##Eager Loading
 
-To explain this new funcionality, let's look at some examples like the following code:
+To explain this new funcionality, let's look at the following code:
 
 	Author.find(:all, :include => [:posts, :comments])
 	
-I'm searching through table **authors** and also including tables **posts** and **comments** in my query through to the **author_id** column, which is the default column name according to Rails' convention for foreign_key names. 
+I'm searching through table **authors** and also including tables **posts** and **comments** in my query through the **author_id** column, which is the default column name according to Rails' convention for foreign_key names. 
 This search used to generate SQL queries like this:
 
 	SELECT
@@ -24,7 +24,7 @@ This search used to generate SQL queries like this:
 	  LEFT OUTER JOIN posts ON posts.author_id = authors.id
 	  LEFT OUTER JOIN comments ON comments.author_id = authors.id
 
-Exactly one SQL query with **joins** between tables **authors**, **posts** and **comments**. We call this **cartesian product**.	
+Exactly one long SQL query with **joins** between tables **authors**, **posts** and **comments**. We call this **cartesian product**.	
 
 This type of query is not always good performance wise, so it was changed for Rails 2.1. The same query for **Author** class now uses a different approach to retrieve information from all three tables. Instead of using one SQL query with all three tables, Rails now uses three different queries - one for each table - which are shorter queries than the former that used to be generated. The result can be seen in the log after executing the previous ruby on rails code:
 

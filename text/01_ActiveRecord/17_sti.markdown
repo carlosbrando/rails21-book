@@ -14,7 +14,7 @@ Whenever we use **models** with **namespace** and **STI**, **ActiveRecord** stor
       
 This change adds a new option that makes **ActiveRecord** store the whole name of the class 
 
-To enable/disable this feature, you should include or edit the following on your **environment.rb**.
+To enable/disable this feature, you should include or edit the following in your **environment.rb**.
 
 	ActiveRecord::Base.store_full_sti_class = true
                              
