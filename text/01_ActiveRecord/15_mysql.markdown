@@ -1,6 +1,6 @@
-## Smallint, int ou bigint no MySQL?
-
-O adaptador de **MySQL** do ActiveRecord ficou um pouco mais esperto na hora de criar ou alterar colunas no banco de dados usando inteiros. De acordo com a opção **:limit**, ele define se a coluna será um **smallint**, **int** ou **bigint**. Veja um trecho do código que faz isto:
+## Smallint, int or bigint in MySQL?
+                       
+The **MySQL** adapter for **ActiveRecord** is now smarter when creating or altering columns in the database using integer types. According to the option **:limit**, it will now tell if the column will be a **smallint**, **int** or **bigint**. Let's take a look at an example that does just that:
 
 	case limit
 	when 0..3
@@ -13,21 +13,21 @@ O adaptador de **MySQL** do ActiveRecord ficou um pouco mais esperto na hora de 
 	  'int(11)'
 	end
 
-Para ficar mais claro, vamos mapear isto em um **migration** e ver que tipo de coluna será criado para cada caso:
+Now let's map it in a **migration** file and see what column type will be created for each column:
 
 	create_table :table_name, :force => true do |t|
 
-	  # de 0 à 3: smallint
+	  # de 0 � 3: smallint
 	  t.integer :coluna1, :limit => 2 # smallint(2)
 
-	  # de 4 à 8: int
+	  # de 4 � 8: int
 	  t.integer :coluna2, :limit => 6 # int(6)
 
-	  # de 9 à 20: bigint
+	  # de 9 � 20: bigint
 	  t.integer :coluna3, :limit => 15 # bigint(15)
 
-	  # se a opção :limit não for informada: int(11)
+	  # se a op��o :limit n�o for informada: int(11)
 	  t.integer :coluna4 # int(11)
 	end
-
-O adaptador do **PostgreSQL** já fazia assim, o do **MySQL** apenas seguiu a tendência.
+      
+The **PostgreSQL** adapter had this feature already, and **MySQL** just caught up.

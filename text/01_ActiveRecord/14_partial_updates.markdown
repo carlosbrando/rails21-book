@@ -1,14 +1,12 @@
 ## Partial Updates
 
-The implementation of **Dirty Objects** was the starting point for another very interesting functionality.
+The implementation of **Dirty Objects** was the starting point for another very interesting feature.
                                                                                                          
 Since we can now track down what has changed in an object state, why not use it to avoid unnecessary updates to the database ?
   
-On previous versions of Rails when we called **save** from an already existing **ActiveRecord** object, all of its fields would be updated in the database.
+On previous versions of Rails when we called **save** from an already existing **ActiveRecord** object, all of its fields would be updated in the database. Even the ones that had not suffered any change.
 
-This action could be greatly enhanced with the use of **Dirty Objects** and it is exactly what happened. Take a loot at the SQL query generated when trying to save an object that suffered a slight change in Rails 2.1 
-
-Com o **Dirty Objects** isto poderia ser melhorado, e foi exatamente o que aconteceu. Veja o SQL gerado ao tentar salvar um registro que sofreu apenas uma leve alteração no Rails 2.1:
+This action could be greatly enhanced with the use of **Dirty Objects** and it is exactly what happened. Take a loot at the SQL query generated in Rails 2.1 when trying to save an object that suffered a slight change: 
 
 	article = Article.find(:first)
 	article.title  #=> "Title"
@@ -20,30 +18,31 @@ Com o **Dirty Objects** isto poderia ser melhorado, e foi exatamente o que acont
 	# Veja o SQL criado ao persistir o objeto
 	article.save
 	#=>  "UPDATE articles SET title = 'New Title’ WHERE id = 1″
+           
+Only the fields that were changed in the application were also update in the database. If no field had been updated in the application, then **ActiveRecord** would not execute any update.
+                                
+To enable/disable this new feature you change the **partial\_updates** property related to your model.
 
-Note que apenas o atributo alterado será atualizado no banco de dados. Se nenhum atributo fosse alterado, o **ActiveRecord** não executaria nenhum update.
-
-Para habilitar/desabilitar esta nova funcionalidade você deve alterar a propriedade **partial\_updates** dos seus **models**.
-
-	# Para habilitar a funcionalidade…
+	# To enable it
 	MinhaClasse.partial_updates = true
+         
+If you wish to enable/disable this feature to all of your models, then you must edit the file *config/initializers/new\_rails\_defaults.rb*:
 
-Se deseja habilitar/desabilitar esta funcionalidade para todos os models do seu sistema altere esta linha no arquivo *config/initializers/new\_rails\_defaults.rb*:
-
-	# Habilitando para todos os meus models
+	# Enable it to all models
 	ActiveRecord::Base.partial_updates = true
+      
+Don't forget to also inform Rails through *config/initializers/new\_rails\_defaults.rb* if you plan to edit a field without using the method **attr=**, like this:
 
-Atenção: Não se esqueça de informar o *config/initializers/new\_rails\_defaults.rb* quando for alterar um atributo sem usar o método **attr=**, assim:
-
-	# Se eu fizer assim, tudo bem…
+	# If you use **attr=**, 
+	# then it's ok not telling
 	person.name = 'bobby'
 	person.name_change    # => ['bob', 'bobby']
 	
 	
-	# Mas se eu não alterar o atributo usando o sinal de '=’
-	# então preciso avisar que vou fazer uma alteração
+	# But you must inform that the field will be changed
+	# if you plan not to use **attr=** 
 	person.name_will_change!
 	person.name << 'by'
 	person.name_change    # => ['bob', 'bobby']
-
-Se não fizer isto este tipo de alteração não será rastreado, e sua tabela não será atualizada corretamente.
+         
+If you don't inform changes like these will occur, then they won't be able to be tracked down and your database table won't be correctly updated.
