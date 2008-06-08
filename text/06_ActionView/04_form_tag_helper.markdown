@@ -2,6 +2,6 @@
 
 ### submit\_tag
 
-Foi adicionada a opção **:confirm** nos parametros do método **#submit\_tag**. Essa opção funciona exatamente como no método **link\_to**. Veja um exemplo:
+It was added the **:confirm** option in the parameters of **#submit\_tag** method. This option works the same way like the method **link\_to**. Look an example:
 
 	submit_tag('Save changes', :confirm => "Are you sure?")
