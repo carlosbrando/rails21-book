@@ -1,30 +1,30 @@
 ## Find
 
 ### Conditions
-
-A partir de agora é possível passar um objeto como parâmetro no método **find** de uma classe **ActiveRecord**. Veja este caso como exemplo:
+            
+From now on, one can pass an object as a parameter to **ActiveRecord**'s **find** method. See this example:
 
 	class Account < ActiveRecord::Base
 	  composed_of :balance, :class_name => "Money", :mapping => %w(balance amount)
 	end
-
-Nesse caso, você pode passar um objeto **Money** como parâmetro no método **find** da classe **Account**, assim:
+            
+In this case, you can pass a **Money** object as a parameter for the **find** method from the **Account** class, like this:
 
 	amount = 500
 	currency = "USD"
 	Account.find(:all, :conditions => { :balance => Money.new(amount, currency) })
 	
 ### Last
+           
+Up to now we could only use three operators to look for data using **ActiveRecord**'s **find** method. These are: **:first**, **:all** and the object's own id (in this case whe don't pass any argument to **find** besides the id itself)
 
-Até agora podíamos usar apenas três operadores para procurar dados usando o método **find** do **ActiveRecord**: **:first**, **:all** e o próprio id do objeto (neste caso não usamos um operador especifico, mas a falta de um significa que estamos passando o id).
-
-Agora teremos um quarto operador o **:last**. Veja alguns exemplos:
+Now there is a forth operator named **:last**. A few examples:
 
 	Person.find(:last)
 	Person.find(:last, :conditions => [ "user_name = ?", user_name])
 	Person.find(:last, :order => "created_on DESC", :offset => 5)
-	
-Para entender como esse método foi implementado basta olhar um dos seus testes:
+	                                                             
+To fully understand how this method works, just look at the following test:
 
 	def test_find_last
 	  last  = Developer.find :last
@@ -32,26 +32,26 @@ Para entender como esse método foi implementado basta olhar um dos seus testes:
 	end
 	
 ### All
-
-O método estático **all** é um alias para o, também estático, **find(:all)**. Exemplo:
+                      
+The static method **all** is an alias to the also static **find(:all)**. Example:
 	
-	Topic.all é equivalente ao Topic.find(:all)
+	Topic.all is the same as Topic.find(:all)
 
 ### First
+              
+The static method **first** is an alias to the also static **find(:first)**. Example:
 
-O método estático **first** é um alias para o, também estático, **find(:first)**. Exemplo:
-
-	Topic.first é equivalente ao Topic.find(:first)
+	Topic.first is the same as Topic.find(:first)
 
 ### Last
 
-O método estático **last** é um alias para o, também estático, **find(:last)**. Exemplo:
+The static method **last** is an alias to the also static **find(:last)**. Example:
 
-	Topic.last é equivalente ao Topic.find(:last)
+	Topic.last is the same as Topic.find(:last)
 
+             
+## Using **first** and **last** methods in named\_scope
 
-## Usando os métodos first e last em named\_scope
-
-Os métodos mencionados acima também funcionam em **named\_scopes**. Imagine que eu criei um **named\_scope** chamado **recent**, então eu poderei fazer isto:
+All the methods mentioned above also work in **named\_scope**. Suppose we create a **named\_scope** named **recent**. The following is legal:
 
 		post.comments.recent.last

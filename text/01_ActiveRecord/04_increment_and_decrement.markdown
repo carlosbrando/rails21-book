@@ -1,8 +1,8 @@
-## Increment e decrement
+## Increment and decrement
 
-Os métodos **increment**, **increment!**, **decrement** e **decrement!** do **ActiveRecord** receberam mais um parâmetro como opcional. Nas versões anteriores do Rails você podia usar estes métodos para aumentar ou diminuir o valor de uma coluna em 1 (um). Mas a partir desta versão você poderá especificar o valor a ser adicionado ou subtraído se desejar. Assim:
+**ActiveRecord**'s methods **increment**, **increment!**, **decrement** and **decrement!** can now take a new optional parameter. On previous verions of Rails you could use these methods to add or subtract 1 (one) from a given column. Now in Rails 2.1 you can tell which value that is to be added or subtracted. Like this:
 
 	player1.increment!(:points, 5)
 	player2.decrement!(:points, 2)
-
-No exemplo acima estou somando 5 à pontuação atual do jogador 1 e subtraindo 2 da pontuação atual do jogador 2. Como este parâmetro é opcional, os seus códigos antigos não serão afetados.
+                                      
+In the above example I am adding 5 points to player1 and subtracting 2 points from player2. Since this is an optional parameter, legacy code is not affected.
