@@ -2,23 +2,23 @@
 
 ### Time#end\_of\_day
 
-Retorna o dia de hoje com o horário 23:59:59.
+Returns today with the time set to 11:59:59 PM.
 
 ### Time#end\_of\_week
 
-Retorna o fim da semana (domingo 23:59:59).
+Returns the end of the week (Sunday 11:59:59 PM).
 
 ### Time#end\_of\_quarter
 
-Retorna um Date representando o final do trimestre. Em outras palavras o última dia de março, junho, setembro, dezembro, o que vier primeiro.
+Returns a Date object representing the end of the trimester. In other words, it returns the last day of march, june, september, december, whatever it happens first.
 
 ### Time#end\_of\_year
 
-Retorna dia 31 de dezembro às 23:59:59
+Returns December 31 at 11:59:59 PM
 
 ### Time#in\_time\_zone
 
-Este método é similar ao **Time#localtime**, exceto pelo fato de que usa o **Time.zone** no lugar do fuso-horário do sistema operacional. Você pode passar como parâmetro um **TimeZone** ou uma **String**. Vejamos alguns exemplos:
+This method is similar to **Time#localtime**, except by the fact it uses **Time.zone** in substitution of the operating system timezone. You can pass as parameter a **TimeZone** or **String**. Look some examples:
 
 	Time.zone = 'Hawaii'
 	Time.utc(2000).in_time_zone
@@ -29,9 +29,9 @@ Este método é similar ao **Time#localtime**, exceto pelo fato de que usa o **T
 
 ### Time#days\_in\_month
 
-Foi corrigido um bug no método **days\_in\_month** que informava o número de dias no mês de fevereiro de forma errônea quando o ano não era informado. 
+It was fixed a bug in the method **days\_in\_month** which was returning the number of days of february in a erroneous form when year wasn't specified. 
 
-A alteração consiste em usar o ano corrente quando não se informa um ano ao chamar o método. Supondo que você esteja em um ano bissexto, veja:
+Changes comprise in using the current year as default when not specifying a year in method call. Supposing you are in a leap year, look the example:
 
 	Loading development environment (Rails 2.0.2)
 	>> Time.days_in_month(2)
@@ -43,8 +43,8 @@ A alteração consiste em usar o ano corrente quando não se informa um ano ao c
 
 ### DateTime#to_f
 
-A classe **DateTime** ganhou um novo método o **to_f** que retorna a data como um ponto flutuante que representa a quantidade de segundos desde o Unix epoch (época Unix). Isto é, a quantidade de segundos desde 1 de janeiro de 1970 às zero hora.
+**DateTime** class received a new method called **to_f** which returns the date as float number representing the number of seconds since Unix epoch. It means, the total of seconds since january 1st of 1970 at midnight.
 
 ### Date.current
 
-A classe **Date** ganhou um método **current** que deve ser usado com substituto do **Date.today**, pois leva em conta o fuso-horário caso o **config.time\_zone** tenha sido configurado, retornando um **Time.zone.today**. Caso não tenha sido configurado ele retornará um **Date.today**.
+**Date** class received a new method called **current** which must be used in substitution of **Date.today**, because it considers the timezone set in **config.time\_zone** if it has been configured, returning a **Time.zone.today**. If it hasn't been configured  it returns a **Date.today**.

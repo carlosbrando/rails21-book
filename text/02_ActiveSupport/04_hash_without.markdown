@@ -1,6 +1,6 @@
 ## Hash#without
 
-Conhece o método **slice** que o Rails acrescenta ao objeto **Hash**? O método **slice** é muito útil em diversas ocasiões. Veja um exemplo:
+Do you know **slice** method which Rails adds to the **Hash** object? **slice** method is very useful in many situations. Look an example:
 
 	def search(criteria = {})
 	  assert_valid_keys(:mass, :velocity, :time)
@@ -8,10 +8,10 @@ Conhece o método **slice** que o Rails acrescenta ao objeto **Hash**? O método
 
 	search(options.slice(:mass, :velocity, :time))
 
-Meu método **search** espera um **Hash** com as chaves **:mass**, **:velocity** e **:time**, se eu passar mais uma chave dentro do **Hash** o método **assert\_valid\_keys** irá retornar um **ArgumentError**. Para evitar este problema eu estou usando o método **slice** para que apenas as chaves corretas sejam passadas para o método.
+My **search** method waits for a **Hash** with they keys **:mass**, **:velocity** and **:time**, if I give one more key inside the **Hash**, **assert\_valid\_keys** method will return an **ArgumentError**. To avoid this problem, I'm using the **slice** method  so only the correct keys will be given to the method.
 
-É isto que o método **slice** faz, ele retorna um **Hash** apenas com as chaves informadas.
+That's what **slice** method does, it returns a **Hash** with only the given keys.
 
-No Rails 2.1 temos um método inverso ao **slice**, o método **without** que retorna um **Hash** sem as chaves informadas.
+In Rails 2.1 we have a reverse method for **slice**, **without** method which returns a **Hash** without the given keys.
 
 	Event.new(event.attributes.without(:id, :user_id))

@@ -1,13 +1,12 @@
-##Removendo espaços em branco com o método squish
+##Removing whitespaces with squish method
 
-Dois novos métodos foram acrescentados ao objeto **String**, o **squish** e o **squish!**.
+Two new methods added to the **String** object, **squish** and **squish!**.
 
-Estes métodos fazem o mesmo que o método **strip**, removendo espaços em branco do inicio e fim do texto, mas além disso também arrumam casos onde no meio do texto temos mais de um espaço deixando com apenas um.
+These methods do the same as **strip** method, removing white spaces from the beginning and ending of the text, but it goes beyond, also removing unused white spaces (more than one white space) from the middle of the text
+Look the example:
 
-Veja um exemplo:
+	“    A    text    full    of     spaces    “.strip
+	#=> “A    text    full    of     spaces”
 
-	“    Um    texto    cheio    de     espaços    “.strip
-	#=> “Um    texto    cheio    de     espaços”
-
-	“    Um    texto    cheio    de     espaços    “.squish
-	#=> “Um texto cheio de espaços”
+	“    A    text    full    of     spaces    “.squish
+	#=> “A text full of spaces”

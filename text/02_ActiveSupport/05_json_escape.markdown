@@ -1,14 +1,14 @@
 ## JSON escape
 
-O método **json\_escape** funciona como o **html\_escape**. É muito útil para quem precisa exibir strings **JSON** em uma página **HTML**, como no caso de uma documentação, por exemplo.
+**json\_escape** method works like **html\_escape**. It's very useful when we need to show **JSON** strings in a **HTML** page, for example, in a documentation process.
 
 	puts json_escape("is a > 0 & a < 10?")
 	# => is a \u003E 0 \u0026 a \u003C 10?
 
-Também podemos usar o atalho **j** no ERB:
+We can also use the shortcut **j** when in ERB:
 
 	<%= j @person.to_json %>
 
-Se quiser que todo o código **JSON** seja "escapado" por padrão, incluía a seguinte linha no seu arquivo *environment.rb*:
+If you want all **JSON** code to be 'escaped' by default, include the following line in your *environment.rb* file:
 
 	ActiveSupport.escape_html_entities_in_json = true
