@@ -1,8 +1,8 @@
 ## Named_scope
-
-O gem *has\_finder* foi incorporado ao Rails, mas com um nome diferente: **named\_scope**.
-
-Para entender o que isto acrescentou de novo ao Rails veja os exemplos abaixo:
+              
+The *has\_finder* gem has been added to Rails with a different name: **named\_scope**.
+                       
+To fully understand what this adition brought to Rails let's look at the following examples:
 
 	class Article < ActiveRecord::Base
 	  named_scope :published, :conditions => {:published => true}
@@ -13,8 +13,8 @@ Para entender o que isto acrescentou de novo ao Rails veja os exemplos abaixo:
 	Article.published.containing_the_letter_a.count
 	Article.containing_the_letter_a.find(:first)
 	Article.containing_the_letter_a.find(:all, :conditions => {…})
-
-Ao invés de criar um método **published** para retornar os posts já publicados, estou usando o **named\_scope** para fazer isto. Mas o método é um pouco mais robusto do que isto. Veja mais alguns exemplos de como ele pode ser usado:
+ 
+Instead of creating a new method named **published** to return all published posts, I'm using a **named\_scope** to do it for me. But it can go even further than this. Let's look at another example of how it can be used:
 
 	named_scope :written_before, lambda { |time|
 	  { :conditions => ['written_on < ?', time] }
@@ -31,11 +31,11 @@ Ao invés de criar um método **published** para retornar os posts já publicado
 	named_scope :multiple_extensions, 
 		:extend => [MultipleExtensionTwo, MultipleExtensionOne]
 
-## Testando named\_scope com proxy\_options
+## Testing named\_scope with proxy\_options 
+                                                                                 
+**Named scopes** is a very interesting new feature for Rails 2.1, but after using it awhile you might have a hard time creating tests for more complex situations.
 
-**Named scopes** é uma novidade muito interessante no Rails 2.1, mas após usar por um tempo este recurso, você pode descobrir que criar testes para estruturas mais complexas pode ser muito díficil.
-
-Vamos pegar um exemplo:
+Let's look at an example:
 
 		class Shirt < ActiveRecord::Base
 		  named_scope :colored, lambda { |color|
@@ -43,9 +43,9 @@ Vamos pegar um exemplo:
 		  }
 		end
 
-Como criar um teste que valide a geração correta do escopo?
+How to create a test that validates the generation of the scope ?
 
-Para facilitar isto foi criado o método **proxy\_options**, que permite examinar as opções que estão sendo usadas no **named\_scope**. Para testar o exemplo acima, poderíamos fazer assim:
+To solve this issue, the method **proxy\_options** was created. It allows us to examine the options used in **named_scope**. To test the code above we could write:
 
 		class ShirtTest < Test::Unit
 		  def test_colored_scope

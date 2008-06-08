@@ -1,9 +1,9 @@
-## Opcional :select no has\_one e belongs\_to
+## Option :select in has\_one and belongs\_to
 
-Os famosos métodos **has\_one** e **belongs\_to** acabam de receber mais uma opção, o já conhecido **:select**.
+The already known methods **has\_one** and **belongs\_to** just got a now option: **:select**.
 
-Por padrão esta opção é o "*" do **SELECT * FROM**, mas você pode mudar isto e recuperar somente as colunas que serão usadas, ou o que sua imaginação inventar.
+Its default value is "*" (as in "SELECT * FROM table"), but you can edit it to retrieve only the columns you are going to be using.
+     
+Don't forget to include the **primary** and **foreign keys**, otherwise you will get an error.
 
-Só um detalhe, não esqueça de colocar a **primary** e as **foreign keys**, senão você terá um lindo erro.
-
-Outra alteração é que a opção **:order** do **belongs\_to** foi removida. Mas não se preocupe, porque ela nem servia para nada mesmo.
+The **belongs_to** method does not have the option **:order** anymore. But don't worry, because it didn't really have a use.

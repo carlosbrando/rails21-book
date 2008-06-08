@@ -1,24 +1,24 @@
 ## change\_table
+        
+The creation of **migrations** in Rails 2.0 was a lot sexier than on previous verions, but to alter a table using **migrations** was not sexy at all.
 
-Criar **migrations** ficou muito mais sexy depois do lançamento do Rails 2.0, mas alterar uma tabela usando **migrations** continuou sendo da forma antiga, nada sexy.
-
-No Rails 2.1, alterar uma tabela também é sexy, com o novo método **change\_table**. Veja um exemplo:
+In Rails 2.1, alter table became also sexy with the new method **change\_table**. Let's take a look at an example:
 
 	change_table :videos do |t|
-	  t.timestamps # adiciona as colunas created_at e updated_at
-	  t.belongs_to :goat # adiciona a coluna goat_id (integer)
-	  t.string :name, :email, :limit => 20 # adiciona duas colunas: name e email
-	  t.remove :name, :email # remove as colunhas name e email
+	  t.timestamps # this adds columns created_at and updated_at
+	  t.belongs_to :goat # this adds column goat_id (integer)
+	  t.string :name, :email, :limit => 20 # this adds columns name and email
+	  t.remove :name, :email # this removes columns name and email
 	end
-
-Funciona como o **create\_table**, mas ao invés de criar uma nova tabela, apenas altera uma tabela existente, adicionando ou removendo colunas e índices. Veja uma lista das opções existentes:
+              
+The new method **change\_table** works just like his cousin **create\_table** but instead of creating a new table it just alters an already existing table by adding or removing columns and indexes.
 
 	change_table :table do |t|
 	  t.column # cria uma coluna simples. Ex: t.column(:name, :string)
-	  t.index # Adiciona um novo índice à tabela
+	  t.index # Adiciona um novo �ndice � tabela
 	  t.timestamps
-	  t.change # muda a definição da coluna. Ex: t.change(:name, :string, :limit => 80)
-	  t.change_default # muda o valor padrão da coluna.
+	  t.change # muda a defini��o da coluna. Ex: t.change(:name, :string, :limit => 80)
+	  t.change_default # muda o valor padr�o da coluna.
 	  t.rename # muda o nome da coluna
 	  t.references
 	  t.belongs_to

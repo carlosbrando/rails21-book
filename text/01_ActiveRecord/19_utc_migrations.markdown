@@ -1,24 +1,24 @@
 ## Timestamped Migrations
+              
+When you are just studying Rails or developing something on your own, **migrations** seem to be the best solution to all of your problems. However, when you are part of a team working on a project and have everyone creating **migrations**, you will find out (if you haven't already) that it simply does not work. This was before Rails 2.1.
 
-Quando se está estudando Rails ou desenvolvendo algo sozinho, **migrations** parecem ser a solução para todos os problemas. Mas quando se tem uma equipe trabalhando no mesmo projeto e todo mundo criando **migrations** ao mesmo tempo, você descobrirá (ou já descobriu) que **migrations** simplesmente não funcionam, pelo menos nas versões anteriores do Rails.
+When you created a **migration**, it had a number associated with it. But what happened when two people created a **migration** at the same time or, even worse, when many people started creating **migrations** and only commited later in the day ? You would end up with a bunch of **migrations** sharing the same number but different code. Conflict!
+        
+There were many ways to "try" to solve this problem. Many plugins were created with different approaches to solve this issue. Despite the plugins available, one thing was clear: the old way simply didn't work.     
 
-O problema é que quando se criava uma **migration**, ela recebia um número. Mas o que acontecia se duas pessoas criassem uma **migration** ao mesmo tempo, ou pior ainda, se várias pessoas começassem a criar **migrations** e só dessem commit depois? Você tinha um monte de **migrations** com o mesmo número com códigos diferentes. Conflito!
+If you were using Git, then you would be digging an even deeper hole, since your team would probably have a couple of work branches and have **migrations** in all of them. You would have serious conflict problems when merging branches.
+                 
+To solve this huge problem, the coreteam changed how **migration** works in Rails so it will not be referred to as a number anymore, but as a string base on the **UTC** time and following the format YYYYMMDDHHMMSS.
 
-Já existia várias formas de "tentar" solucionar isto. Havía alguns plugins com abordagens diferentes para resolver este impasse. Mas independente do plugin ou abordagem que você usesse, uma coisa fica bem clara, a forma antiga simplesmente não funcionava.
+Also a new table called **schema_migrations** was created and it stores which **migrations** have already been invoked. That way, if anyone creates a **migration** with a smaller number, rails will **rollback** migrations until the previous version and then run everything up to the current version.
 
-Se você estivesse usando Git isto é pior ainda, porque provavelmente sua equipe teria alguns branches de trabalho e poderiam criar **migrations** em todos eles, e você teria os mesmo conflitos na hora de fazer o merge.
+Apparently, it solves the conflict problem with **migrations**.
 
-Por isto, o coreteam alterou a criação de migrations no Rails para usar não mais um número, mas uma string baseada na hora **UTC** no formato: YYYYMMDDHHMMSS.
-
-Além disso foi criada uma nova tabela chamada **schema_migrations** que armazena quais **migrations** já foram executadas. Assim, se alguém criar uma migration com um número menor, será feito um **rollback** até a versão anterior e depois executado tudo de novo até a versão corrente.
-
-Aparentemente isto resolve o problema de conflito de **migrations**.
-
-Se você quiser, pode desligar esta funcionalidade incluindo esta linha no arquivo environment.rb:
+There is an option to disable this feature by including the following line in **environment.rb**:
 
 	config.active_record.timestamped_migrations = false
 
-Também foram criadas novas tarefas rake para "andar" pelos **migrations**:
+There are also new rake tasks to "walk through" **migrations**:
 
 	rake db:migrate:up
 	rake db:migrate:down
