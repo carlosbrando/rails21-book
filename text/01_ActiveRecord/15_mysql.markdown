@@ -17,17 +17,17 @@ Now let's map it in a **migration** file and see what column type will be create
 
 	create_table :table_name, :force => true do |t|
 
-	  # de 0 à 3: smallint
+	  # 0 - 3: smallint
 	  t.integer :coluna1, :limit => 2 # smallint(2)
 
-	  # de 4 à 8: int
+	  # 4 - 8: int
 	  t.integer :coluna2, :limit => 6 # int(6)
 
-	  # de 9 à 20: bigint
+	  # 9 - 20: bigint
 	  t.integer :coluna3, :limit => 15 # bigint(15)
 
-	  # se a opção :limit não for informada: int(11)
+	  # if :limit is not informed: int(11)
 	  t.integer :coluna4 # int(11)
 	end
       
-The **PostgreSQL** adapter had this feature already, and **MySQL** just caught up.
+The **PostgreSQL** adapter had this feature already and **MySQL** just caught up.
