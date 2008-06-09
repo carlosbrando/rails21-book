@@ -6,7 +6,7 @@ Now, any gem that has a **rails/init.rb** file can be installed inside the **ven
 
 ### Using generators in plugins
 
-It's possible to configure **Rails** to search for **plugins** in toher places then the **vendor/plugins** directory, just including this line of code in your **environment.rb**.
+It's possible to configure **Rails** to search for **plugins** in another places then the **vendor/plugins** directory, just including this line of code in your **environment.rb**.
 
 	config.plugin_paths = ['lib/plugins', 'vendor/plugins']
 	
