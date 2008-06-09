@@ -1,3 +1,3 @@
 # ActionController
-ActionController is the responsible layer by receiving web requests and taking decisions of what is going to be run and rendered or to redirect the request to another action.
+ActionController is the layer responsible by receiving web requests and taking decisions of what is going to be run and rendered or to redirect the request to another action.
 An Action is defined as public methods within controllers which are automatically available through routes.

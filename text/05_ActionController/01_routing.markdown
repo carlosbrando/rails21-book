@@ -3,12 +3,12 @@
 ### Map.root
 Now, when using **map.root** you can be more **DRY** using an alias for that.
 
-In the earlier versions of rails you used to do like this:
+In the earlier versions of rails you used to do it like this:
 
 	map.new_session :controller => 'sessions', :action => 'new'
 	map.root :controller => 'sessions', :action => 'new'
 	
-Now you can do this way:
+Now you can do it this way:
 
 	map.new_session :controller => 'sessions', :action => 'new'
 	map.root :new_session
