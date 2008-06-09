@@ -6,7 +6,7 @@ Since we can now track down what has changed in an object state, why not use it 
   
 On previous versions of Rails when we called **save** from an already existing **ActiveRecord** object, all of its fields would be updated in the database. Even the ones that had not suffered any change.
 
-This action could be greatly enhanced with the use of **Dirty Objects** and it is exactly what happened. Take a loot at the SQL query generated in Rails 2.1 when trying to save an object that suffered a slight change: 
+This action could be greatly enhanced with the use of **Dirty Objects** and it is exactly what happened. Take a look at the SQL query generated in Rails 2.1 when trying to save an object that suffered a slight change: 
 
 	article = Article.find(:first)
 	article.title  #=> "Title"
@@ -19,7 +19,7 @@ This action could be greatly enhanced with the use of **Dirty Objects** and it i
 	article.save
 	#=>  "UPDATE articles SET title = 'New Title’ WHERE id = 1″
            
-Notice how only the fields that were changed in the application were also update in the database. If no field had been updated in the application, then **ActiveRecord** would not execute any update.
+Notice how only the fields that were changed in the application were also updated in the database. If no field had been updated in the application, then **ActiveRecord** would not execute any update.
                                 
 To enable/disable this new feature you change the **partial\_updates** property related to your model.
 

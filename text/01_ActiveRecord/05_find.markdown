@@ -18,7 +18,7 @@ In this case, you can pass an instance of **Money** as a parameter to the **find
            
 Up to now we could only use three operators to look for data using **ActiveRecord**'s **find** method. These are: **:first**, **:all** and the object's own id (in this case whe don't pass any argument to **find** besides the id itself)
 
-In Rails 2.1 there is a forth operator named **:last**. A few examples:
+In Rails 2.1 there is a fourth operator named **:last**. A few examples:
 
 	Person.find(:last)
 	Person.find(:last, :conditions => [ "user_name = ?", user_name])
