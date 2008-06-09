@@ -1,6 +1,6 @@
 ##Mime Types
 
-Foi corrigido um bug que não permitia determinar o mime type atribuido ao **request.formt** usando um símbolo. Agora o código abaixo já pode ser utilizado:
+It was fixed a bug which doesn't allowed to define the assigned attribute for **request.format** using a symbol. Now, we can use the code bellow:
 
 	request.format = :iphone
 	assert_equal :iphone, request.format

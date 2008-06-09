@@ -1,9 +1,9 @@
-## Definindo a localização de seu arquivo de rotas
+## Defining the location of your routes file
 
-No Rails 2.1 você pode definir em que arquivo estão suas rotas incluindo a seguinte linha no seu arquivo *environment.rb*:
+In rails 2.1 you can define in which file your routes are stored, including the following line in your *enviroment.rb*:
 
 	config.routes_configuration_file
 
-Isto pode ser útil em um cenário onde você tem dois front-ends separados que usam os mesmos módulos, bibliotecas e plugins.
+This can be useful in a scenario where you can have two separated front-ends that share the same modules, libraries and plugins.
 
-Por exemplo, getsatisfaction.com e api.getsatisfaction.com compartilham os mesmos modelos, mas não os controllers, helpers e views. getsatisfaction.com tem o seu arquivo de rotas com otimizações para melhorar o seu SEO, enquanto o arquivo de rotas da API não precisaria de nada disto.
+For example, getsatisfaction.com and api.getsatisfaction.com shares the same models, but not the controllers, helpers and views. getsatisfaction has its own routes file with optimizations to improve its SEO, while the API route's file doesn't need nothing about SEO improvments.
