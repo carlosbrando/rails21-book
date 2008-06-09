@@ -1,10 +1,10 @@
-#Introdução
+#Introduction
 
-Por volta do mês de julho de 2004 David Heinemeier Hansson lançou publicamente o framework Ruby on Rails, que havia sido extraído de um software chamado Basecamp. Mais de três anos depois, no dia 7 de dezembro de 2007 o Ruby on Rails chegou a sua versão 2.0 com diversas alterações importantes.
+Around July of 2004 David Heinemeier Hansson publicly release the Ruby on Rails framework, that had been extracted from a software called Basecamp. More than three years later, on the 7th of december 2007 Ruby on Rails got into its 2.0 version with many important changes.
 
-De lá para cá se passaram seis meses, e neste tempo mais de **1400 programadores** do mundo todo contribuiram criando **1600 patches**. E hoje, 1 de junho de 2008 o Ruby on Rails chega à sua versão 2.1.
+Six months has passed since that time, and during this time more than **1400 developers** from all around the world contributed **1600 patches**. And today, 1st of June 2008, Ruby on Rails gets to its 2.1 version.
 
-De acordo com David as principais novidades nesta versão são:
+According to David the major new features are:
 
 * Timezones
 * Dirty tracking
@@ -13,14 +13,14 @@ De acordo com David as principais novidades nesta versão são:
 * UTC-based migrations
 * Better caching
 
-Para atualizar ou instalar a nova versão, é o de sempre:
+As always, to update or install the new version:
 
 	gem install rails
 
-##Agradecimentos
+##Acknowledgment
 
-Ao Marcos Tapajós que é o co-autor deste livro. Se não fosse por ele acho que você não estaria lendo isto.
+To Marcos Tapajós the co-author of this book. If it wasn't for him, I think you wouldn't be reading this.
 
-Ao Daniel Lopes que fez uma linda capa para esta edição.
+To Daniel Lopes that made this beautiful cover for this edition.
 
-A toda a comunidade brasileira de Ruby on Rails que colaborou direta ou indiretamente com este livro, comentando os textos no blog e dando sugestões. É como sempre costumo dizer, o melhor do Rails é a comunidade! Continuem criando, inventando e principalmente compartilhando...
+To all of the Ruby on Rails brazillian comunity that helped direct or indirectly with this book, commenting on the blog posts and giving suggestions. It's like I always say, the best of Rails is its community! Keep creating, inventing, and principally sharing...
