@@ -61,7 +61,7 @@ a { text-decoration: none; color: black }
 /* cross-references */
 
 a.pageref::after { content: " on page " target-counter(attr(href), page); }
-a.chapref::before { content: " Capítulo " target-counter(attr(href), chapter) ", "; }
+a.chapref::before { content: " Chapter " target-counter(attr(href), chapter) ", "; }
 a.figref { content: " Figure " target-counter(attr(href), figure); }
 a.tableref { content: " Table " target-counter(attr(href), figure); }
 
@@ -162,7 +162,7 @@ table.lined td, table.lined th {
 @page :left {
   @top-left {
     font: 11pt "Gill Sans", serif;
-    content: "Ruby on Rails 2.1 - O que há de novo?";
+    content: "Ruby on Rails 2.1 - What's New";
     vertical-align: bottom;
     padding-bottom: 2em;
   }
@@ -409,7 +409,7 @@ ul.toc > li.endmatter a::after {
   font-style: normal;
 }
 ul.toc > li.chapter::before {
-  content: "Capítulo " counter(toc-chapter, decimal);
+  content: "Chapter " counter(toc-chapter, decimal);
   display: block;
   margin: 1em 0 0.1em -2.5cm;
   font-weight: normal;
@@ -428,14 +428,14 @@ h1::before {
   content: "\B0  \B0  \B0  \B0  \B0 \A";  /* ornaments */
 }
 
-div.chapter h1::before { content: "Capítulo " counter(chapter) " \A"; }
+div.chapter h1::before { content: "Chapter " counter(chapter) " \A"; }
 
 div.frontcover h1::before, div.titlepage h1::before, div.halftitlepage h1::before {
   content: normal;                  /* that is, none */
 }
 
 h1 { string-set: header content();}
-div.chapter h1 { string-set: header "Capítulo " counter(chapter) ": " content(); }
+div.chapter h1 { string-set: header "Chapter " counter(chapter) ": " content(); }
 
 /* index */
 
