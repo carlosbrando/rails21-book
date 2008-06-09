@@ -1,6 +1,6 @@
 ## Timeouts
 
-ActiveResource ueses **HTTP** to access RESTful API's and because this fact is susceptible to problems of server slow responses or non-working servers. In some cases, its calls to ActiveResource can expire (timeout). Now you can have control of expiration time with the timeout property.
+ActiveResource uses **HTTP** to access RESTful API's and because this fact is susceptible to problems of server slow responses or non-working servers. In some cases, its calls to ActiveResource can expire (timeout). Now you can have control of expiration time with the timeout property.
 
 	class Person < ActiveResource::Base
 	  self.site = "http://api.people.com:3000/"
