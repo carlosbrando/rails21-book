@@ -1,12 +1,12 @@
-## O método clone
+## The clone method
 
-Agora poderemos clonar um resource existente da seguinte forma:
+Now we can clone an existing resource:
 
 	ryan = Person.find(1)
 	not_ryan = ryan.clone
 	not_ryan.new?  # => true
 
-Só vale tomar nota que a cópia não clona nenhum atributo da classe, apenas os atributos do resource.
+Please note the copied object doesn't clone any of the class attributes, just the resource attributes.
 
 	ryan = Person.find(1)
 	ryan.address = StreetAddress.find(1, :person_id => ryan.id)
