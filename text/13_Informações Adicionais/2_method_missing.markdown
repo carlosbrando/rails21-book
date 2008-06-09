@@ -1,56 +1,56 @@
-## Usou o method\_missing, então não deixe pontas soltas
+## Used method\_missing, then don't leave loose ends
 
-Devido a natureza dinâmica do Ruby, o método **respond\_to?** é crucial. Quantas vezes não precisamos checar se um método existe no objeto que estamos manipulando, ou mesmo verificar se o objeto é mesmo aquele que estamos esperando (**is\_a?**)?
+Due to Ruby's dynamic nature, the method **respond\_to?** is crucial. How many times we had to check if a method exists in the object we're dealing with, or even check if the object is the same that we are expecting (**is\_a?**)?
 
-Porém tem algo muito importante que muita gente se esquece. Veja por exemplo esta minha classe que faz uso do método **method\_missing**:
+However there's something really important that many people forget. Look at this class that uses the method **method\_missing**:
 
-	class Cachorro
+	class Dog
 	  def method_missing(method, *args, &block)
-	    if method.to_s =~ /^latir/
-	      puts "auau!"
+	    if method.to_s =~ /^bark/
+	      puts "woofwoof!"
 	    else
 	      super
 	    end
 	  end
 	end
 
-	rex = Cachorro.new
-	rex.latir #=> auau!
-	rex.latir! #=> auau!
-	rex.latir_e_correr #=> auau!
+	rex = Dog.new
+	rex.bark #=> woofwof!
+	rex.bark! #=> woofwoof!
+	rex.bark_and_run #=> woofwoof!
 
-Acho que você já deve conhecer o **method\_missing**, não? Veja que no exemplo acima eu estou criando uma instância da classe **Cachorro** e chamando os métodos **latir**, **latir!** e **latir\_e\_correr** que não existem. Por isto o método **method\_missing** é disparado, onde eu uso uma expressão regular simples para retornar "auau!" caso o nome do método comece com a expressão latir.
+I think you already know **method\_missing**, don't you? In the example above I'm creating an instance of the class **Dog** and calling the methods **bark**, **bark!** e **bark\_and\_run** that don't exist. Therefore the method **method\_missing** is called, where I use a simple regular expression to return "woofwoof!", when the name of the method begins with bark.
 
-Mas veja o que acontece quando tento usar o método **respond\_to?**:
+But look what happens when I try to use the method **respond\_to?**:
 
-	rex.respond_to? :latir #=> false
-	rex.latir #=> auau!
+	rex.respond_to? :bark #=> false
+	rex.bark #=> woofwoof!
 
-Ele retorna false, e isto faz todo o sentido já que o método realmente não existe. Então fica na minha responsabilidade alterar o método **respond\_to?** para que ele funcione direito usando esta minha regra especial. Vou alterar minha classe para isto:
+It returns false, and that makes all sense since the method doesn't really exist. Then it's my responsibility to change the method **respond\_to?** to work properly using my special rule. I'll change my class to this:
 
-	class Cachorro
-	  METODO_LATIR = /^latir/
+	class Dog
+	  METHOD_BARK = /^bark/
 
 	  def respond_to?(method)
-	    return true if method.to_s =~ METODO_LATIR
+	    return true if method.to_s =~ METHOD_BARK
 	    super
 	  end
 
 	  def method_missing(method, *args, &block)
-	    if method.to_s =~ METODO_LATIR
-	      puts "auau!"
+	    if method.to_s =~ METHOD_BARK
+	      puts "woofwoof!"
 	    else
 	      super
 	    end
 	  end
 	end
 
-	rex = Cachorro.new
-	rex.respond_to?(:latir) #=> true
-	rex.latir #=> auau!
+	rex = Dog.new
+	rex.respond_to?(:bark) #=> true
+	rex.bark #=> woofwoof!
 
-Agora sim! Este é um erro comum que tenho visto em alguns códigos, inclusive no próprio Rails, tente executar um **respond\_to?** para verificar a existência de métodos como **find\_by\_name**, por exemplo.
+Now we're talking! This is a common mistake that I've seen in some codes, Rails itself included, try to execute a  **respond\_to?** to check the existence of methods like **find\_by\_name**, for example.
 
-Ruby é uma linguagem impressionante e flexível ao máximo, mas se não tomarmos cuidado podemos deixar pontas soltas como esta.
+Ruby is an amazing and highly flexible language, but if we don't watch it we can leave loose ends like this.
 
-Claro que no Rails 2.1 corrigiram este problema, poderemos usar o **respond\_to?** para verificar a existência de métodos como o **find\_by\_alguma\_coisa**.
+Of course that in Rails 2.1 this problem was fixed, we can use **respond\_to?** to check the existence of methods like **find\_by\_something**.
