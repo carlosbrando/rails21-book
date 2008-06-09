@@ -1,6 +1,6 @@
 ## config.gem
 
-Now it's possible to configure all necessary gems to get a project running by using a new feature called **config.gem**. In  **environment.rb** file you can specify which gems your project depends for run. Look the example:
+Now it's possible to configure all necessary gems to get a project running by using a new feature called **config.gem**. In  **environment.rb** file you can specify which gems your project depends to run. Look at the example:
 
 	config.gem "bj" 
 

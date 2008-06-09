@@ -1,6 +1,6 @@
 ##Getting information about a plugin
 
-This is one of the new Rails 2.0 features which you probably never use it. I say "probably", because in some very specific case it can be useful, for example, to know plugin version.
+This is one of the new Rails 2.0 features which you probably never used. I say "probably", because in some very specific cases it can be useful, for example, to know a plugin version.
 
 To test it, we need to create a new file called *about.yml* in the plugin directory, something like this:
 
