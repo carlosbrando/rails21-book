@@ -2,7 +2,7 @@
 
 ### Expressions in the **sum** method
             
-Now we can use expressions in **ActiveRecord** methods that deal with calculation, like for example **sum**:
+Now we can use expressions in **ActiveRecord** methods that deal with calculation, like **sum**, for example:
 
 	Person.sum("2 * age")
 

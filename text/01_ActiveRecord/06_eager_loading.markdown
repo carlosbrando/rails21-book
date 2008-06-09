@@ -26,7 +26,7 @@ This search used to generate SQL queries like this:
 
 Exactly one long SQL query with **joins** between tables **authors**, **posts** and **comments**. We call this **cartesian product**.	
 
-This type of query is not always good performance wise, so it was changed for Rails 2.1. The same query for **Author** class now uses a different approach to retrieve information from all three tables. Instead of using one SQL query with all three tables, Rails now uses three different queries - one for each table - which are shorter queries than the former that used to be generated. The result can be seen in the log after executing the previous ruby on rails code:
+This type of query is not always good performance-wise, so it was changed for Rails 2.1. The same query for **Author** class now uses a different approach to retrieve information from all three tables. Instead of using one SQL query with all three tables, Rails now uses three different queries - one for each table - which are shorter queries than the former that used to be generated. The result can be seen in the log after executing the previous ruby on rails code:
 
 	SELECT * FROM "authors"
 	SELECT posts.* FROM "posts" WHERE (posts.author_id IN (1))
