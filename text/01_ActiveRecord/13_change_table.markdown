@@ -14,12 +14,12 @@ In Rails 2.1, alter table became also sexy with the new method **change\_table**
 The new method **change\_table** works just like his cousin **create\_table** but instead of creating a new table it just alters an already existing table by adding or removing columns and indexes.
 
 	change_table :table do |t|
-	  t.column # cria uma coluna simples. Ex: t.column(:name, :string)
-	  t.index # Adiciona um novo índice à tabela
+	  t.column # adds an ordinary column. Ex: t.column(:name, :string)
+	  t.index # adds a new index.
 	  t.timestamps
-	  t.change # muda a definição da coluna. Ex: t.change(:name, :string, :limit => 80)
-	  t.change_default # muda o valor padrão da coluna.
-	  t.rename # muda o nome da coluna
+	  t.change # changes the column definition. Ex: t.change(:name, :string, :limit => 80)
+	  t.change_default # changes the column default value.
+	  t.rename # changes the name of the column.
 	  t.references
 	  t.belongs_to
 	  t.string
