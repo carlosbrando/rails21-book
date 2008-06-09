@@ -1,6 +1,6 @@
 ## Plugins
 
-### Gems can be plugins
+### Gems can now be plugins
 
 Now, any gem that has a **rails/init.rb** file can be installed inside the **vendor** directory of your Rails project just like a **plugin**.
 
