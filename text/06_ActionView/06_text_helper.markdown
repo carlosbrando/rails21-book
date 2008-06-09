@@ -14,9 +14,9 @@ But the problem it was bugged. If you count, you'll see the method returned 6 ch
 	
 ###simple\_format
 
-The **simple\_format** method basically receives as a parameter any text and formats it in a simple way to **HTML**. It takes the takes the text and replaces line breaks (\n) by **HTML** tag "< br />". And when we have two line breaks one after other  (\n\n)  it separates the text in paragraphs using "< p>"tag.
+The **simple\_format** method basically receives as a parameter any text and formats it in a simple way to **HTML**. It takes the text and replaces line breaks (\n) by **HTML** tag "< br />". And when we have two line breaks one after other  (\n\n)  it separates the text in paragraphs using "< p>"tag.
 
-In Rails 2.1 this method received an additional parameter. Besides text, we are going to be able to inform which **HTML** attributes we would like "< p>" tag had.Look the examples:
+In Rails 2.1 this method received an additional parameter. Besides text, we are going to be able to inform which **HTML** attributes we would like "< p>" tag had. Look the examples:
 
 	simple_format("Hello Mom!", :class => 'description')
 	# => "<p class=’description’>Hello Mom!</p>"
