@@ -2,12 +2,12 @@
 
 ### plugin
 
-O comando script/plugin install agora permite o uso da opção –e/--export, para que ele use um svn export. 
-Foi adicionado o suporte a plugins hospedados em repositórios GIT.
+The command script/plugin install now allows the use of –e/--export option, so that it issues a svn export. 
+Added support for plugins hosted in GIT repositories.
 
 
 ### dbconsole
 
-Esse script faz a mesma coisa que o script/console mas para o banco de dados. Em outras palavras ele entra no cliente de linha de comandos do banco de dados.
+This script does the same thig as script/console but for your database. In other words it connects to the command line client of your database.
 
-Analisando o código, aparentemente isto só vai funcionar para bancos de dados mysql, postgresql, sqlite(3). Quando um banco diferente estiver configurado no arquivo database.yml e este comando for executado, a mensagem "not supported for this database type" será exibida no terminal.
+Looking at the code, this apparently will only work for mysql, postgresql and sqlite(3). When another database is configured in database.yml, this script will show: "not supported for this database type".

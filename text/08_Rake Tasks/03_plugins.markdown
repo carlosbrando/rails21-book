@@ -1,13 +1,13 @@
 ## Plugins
 
-### Gems podem ser plugins
+### Gems can be plugins
 
-Agora, qualquer gem que possua um arquivo **rails/init.rb** na sua árvore de diretório pode ser instalado dentro do diretório **vendor** do seu projeto Rails como se fosse um **plugin**.
+Now, any gem that has a **rails/init.rb** file can be installed inside the **vendor** directory of your Rails project just like a **plugin**.
 
-### Usando generators em plugins
+### Using generators in plugins
 
-É possível configurar o **Rails** para procurar por **plugins** em outro lugar diferente do diretório **vendor/plugins**, apenas incluindo uma linha de código no arquivo **environment.rb**.
+It's possible to configure **Rails** to search for **plugins** in toher places then the **vendor/plugins** directory, just including this line of code in your **environment.rb**.
 
 	config.plugin_paths = ['lib/plugins', 'vendor/plugins']
 	
-Porém na versão 2.0 do Rails, havia um bug com esta configuração que se manifestava quando o plugin tinha generators. Por causa desse bug o Rails só encontrava generators em plugins que estivessem no diretório **vendor/plugins**. Na versão 2.1 esse bug foi corrigido.
+Rails 2.0, however, had a bug in this configuration that showed up when the plugin had generators. Because of that bug Rails only found generators in plugins that were inside the **vendor/plugins** directory. In 2.1 this bug was squashed.

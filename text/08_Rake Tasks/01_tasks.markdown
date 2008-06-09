@@ -2,15 +2,15 @@
 
 ### rails:update
 
-A partir de agora toda vez que se executar a tarefa **rake rails:freeze:edge** também será executado o **rails:update**, atualizando os arquivos de configuração e *JavaScript*.
+From now on everytime you run the task **rake rails:freeze:edge** it will also run **rails:update**, updating the config files and *JavaScripts*.
 
-### Banco de dados em 127.0.0.1
+### Database in 127.0.0.1
 
-Foi feita uma alteração no arquivo databases.rake que antes só considerava um banco de dados local como estando em localhost para considerar também o IP **127.0.0.1**. Isto funciona tanto para a tarefa **create** como para **drop**. O arquivo databases.rake também foi refeito para tornar o código menos repetitivo.
+A change was made in the file databases.rake that used to look only in localhost for local databases, it will now also consider the IP **127.0.0.1**. This works for both **create** and **drop** tasks. The databases.rake file was also refactored to make the code less repetitive.
 
-### Congelando um release específico do Rails
+### Freezing a specific Rails release.
 
-Até ao Rails 2.1 não era possível congelar o Rails em seu projeto pela versão, somente pela revisão. No Rails 2.1, poderemos congelar um release específico com o comando abaixo:
+Until Rails 2.1 it wasn't possible to freeze a specific Rails release inside your project, you could only use its Revision as a parameter. In Rails 2.1, we can freeze a specific release using the command below:
 
 	rake rails:freeze:edge RELEASE=1.2.0
 
@@ -18,12 +18,12 @@ Até ao Rails 2.1 não era possível congelar o Rails em seu projeto pela versã
 
 #### rake time:zones:all
 
-Retorna todos os time zones que o Rails reconhece, agrupados por offset. Você também pode filtrar o retorno usando o parâmetro opcional OFFSET, por exemplo: OFFSET=-6.
+Return all the time zones known to Rails, grouped by offset. You can also filter the return value using the optional parameter OFFSET, for instance: OFFSET=-6.
 
 #### rake time:zones:us
 
-Exibe uma lista com todos os time zones dos USA. A opção OFFSET também vale aqui.
+Shows a list with all US time zones. The OFFSET option is still valid here.
 
 #### rake time:zones:local
 
-Retorna os time zones que o Rails conhece que estão no mesmo offset do seu sistema operacional.
+Return all the time zones known to Rails that are in the same offset of your OS.

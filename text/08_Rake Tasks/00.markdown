@@ -1,1 +1,1 @@
-# Rake Tasks, Plugins e Scripts
+# Rake Tasks, Plugins and Scripts
