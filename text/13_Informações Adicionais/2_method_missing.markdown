@@ -19,7 +19,7 @@ However there's something really important that many people forget. Look at this
 	rex.bark! #=> woofwoof!
 	rex.bark_and_run #=> woofwoof!
 
-I think you already know **method\_missing**, don't you? In the example above I'm creating an instance of the class **Dog** and calling the methods **bark**, **bark!** e **bark\_and\_run** that don't exist. Therefore the method **method\_missing** is called, where I use a simple regular expression to return "woofwoof!", when the name of the method begins with bark.
+I think you already know **method\_missing**, don't you? In the example above I'm creating an instance of the class **Dog** and calling the methods **bark**, **bark!** e **bark\_and\_run** that don't exist. Then the method **method\_missing** is called, where I use a simple regular expression to return "woofwoof!", whenever the name of the method begins with bark.
 
 But look what happens when I try to use the method **respond\_to?**:
 
@@ -49,7 +49,7 @@ It returns false, and that makes all sense since the method doesn't really exist
 	rex.respond_to?(:bark) #=> true
 	rex.bark #=> woofwoof!
 
-Now we're talking! This is a common mistake that I've seen in some codes, Rails itself included, try to execute a  **respond\_to?** to check the existence of methods like **find\_by\_name**, for example.
+Now we're talking! This is a common mistake that I've seen in some codes, Rails itself included. Try to execute a  **respond\_to?** to check the existence of methods like **find\_by\_name**, for example.
 
 Ruby is an amazing and highly flexible language, but if we don't watch it we can leave loose ends like this.
 
