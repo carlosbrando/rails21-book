@@ -29,7 +29,10 @@ To all of the Ruby on Rails brazilian community that helped direct or indirectly
 
 This book was proudly translated to english by these Brazilian guys:
 
-**Pedro Pimentel** - chapters 3-8, 10-13 
+**Pedro Pimentel** - chapters 01-07, 09-12 
  	* http://www.pedropimentel.com/
 	* http://www.workingwithrails.com/recommendation/new/person/9323-pedro-pimentel
 	
+**Rafael Barbosa** - Introduction and chapter 08
+ 	* http://www.act-as-newbie.com/
+	* http://workingwithrails.com/recommendation/new/person/12119-rafael-barbosa-de-oliveira-costa
