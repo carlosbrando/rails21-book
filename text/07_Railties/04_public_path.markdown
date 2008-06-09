@@ -1,5 +1,5 @@
 ## Rails.public\_path
 
-Foi incluído no Rails o atalho **Rails.public\_path** para recuperar o caminho do diretório **"public"** do projeto.
+It was added the **Rails.public\_path** shortcut to recover the path of the project's **"public"** directory.
 
 	Rails.public_path

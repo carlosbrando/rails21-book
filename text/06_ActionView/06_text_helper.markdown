@@ -2,23 +2,23 @@
 
 ### excerpt
 
-O método **excerpt** é um helper para localizar uma palavra dentro de uma frase e retornar uma abreviação desta frase com o número de caracteres passado como parâmetro antes e depois da palavra, acrescentando, quando necessário, "…". Veja este exemplo:
+The **excerpt** method is a helper to find a word inside a phrase and return an abreviation of that phrase with the number of given characters as parameters before and after the word, adding, when necessary the "…". Look an example:
 
 	excerpt('This is an example', 'an', 5)
 	# => "…s is an examp…"
 	
-O problema é que existia um BUG. Se você contar verá que depois a palavra ele trouxe na verdade seis caracteres e não cinco. Esse bug foi corrigido. Veja o exemplo do funcionamento correto desse método:
+But the problem it was bugged. If you count, you'll see the method returned 6 chars and not 5. This bug was fixed. Look the example of the correct output for this method:
 
 	excerpt('This is an example', 'an', 5)
 	# => "…s is an exam…"
 	
 ###simple\_format
 
-O método **simple\_format** basicamente recebe como parâmetro um texto qualquer e o formata de uma forma simples em HTML. O que ele faz é pegar o texto e substituir uma quebra de linha (\n) pela tag "< br />". E quando temos duas quebras de linha seguidas (\n\n) ele separa o texto entre parágrafos, usando a tag "< p>".
+The **simple\_format** method basically receives as a parameter any text and formats it in a simple way to **HTML**. It takes the takes the text and replaces line breaks (\n) by **HTML** tag "< br />". And when we have two line breaks one after other  (\n\n)  it separates the text in paragraphs using "< p>"tag.
 
-No Rails 2.1 este método recebe um novo parâmetro opcional. Além do texto poderemos também informar quais atributos HTML gostaríamos que a tag "< p>" tivesse. Vamos aos exemplos:
+In Rails 2.1 this method received an additional parameter. Besides text, we are going to be able to inform which **HTML** attributes we would like "< p>" tag had.Look the examples:
 
-	simple_format("Oi mãe!", :class => 'description')
-	# => "<p class=’description’>Oi mãe!</p>"
+	simple_format("Hello Mom!", :class => 'description')
+	# => "<p class=’description’>Hello Mom!</p>"
 
-Os atributos HTML informados serão acrescentados em todas as tags "< p>" criadas pelo método.
+The **HTML** attributes will be added in all "< p>" tags created by the method.

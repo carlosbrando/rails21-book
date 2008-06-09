@@ -1,6 +1,6 @@
 ## config.gem
 
-Agora é possível configurar todas as gems necessárias para o funcionamento correto de um projeto através do novo recurso **config.gem**. No arquivo **environment.rb** você pode adicionar quais gems seu projeto depende, como nesse exxemplo:
+Now it's possible to configure all necessary gems to get a project running by using a new feature called **config.gem**. In  **environment.rb** file you can specify which gems your project depends for run. Look the example:
 
 	config.gem "bj" 
 
@@ -9,35 +9,35 @@ Agora é possível configurar todas as gems necessárias para o funcionamento co
 
 	config.gem "aws-s3", :lib => "aws/s3"
 
-Pode instalar todas as dependências de uma só vez basta usar o comando:
+To install all dependencies at once, we just use a Rake task:
 
-	# Instala todos os gems listados
+	# Installs all specified gems
 	rake gems:install
 
-Também é possível listar quais gems estão sendo usados no projeto executando:
+It's also possible to list which gems are being used in the running project by using:
 
-	# Lista todos os gems dependentes
+	# Listing all gem dependencies
 	rake gems
 
-E se algum dos gems tiver um arquivo **rails/init.rb** e você quiser levar o gem junto com sua aplicação, rode:
+If one of the gems have a **rails/init.rb** file and you want to take the gem with your application, you can use:
 
-	# Copia o gem especifícado para vendor/gems/nome_do_gem-x.x.x
-	rake gems:unpack GEM=nome_do_gem
+	# Copy the specified gem to vendor/gems/nome_do_gem-x.x.x
+	rake gems:unpack GEM=gem_name
 
-E o gem será copiado para o diretório **vendor/gems/gem\_name-x.x.x**. Caso você não especifique o nome do gem o Rails irá copiar todos os gems para o diretório **vendor/gem**
+Then, the gem will be copied to the directory  **vendor/gems/gem\_name-x.x.x**. In case you don't specify gem name, Rails will copy all gems to the directory **vendor/gem**
 
-## config.gem em plugins
+## config.gem in plugins
 
-O recurso do **config.gem** também está disponível para uso com plugins.
+The **config.gem** feature is also available for use with plugins.
 
-Até a versão 2.0 o arquivo **init.rb** de um plugin se parecia com isto:
+Untill Rails 2.0 the **init.rb** file of a plugin used to look like this:
 
-	# init.rb do plugin open_id_authentication
+	# init.rb of plugin open_id_authentication
 	require 'yadis' 
 	require 'openid' 
 	ActionController::Base.send :include, OpenIdAuthentication 
 
-Mas no Rails 2.1 o arquivo **init.rb** seria:
+But in Rails 2.1 the **init.rb** file would be:
 
 	config.gem "ruby-openid", :lib => "openid", :version => "1.1.4"
 	config.gem "ruby-yadis",  :lib => "yadis",  :version => "0.3.4" 
@@ -46,4 +46,4 @@ Mas no Rails 2.1 o arquivo **init.rb** seria:
 	  ActionController::Base.send :include, OpenIdAuthentication
 	end
 
-Assim, quando você rodar a tarefa para instalar todos os gems necessários, estes gems estarão entre eles.
+So, when you run the task to install all necessary gems, these gems will be among them.

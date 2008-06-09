@@ -1,10 +1,10 @@
 ## ActionView::Helpers::FormHelper
 
-### fields\_for form\_for com a opção index.
+### fields\_for form\_for with index option.
 
-Os métodos **#fields\_for** e **form\_for** receberam a opção **:index**, removendo a necessidade de usar o **:index => nil** em cada objeto do formulário. Veja os exemplos:
+The **#fields\_for** and **form\_for** methods received the **:index** option, removing the need of using **:index => nil** on each form object. Look the examples:
 
-O código ficava assim:
+This is the way code used to be:
 
 	<% fields_for "project[task_attributes][]", task do |f| %>
 	  <%= f.text_field :name, :index => nil %>
@@ -12,7 +12,7 @@ O código ficava assim:
 	  <%= f.hidden_field :should_destroy, :index => nil %>
 	<% end %>
 
-Agora fica assim:
+Now it looks like this:
 
 	<% fields_for "project[task_attributes][]", task,
 	              :index => nil do |f| %>
