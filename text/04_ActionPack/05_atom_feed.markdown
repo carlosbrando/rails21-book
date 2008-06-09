@@ -1,8 +1,8 @@
-## Novos namespaces no Atom Feed
+## New namespaces in Atom Feed
 
-Conhece o método **atom\_feed**? Ele é uma novidade no Rails 2.0, que facilitou muito a criação de feeds Atom. Veja um exemplo de uso:
+Do you know the **atom\_feed** method? It is one of the new features of Rails 2.0, making easier the creation of Atom feeds. See an example of use:
 
-Em um arquivo *index.atom.builder*:
+In a *index.atom.builder* file:
 
 	atom_feed do |feed|
 	  feed.title("Nome do Jogo")
@@ -20,18 +20,18 @@ Em um arquivo *index.atom.builder*:
 	  end
 	end
 
-O que é um atom feed? Atom é o nome de um estilo baseado em XML e meta data. Em outras palavras é um protocolo quer serve para publicar conteúdo na internet que é sempre atualizado, como um blog, por exemplo. Os feeds sempre são publicados em XML e no caso do Atom Feed ele é identificado como application/atom+xml media type.
+What is an Atom feed ? Atom is the name of XML based style and meta data. In other words is a protocol to publish content in Internet that is often updated, like a blog, for example. Feeds are always published in XML and in Atom it is identified as an application/atom+xml media type.
 
-Nas primeiras versões do Rails 2.0 este método aceitava como parâmetros as opções **:language**, **:root_url** e **:url**, você pode obter mais informações sobre estes métodos na documentação do Rails. Mas com a alteração realizada, agora podemos incluir novos namespaces ao elemento root do feed. Por exemplo, se fizermos assim:
+In the first versions of Rails 2.0 this method used to accept as parameter **:language**, **:root_url** and **:url** options, you can obtain more information about these methods in Rails Documentation. But with the update mede, now we can include new namespaces in the root element of the feed. For example:
 
 	atom_feed('xmlns:app' => 'http://www.w3.org/2007/app') do |feed|
 
-Ele retornará isto:
+It will return:
 
 	<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" 
 		xmlns:app="http://www.w3.org/2007/app">
 
-Adaptando o exemplo anterior, poderíamos usá-lo assim:
+Modifying the example used before, we could use this way:
 
 	atom_feed({'xmlns:app' => 'http://www.w3.org/2007/app',
 		'xmlns:openSearch' => 'http://a9.com/-/spec/opensearch/1.1/'}) do |feed| 

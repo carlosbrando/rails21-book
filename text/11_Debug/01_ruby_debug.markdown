@@ -1,3 +1,3 @@
-## Ruby-debug nativo
+##Native Ruby-debug
 
-Foi habilitada novamente a opção de usar o **ruby-debug** nos testes do Rails. Agora basta usar o método **debugger**, desde que você já tenha o gem instalado.
+It was enabled again the option for using **ruby-debug** in Rails tests. Now, since you already have the gem installed, it only needs the **debugger** method.

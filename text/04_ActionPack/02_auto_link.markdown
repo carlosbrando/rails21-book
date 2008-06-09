@@ -1,21 +1,21 @@
 ## Auto Link
 
-Para quem não conhece, o método **auto\_link** recebe um texto qualquer como parâmetro e se o texto tiver algum endereço de email ou de um site ele retorna o mesmo texto com hyperlinks.
+For those who doesn't know,  **auto\_link** method receives any text given as parameter, and if the texts has some e-mail address or an website, it returns the same text, but with hyperlinks.
 
-Por exemplo:
+For example:
 
-	auto_link("Acesse este endereço: http://www.rubyonrails.com")
-	# => Acesse este endereço: http://www.rubyonrails.com
+	auto_link("Go to this website now: http://www.rubyonrails.com")
+	# => Go to this website now: http://www.rubyonrails.com
 
-Acontece que alguns sites como o Amazon estão usando também o sinal de "=" (igual) em suas URLs, e este método não reconhece este sinal. Veja como o método se comporta neste caso:
+Some sites, like Amazon, are also using the "=" symbol in their URL's, and this method doesn't recognize that symbol. Look how the method behaves in such case:
 
 	auto_link("http://www.amazon.com/Testing/ref=pd_bbs_sr_1")
 	# => http://www.amazon.com/Testing/ref
 
-Note que o método terminou o hyperlink exatamente antes do sinal de "=", pois ele não suporta este sinal. Quer dizer, não suportava. Nesta nova versão do Rails já temos este problema resolvido.
+Note the method finished the hyperlink exactly before the "=" symbol, because it doesn't support that symbol. It means, it used not to support. In Rails 2.1 we have this problem fixed.
 
-O mesmo método foi alterado mais tarde para também permitir o uso de URLs com o sinal de parênteses.
+The same method was updated later to also allow the use of URL's with parenthesis.
 
-Um exemplo de URL com parênteses:
+An URL example using parenthesis:
 
 	http://en.wikipedia.org/wiki/Sprite_(computer_graphics)

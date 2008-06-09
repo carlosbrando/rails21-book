@@ -1,5 +1,5 @@
-## Detalhes
+## Details
 
-O principal foco das alterações do Rails foi o Ruby 1.9, mesmo os menores detalhes foram analisados para deixar o Rails o mais compatível possível com a nova versão do Ruby. Detalhes como alterar de **File.exists?** para **File.exist?** não foram deixados de fora.
+The main focus of Rails changes was Ruby 1.9, even minor details were analyzed to make Rails the more compatible possible with the new Ruby version. Details like changing from **File.exists?** to **File.exist?** were not kept aside.
 
-Também, no Ruby 1.9, o módulo **Base64** (base64.rb) foi removido, por isto todas as referencias a ele foram substituídas por **ActiveSupport::Base64**.
+Also, in Ruby 1.9, the module **Base64** (base64.rb) was removed, because of that, all references to it were replaced by **ActiveSupport::Base64**.

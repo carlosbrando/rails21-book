@@ -1,3 +1,3 @@
-## Correção de bug no change\_column
+##Bug fixes in change\_column
 
-Foi corrigido um bug existente quando se tentava usar o método **change\_column** com **:null => true** em uma coluna que foi criada usando **:null => false**. Por causa deste bug nenhuma alteração era feita.
+It was fixed an existing bug when using the **change\_column** method with **:null => true** in a column created using **:null => false**. Because of this bug no changes were made when using the method.

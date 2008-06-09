@@ -1,9 +1,9 @@
-## Condicional no método caches\_page
+## Conditional in the caches\_page method
 
-O método **caches\_page** ganhou uma opção para condicionar seu uso (**:if**). Veja um exemplo:
+The **caches\_page** method now has the option to use conditionals (**:if**). See an example:
 
-	# forma atual
+	# actual way
 	caches_page :index
 
-	# No Rails 2.1 você pode usar a opção :if
+	# In Rails 2.1 you can use :if option
 	caches_page :index, :if => Proc.new { |c| !c.request.format.json? }

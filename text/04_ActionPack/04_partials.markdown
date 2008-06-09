@@ -1,21 +1,21 @@
-## Uma nova forma de usar partials
+## A new way of using partials
 
-Algo muito normal no desenvolvimento de softwares em Rails é o uso de **partials** para evitar a repetição de código. Vejamos um exemplo de seu uso:
+Something very common in Rails software development is the use of **partials** to avoid code repetition. Look an example of use:
 
 	<% form_for :user, :url => users_path do %>
 		<%= render :partial => 'form' %>
 		<%= submit_tag 'Create' %>
 	<% end %>
 
-**Partial** é um fragmento de código (um template). A vantagem de se usar uma **partial** é evitar a repetição desnecessária de código. Para usar uma **partial** é muito simples, você pode começar com algo mais ou menos assim: **render :partial => "name"**. Depois deve criar um arquivo com o mesmo nome da **partial**, mas com um underscore na frente, só isso.
+**Partial** is a code fragment (a template). The advantage of using an **partial** is to avoid unnecessary code repetition. Using a **partial** is very simple, you can start with something like this: **render :partial => "name"**. After, you must create a file with the same name of your **partial**, but using a underscore in front of it. Just that.
 
-O código acima é a forma como estamos acostumados a fazer hoje, mas nesta nova versão do Rails, faremos a mesma coisa de uma forma um pouco diferente, assim:
+The above code is the way we are used to do, but in this new Rails version, we'll do the same thing in a different way, like this:
 
 	<% form_for(@user) do |f| %>
 		<%= render :partial => f %>
 		<%= submit_tag 'Create' %>
 	<% end %>
 
-Neste exemplo nós vamos renderizar a partial "users/\_form", que receberá uma variável chamada form com as referências criadas pelo **FormBuilder**.
+In this example we render the partial "users/\_form", which will receive a variable called "form" with the references created by the **FormBuilder**.
 
-A forma antiga também vai continuar funcionando.
+Old way will keep working.

@@ -1,14 +1,15 @@
 ## Timeouts
 
-O Active Resource usa HTTP para acessar APIs RESTful e por isto está suscetível a problemas de lentidão ou servidores fora do ar. Em alguns casos, suas chamadas ao ActiveResource podem expirar (timeout). Agora você pode controlar o tempo de expiração com a propriedade timeout.
+ActiveResource ueses **HTTP** to access RESTful API's and because this fact is susceptible to problems of server slow responses or non-working servers. In some cases, its calls to ActiveResource can expire (timeout). Now you can have control of expiration time with the timeout property.
 
 	class Person < ActiveResource::Base
 	  self.site = "http://api.people.com:3000/"
-	  self.timeout = 5 # espera 5 segundos antes de expirar
+	  self.timeout = 5 # waits 5 seconds before expire
 	end
 
-Neste exemplo foi configurado o tempo de timeout para 5 segundos. É recomendado que este valor seja baixo, para permitir que seu sistema falhe rápido (ou fail-fast), impedindo falhas em cascata que poderiam incapacitar o seu servidor.
+In this example it was configured a timeout of 5 seconds. It's recommended this value be low, to allow your system to fail-fast, 
+preventing cascading fails which could incapacitate your server.
 
-Internamente o Active Resource se baseia na biblioteca Net::HTTP para fazer requests HTTP. Quando você define um valor para a propriedade timeout, o mesmo valor é definido para o read\_timeout da instância do objeto Net::HTTP que está sendo usado.
+Internally, ActiveResource shares resource from the Net:HTTP library to make HTTP requests. When you define a value for the timeout property, the same value is defined for the **read\_timeout** of the Net:HTTP object instance which is being used.
 
-O valor padrão é de 60 segundos.
+The default value is 60 seconds.

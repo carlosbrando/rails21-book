@@ -1,10 +1,10 @@
-## Acessando Helpers fora das Views
+## Accessing Helpers outside Views
 
-Quantas vezes você não criou um **helper** e depois quis usá-lo dentro do meu **controller**? Para conseguir isto só incluindo o módulo do **helper** no **controller**, mas isto sempre deixa seu código com aparência de sujo.
+How many times did you create a **helper** e wished to use it inside your **controller** ? To achive this, we needed to included the **helper** module inside the **controller**, but this makes your code look dirty.
 
-Para o Rails 2.1 foi criado um proxy para acessar os helpers de fora das views. Funciona de maneira muito simples:
+For Rails 2.1 was developed a proxy to access helpers outside views. It works in a very simple way:
 
-	# Para acessar o método simple_format, por exemplo
+ 	# To access simple_format method, for example
 	ApplicationController.helpers.simple_format(text)
 
-Simples e limpo!
+Simple and Clean!
