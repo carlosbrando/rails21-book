@@ -2,11 +2,11 @@
 
 All **fragment\_cache\_key** methods now return by default the namespace 'view/' as prefix.
 
-All caching stores were removed from **ActionController::Caching::Fragments::*** and now they can found in **ActiveSupport::Cache::***.In this case, if you made a reference to a store, like **ActionController::Caching::Fragments::MemoryStore**, for example, it is going to be necessary to change its reference to **ActiveSupport::Cache::MemoryStore**.
+All caching stores were removed from **ActionController::Caching::Fragments::*** and now they can be found in **ActiveSupport::Cache::***. In this case, if you made a reference to a store, like **ActionController::Caching::Fragments::MemoryStore**, for example, you'll have to change its reference to **ActiveSupport::Cache::MemoryStore**.
 
 **ActionController::Base.fragment\_cache\_store** is no more and **ActionController::Base.cache\_store** takes its place.
 
-It was included in the **ActiveRecord::Base** the **cache\_key** method to facilitate the storing cache of Active Records by the new libraries **ActiveSupport::Cache::***.It works this way:
+It was included in the **ActiveRecord::Base** the **cache\_key** method to facilitate the storing cache of Active Records by the new libraries **ActiveSupport::Cache::***. It works this way:
 
 	>> Product.new.cache_key
 	=> "products/new"

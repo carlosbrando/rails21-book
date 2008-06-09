@@ -27,7 +27,7 @@ That way makes much more sense. The **label** method was included. This method r
 	>> label :title, "A short title", :class => "title_label"
 	=> <label for="post_title" class="title_label">A short title</label>
 
-Did you notice the **for** parameter inside the tag ? "post\_title" is the textbox title which contains our post title. The **\<label\>** tag is in fact a label associated to the **post\_title** object. When someone clicks in the label (which isn't a link) the associated HTML controller receives the focus.
+Did you notice the **for** parameter inside the tag ? "post\_title" is the textbox title which contains our post title. The **\<label\>** tag is in fact a label associated to the **post\_title** object. When someone clicks in the label (which isn't a link) the associated HTML controller receives focus.
 
 Robby Russell wrote an interesting post in his blog about this subject. You can read it on: [http://www.robbyonrails.com/articles/2007/12/02/that-checkbox-needs-a-label](http://www.robbyonrails.com/articles/2007/12/02/that-checkbox-needs-a-label)
 

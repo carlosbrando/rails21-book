@@ -22,11 +22,11 @@ In a *index.atom.builder* file:
 
 What is an Atom feed ? Atom is the name of XML based style and meta data. In other words is a protocol to publish content in Internet that is often updated, like a blog, for example. Feeds are always published in XML and in Atom it is identified as an application/atom+xml media type.
 
-In the first versions of Rails 2.0 this method used to accept as parameter **:language**, **:root_url** and **:url** options, you can obtain more information about these methods in Rails Documentation. But with the update mede, now we can include new namespaces in the root element of the feed. For example:
+In the first versions of Rails 2.0 this method used to accept as parameter **:language**, **:root_url** and **:url** options, you can obtain more information about these methods in Rails Documentation. But with the update made, we can now include new namespaces in the root element of the feed. For example:
 
 	atom_feed('xmlns:app' => 'http://www.w3.org/2007/app') do |feed|
 
-It will return:
+Will return:
 
 	<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" 
 		xmlns:app="http://www.w3.org/2007/app">

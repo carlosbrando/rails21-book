@@ -18,4 +18,4 @@ The above code is the way we are used to do, but in this new Rails version, we'l
 
 In this example we render the partial "users/\_form", which will receive a variable called "form" with the references created by the **FormBuilder**.
 
-Old way will keep working.
+The old way will keep working.

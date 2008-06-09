@@ -12,7 +12,7 @@ Some sites, like Amazon, are also using the "=" symbol in their URL's, and this 
 	auto_link("http://www.amazon.com/Testing/ref=pd_bbs_sr_1")
 	# => http://www.amazon.com/Testing/ref
 
-Note the method finished the hyperlink exactly before the "=" symbol, because it doesn't support that symbol. It means, it used not to support. In Rails 2.1 we have this problem fixed.
+Note the method finished the hyperlink exactly before the "=" symbol, because it doesn't support that symbol. I mean, it used not to support. In Rails 2.1 we have this problem fixed.
 
 The same method was updated later to also allow the use of URL's with parenthesis.
 

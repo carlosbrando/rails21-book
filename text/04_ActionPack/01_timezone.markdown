@@ -2,7 +2,7 @@
 
 ### Defining a default timezone
 
-One new option was added to **time\_zone\_select** method, now you can present a default value in cases when your user doesn't  selected any **TimeZone**, or when the database column is null. To achive this, it was created the **:default** option, so you can use the method in the following way:
+One new option was added to **time\_zone\_select** method, you can now present a default value in cases which your user didn't select any **TimeZone**, or when the database column is null. To achive this, it was created the **:default** option, so you can use the method in the following way:
 
 	time_zone_select("user", "time_zone", nil, :include_blank => true)
 	
@@ -12,7 +12,7 @@ One new option was added to **time\_zone\_select** method, now you can present a
 	time_zone_select( "user", 'time_zone', TimeZone.us_zones, 
 		:default => "Pacific Time (US & Canada)")
 
-In cases where is used **:default** option, it must be shown with the informed **TimeZone** already selected.
+In cases where we use the **:default** option, it must be shown with the informed **TimeZone** already selected.
 
 ### The formatted_offset method
 
@@ -69,7 +69,7 @@ The **TimeZone#now** method was modified to return an **ActiveSupport::TimeWithZ
 
 ### Compare\_with\_coercion
 	
-It was created the method **compare\_with\_coercion** (with an alis for <=>) in **Time** e **DateTime** classes, becoming possible to make a chronologically comparison between the **Time**, **DateTime** classes and instances of  **ActiveSupport::TimeWithZone** objects. For a better understanding, look the examples bellow (each line result is in the comment placed following the code):
+It was created the method **compare\_with\_coercion** (with an alis for <=>) in **Time** e **DateTime** classes, becoming possible to make a chronological comparison between the **Time**, **DateTime** classes and instances of  **ActiveSupport::TimeWithZone** objects. For a better understanding, look the examples bellow (each line result is in the comment placed following the code):
 
 	Time.utc(2000) <=> Time.utc(1999, 12, 31, 23, 59, 59, 999) # 1
 	Time.utc(2000) <=> Time.utc(2000, 1, 1, 0, 0, 0) # 0

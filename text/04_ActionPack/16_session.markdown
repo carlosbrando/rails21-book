@@ -1,6 +1,6 @@
 ## session(:on)
 
-Maybe you don't know anymore, but in Rails is possible to turn off sessions:
+Maybe you don't know this anymore, but in Rails is possible to turn off sessions:
 
 	class ApplicationController < ActionController::Base
 	  session :off
