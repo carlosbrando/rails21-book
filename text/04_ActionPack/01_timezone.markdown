@@ -69,7 +69,7 @@ The **TimeZone#now** method was modified to return an **ActiveSupport::TimeWithZ
 
 ### Compare\_with\_coercion
 	
-It was created the method **compare\_with\_coercion** (with an alis for <=>) in **Time** e **DateTime** classes, becoming possible to make a chronological comparison between the **Time**, **DateTime** classes and instances of  **ActiveSupport::TimeWithZone** objects. For a better understanding, look the examples bellow (each line result is in the comment placed following the code):
+It was created the method **compare\_with\_coercion** (with an alias for <=>) in **Time** e **DateTime** classes, becoming possible to make a chronological comparison between the **Time**, **DateTime** classes and instances of  **ActiveSupport::TimeWithZone** objects. For a better understanding, look the examples bellow (each line result is in the comment placed following the code):
 
 	Time.utc(2000) <=> Time.utc(1999, 12, 31, 23, 59, 59, 999) # 1
 	Time.utc(2000) <=> Time.utc(2000, 1, 1, 0, 0, 0) # 0
