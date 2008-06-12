@@ -18,16 +18,16 @@ Now let's map it in a **migration** file and see what column type will be create
 	create_table :table_name, :force => true do |t|
 
 	  # 0 - 3: smallint
-	  t.integer :coluna1, :limit => 2 # smallint(2)
+	  t.integer :column_one, :limit => 2 # smallint(2)
 
 	  # 4 - 8: int
-	  t.integer :coluna2, :limit => 6 # int(6)
+	  t.integer :column_two, :limit => 6 # int(6)
 
 	  # 9 - 20: bigint
-	  t.integer :coluna3, :limit => 15 # bigint(15)
+	  t.integer :column_three, :limit => 15 # bigint(15)
 
 	  # if :limit is not informed: int(11)
-	  t.integer :coluna4 # int(11)
+	  t.integer :column_four # int(11)
 	end
       
 The **PostgreSQL** adapter had this feature already and **MySQL** just caught up.
