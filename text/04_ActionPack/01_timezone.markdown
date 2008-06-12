@@ -2,7 +2,7 @@
 
 ### Defining a default timezone
 
-One new option was added to **time\_zone\_select** method, you can now present a default value in cases which your user didn't select any **TimeZone**, or when the database column is null. To achive this, it was created the **:default** option, so you can use the method in the following way:
+One new option was added to **time\_zone\_select** method, you can now present a default value in cases which your user didn't select any **TimeZone**, or when the database column is null. To achieve this, a **:default** option was created and can be used as such:
 
 	time_zone_select("user", "time_zone", nil, :include_blank => true)
 	
@@ -31,7 +31,7 @@ Now from Time:
 	Time.local(2000).formatted_offset         # => "-06:00″
 	Time.local(2000).formatted_offset(false)  # => "-0600″
 
-Note this method returns **string**, which can be formatted or not depending of the value given as parameter.
+Note this method returns **string**, which can be either formatted or not depending of the value given as parameter.
 
 ### The with\_env\_tz method
 
@@ -50,15 +50,15 @@ This helper was supposed to call **with\_timezone**, but it was renamed for **wi
 
 ### Time.zone_reset!
 
-It was removed for not being used anymore
+Was removed for not being used anymore
 
 ### Time#in\_current\_time\_zone
 
-It was modified to return **self** when **Time.zone** is null. 
+Was modified to return **self** when **Time.zone** is null. 
 
 ### Time#change\_time\_zone\_to\_current
 
-It was modified to return **self** when **Time.zone** is null. 
+Was modified to return **self** when **Time.zone** is null. 
 
 ### TimeZone#now
 
@@ -69,7 +69,7 @@ The **TimeZone#now** method was modified to return an **ActiveSupport::TimeWithZ
 
 ### Compare\_with\_coercion
 	
-It was created the method **compare\_with\_coercion** (with an alias for <=>) in **Time** e **DateTime** classes, becoming possible to make a chronological comparison between the **Time**, **DateTime** classes and instances of  **ActiveSupport::TimeWithZone** objects. For a better understanding, look the examples bellow (each line result is in the comment placed following the code):
+The method **compare\_with\_coercion** (with an alias for <=>) was created  in **Time** e **DateTime** classes, becoming possible to make a chronological comparison between the **Time**, **DateTime** classes and instances of  **ActiveSupport::TimeWithZone** objects. For a better understanding, take a look the examples bellow (each line result is in the comment placed following the code):
 
 	Time.utc(2000) <=> Time.utc(1999, 12, 31, 23, 59, 59, 999) # 1
 	Time.utc(2000) <=> Time.utc(2000, 1, 1, 0, 0, 0) # 0
@@ -85,7 +85,7 @@ It was created the method **compare\_with\_coercion** (with an alias for <=>) in
 
 ### TimeWithZone#between?
 
-It was included the **between?** method in the **TimeWithZone** class to verify if an instance is found between two dates. Example:
+The **between?** method was included in the **TimeWithZone** class to verify if an instance is found between two dates. Example:
 
 	@twz.between?(Time.utc(1999,12,31,23,59,59),
 	              Time.utc(2000,1,1,0,0,1))
@@ -129,9 +129,9 @@ In Ruby 1.9 we'll have some new methods in the **Time** class, methods such as:
 	Time.now.sunday?
 	# => false
 
-It exists one for each day of the week.
+A respective method exists for each day of the week.
 
-Another curiosity is that **to\_s** method of **Time** object will have a different returning value. Today when we execute **Time.new.to\_s**, we have the following:
+Another interesting things is that **to\_s** method of **Time** object will have a different returning value. Today when we execute **Time.new.to\_s**, we have the following:
 
 	Time.new.to_s
 	# => "Thu Oct 12 10:39:27 +0200 2006″
@@ -141,4 +141,4 @@ In Ruby 1.9 we will have:
 	Time.new.to_s
 	# => "2006-10-12 10:39:24 +0200″
 
-What's all of that have about with Rails 2.1 ? Everything, since Rails is being prepared to deal with these modifications. The **TimeWithZone** class, for example, just received an implementation to work with the methods of the first example.
+What's all of that have to do with Rails 2.1? Everything. Rails is being prepared to deal with these modifications. The **TimeWithZone** class, for example, just received some enhancements to work with the methods of the first example.
