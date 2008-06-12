@@ -18,7 +18,7 @@ Returns December 31 at 11:59:59 PM
 
 ### Time#in\_time\_zone
 
-This method is similar to **Time#localtime**, except by the fact it uses **Time.zone** instead of the underlying operating system's timezone. You can pass either **TimeZone** or **String** as a parameter. Look at some examples:
+This method is similar to **Time#localtime**, except by the fact that it uses **Time.zone** instead of the underlying operating system's timezone. You can pass either **TimeZone** or **String** as a parameter. Look at some examples:
 
 	Time.zone = 'Hawaii'
 	Time.utc(2000).in_time_zone

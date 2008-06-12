@@ -1,6 +1,6 @@
 ## Time.current
 
-A new method for **Time** class. **current** method's return depends on **config.time\_zone**, if it was specified before, the method will return a **Time.zone.now**, otherwise will be a **Time.now**.
+A new method for **Time** class. The **current** method's return depends on **config.time\_zone**, if it was specified before, the method will return a **Time.zone.now**, otherwise will be a **Time.now**.
 
 	# return value depends on config.time_zone
 	Time.current

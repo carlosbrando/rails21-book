@@ -1,4 +1,4 @@
-## UTC ou GMT?
+## UTC or GMT?
 
 An amendment, but interesting. Until now Rails has been using the UTC acronym a lot, but when the method **to\_s** from **TimeZone** is called, it will print GMT, not UTC. This is due to the fact that the GMT acronym is the most common among end users.
 

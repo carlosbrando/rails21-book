@@ -22,3 +22,4 @@ There are also new rake tasks to "walk through" **migrations**:
 
 	rake db:migrate:up
 	rake db:migrate:down
+
