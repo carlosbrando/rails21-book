@@ -1,8 +1,8 @@
 ## Testing Helpers in a simple way
 
-One very boring thing to do in earlier versions of Rails was testing **helpers**. I already suffered a lot to ensure 100% of covering, creating tests for some **helpers**.
+One very boring thing to do in earlier versions of Rails is testing the **helpers**. I already suffered a lot to ensure 100% of coverage, creating tests for some **helpers**.
 
-This became much more simpler in rails 2.1 with the **ActionView::TestCase** class. Look the example:
+This became much simpler in Rails 2.1 with the **ActionView::TestCase** class. Look the example:
 
 	module PeopleHelper
 	  def title(text)

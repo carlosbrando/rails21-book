@@ -16,7 +16,7 @@ When creating a new form using **scaffold** it will be created with the followin
 	  </p>
 	<% end %>
 
-That way makes much more sense. The **label** method was included. This method returns a *string* with the column title inside an HTML **\<label\>** tag.
+The **label** method was included. This method returns a *string* with the column title inside an HTML **\<label\>** tag.
 
 	>> f.label :title
 	=> <label for="post_title">Title</label>
@@ -27,11 +27,11 @@ That way makes much more sense. The **label** method was included. This method r
 	>> label :title, "A short title", :class => "title_label"
 	=> <label for="post_title" class="title_label">A short title</label>
 
-Did you notice the **for** parameter inside the tag ? "post\_title" is the textbox title which contains our post title. The **\<label\>** tag is in fact a label associated to the **post\_title** object. When someone clicks in the label (which isn't a link) the associated HTML controller receives focus.
+Did you notice the **for** parameter inside the tag ? "post\_title" is the textbox title which contains our post title. The **\<label\>** tag is in fact a label associated to the **post\_title** object. When someone clicks on the label (which isn't a link) the associated HTML controller receives focus.
 
 Robby Russell wrote an interesting post in his blog about this subject. You can read it on: [http://www.robbyonrails.com/articles/2007/12/02/that-checkbox-needs-a-label](http://www.robbyonrails.com/articles/2007/12/02/that-checkbox-needs-a-label)
 
-It was also included the **label\_tag** method in **FormTagHelper**. This method works like label, but in a simpler way:
+Also included was the **label\_tag** method in **FormTagHelper**. This method works like label, but in a simpler way:
 
 	>> label_tag 'name'
 	=> <label for="name">Name</label> 

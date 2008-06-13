@@ -4,4 +4,4 @@ The **caches\_action** method now accepts the **:if** option, allowing the use o
 
 	caches_action :index, :if => Proc.new { |c| !c.request.format.json? }
 
-In the above example, the **action index** will go to the **cache** only if it's not accessed by a JSON request.
+In the example above, the **action index** will go to the **cache** only if it's not accessed by a JSON request.

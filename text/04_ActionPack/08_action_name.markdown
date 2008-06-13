@@ -1,6 +1,6 @@
 ## action\_name
 
-Now, to know which view was called during running time of your view, we just use the **action\_name** method:
+In order to find out which view was called during running time of your view, we can use the **action\_name** method:
 
 	<%= action_name %>
 

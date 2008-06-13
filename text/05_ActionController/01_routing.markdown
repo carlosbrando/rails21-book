@@ -1,7 +1,7 @@
 ## ActionController::Routing
 
 ### Map.root
-Now, when using **map.root** you can be more **DRY** using an alias for that.
+Now, when using **map.root** you can be much more **DRY** using an alias for that.
 
 In the earlier versions of rails you used to do it like this:
 
@@ -14,13 +14,13 @@ Now you can do it this way:
 	map.root :new_session
 	
 ### Routes recognition 
-Routes recognition's old implementation used to sweep all routes, one by one, and often turned to be very time consuming. One new and smarter implementation was developed. It creates a tree of routes and the route recognition is made by prefixing, skipping similar routes. This approach lowers recognition time in approximately 2.7 times. 
+Routes recognition's old implementation used to sweep all routes, one by one, and often turned to be very time consuming. A new and smarter implementation was developed. It creates a tree for routes and the route recognition is made by prefixing, skipping similar routes. This approach lowers recognition time in approximately 2.7 times. 
 
-All the new implementation is in the file **recognition\_optimisation.rb** and its working details are well explained in the comments. For more information about its implementation see the the documentation inside the source code itself.
+All the new implementations are in the file **recognition\_optimisation.rb** and its working details are well explained in the comments. See the the documentation inside the source code itself for more information about its implementation.
 
 ### Assert_routing
 
-Now it's possible to test a route with an HTTP method. Look the example:
+Now it's possible to test a route with an HTTP method. Look at the following example:
 
 	assert_routing({ :method => 'put',
 	                 :path => '/product/321' },
@@ -30,7 +30,7 @@ Now it's possible to test a route with an HTTP method. Look the example:
 	
 ### Map.resources
 	
-Imagine you have a site all written in a non-english language and you want to taylor your routes to use the same language. In other words, instead of having:
+Imagine you have a site written in a language other than english, and you want to taylor your routes to use the same language. In other words, instead of having:
 
 	http://www.mysite.com.br/products/1234/reviews
 

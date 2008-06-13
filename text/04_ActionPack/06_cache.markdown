@@ -17,9 +17,9 @@ It was included in the **ActiveRecord::Base** the **cache\_key** method to facil
 	>> Person.find(5).cache_key
 	=> "people/5-20071224150000"
 
-It was included the **ActiveSupport::Gzip.decompress/compress** to make easier the use of a wrapper for **Zlib**.
+**ActiveSupport::Gzip.decompress/compress**  was included to make easier the use as a wrapper for **Zlib**.
 
-Now you can use among environment options the **config.cache\_store** to specify the default place of caching store. It worth mention, if the **tmp/cache** directory exists, the default is **FileStore**, in other case the **MemoryStore** will be used. You can configure in the following ways:
+Now you can use among environment options the **config.cache\_store** to specify the default place of caching store. It is worth mentioning, if the **tmp/cache** directory exists, the default is **FileStore**, in other case the **MemoryStore** will be used. You can configure in the following ways:
 
 	config.cache_store = :memory_store
 	config.cache_store = :file_store, "/path/to/cache/directory"
@@ -27,7 +27,7 @@ Now you can use among environment options the **config.cache\_store** to specify
 	config.cache_store = :mem_cache_store, "localhost"
 	config.cache_store = MyOwnStore.new("parameter")
 
-To make things even more easy, it was included the following comment bellow *environments/production.rb* file, in order to remember you of this option.
+To make things even easier, the comment bellow is included in *environments/production.rb* file, in order to remind you of this option.
 
 	# Use a different cache store in production
 	# config.cache_store = :mem_cache_store

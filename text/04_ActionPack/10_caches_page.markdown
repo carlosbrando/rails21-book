@@ -1,6 +1,6 @@
 ## Conditional in the caches\_page method
 
-The **caches\_page** method now has the option to use conditionals (**:if**). See an example:
+The **caches\_page** method now has the option to use conditionals (**:if**). See example:
 
 	# The Rails 2.0 way
 	caches_page :index
