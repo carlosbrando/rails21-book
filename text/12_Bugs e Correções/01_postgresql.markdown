@@ -1,6 +1,6 @@
 ## Add columns in PostgreSQL
 
-There was a bug when using **PostgreSQL**. The bug occurred when creating a migration for adding a column in an existing table. Look an example:
+There was a bug when using **PostgreSQL**. It occurred when creating a migration for adding a column in an existing table. Look an example:
 
 File: *db/migrate/002\_add\_cost.rb*
 
@@ -29,7 +29,7 @@ Note we are creating a column with **:precision => 6** and **:scale => 2**. Now 
 		<td>not null</td>
 	</tr>
 	<tr>
-		<td>descr</td>
+		<td>desc</td>
 		<td>character varying(255)</td>
 		<td></td>
 	</tr>

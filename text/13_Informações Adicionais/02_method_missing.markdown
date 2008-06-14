@@ -1,8 +1,8 @@
 ## Used method\_missing, then don't leave loose ends
 
-Due to Ruby's dynamic nature, the method **respond\_to?** is crucial. How many times we had to check if a method exists in the object we're dealing with, or even check if the object is the same that we are expecting (**is\_a?**)?
+Due to Ruby's dynamic nature, the method **respond\_to?** is crucial. How many times have you checked if a method exists in the object ? Or how often have you checked if the object is what we are expecting (**is\_a?**)?
 
-However there's something really important that many people forget. Look at this class that uses the method **method\_missing**:
+However there's something really important that many people forget. Look at this class's usage of the method **method\_missing**:
 
 	class Dog
 	  def method_missing(method, *args, &block)
@@ -26,7 +26,7 @@ But look what happens when I try to use the method **respond\_to?**:
 	rex.respond_to? :bark #=> false
 	rex.bark #=> woofwoof!
 
-It returns false, and that makes all sense since the method doesn't really exist. Then it's my responsibility to change the method **respond\_to?** to work properly using my special rule. I'll change my class to this:
+It returns false, and that makes sense since the method doesn't really exist. Then it's my responsibility to change the method **respond\_to?** to work properly using my special rule. I'll change my class to this:
 
 	class Dog
 	  METHOD_BARK = /^bark/
@@ -49,8 +49,8 @@ It returns false, and that makes all sense since the method doesn't really exist
 	rex.respond_to?(:bark) #=> true
 	rex.bark #=> woofwoof!
 
-Now we're talking! This is a common mistake that I've seen in some codes, Rails itself included. Try to execute a  **respond\_to?** to check the existence of methods like **find\_by\_name**, for example.
+Now we're talking! This is a common mistake that I've seen often including in the Rails codebase itself. Try to execute a  **respond\_to?** to check the existence of methods like **find\_by\_name**, for example.
 
-Ruby is an amazing and highly flexible language, but if we don't watch it we can leave loose ends like this.
+Ruby is an amazing and highly flexible language, but if you don't watch it you can leave loose ends like these.
 
-Of course that in Rails 2.1 this problem was fixed, we can use **respond\_to?** to check the existence of methods like **find\_by\_something**.
+Of course that in Rails 2.1 this problem was fixed, you can use **respond\_to?** to check the existence of methods like **find\_by\_something**.
