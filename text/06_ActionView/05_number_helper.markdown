@@ -2,7 +2,7 @@
 
 ### number\_to\_currency
 
-The **number\_to\_currency** method now accepts the **:format** option as a parameter,letting us to format the method's returning value. In earlier versions, when we had to format values for our local currency, we needed to include a space in front of **:unit** option to make the output format correct. See the examples:
+The **number\_to\_currency** method now accepts the **:format** option as a parameter, letting us to format the method's returning value. In earlier versions, when we had to format values for our local currency, we needed to include a space in front of **:unit** option to make the output format correct. See the examples:
 	
 	# R$ is the symbol for Brazilian currency
 	number_to_currency(9.99, :separator => ",", :delimiter => ".", :unit => "R$")
