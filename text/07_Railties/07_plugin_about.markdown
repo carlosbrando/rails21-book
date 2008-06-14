@@ -15,4 +15,4 @@ We can get this information later this way:
 	plugin.about["author"] # => “Carlos Brando”
 	plugin.about["url"] # => “http://www.nomedojogo.com”
 
-If you find some good use for this feature and want to share with me, maybe i can change my mind about its real need.
+If you find some good use for this feature and want to share with me, maybe I can change my mind about its real need.

@@ -1,6 +1,6 @@
 ## Rails.logger, Rails.root, Rails.env and Rails.cache
 
-In Rails 2.1 instead of using the constants: **RAILS\_DEFAULT\_LOGGER**, **RAILS\_ROOT**, **RAILS\_ENV** and **RAILS\_CACHE**. We will use:
+In Rails 2.1 instead of using the constants: **RAILS\_DEFAULT\_LOGGER**, **RAILS\_ROOT**, **RAILS\_ENV** and **RAILS\_CACHE** you can use:
 
 	# RAILS_DEFAULT_LOGGER
 	Rails.logger

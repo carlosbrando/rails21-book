@@ -30,7 +30,7 @@ Then, the gem will be copied to the directory  **vendor/gems/gem\_name-x.x.x**. 
 
 The **config.gem** feature is also available for use with plugins.
 
-Untill Rails 2.0 the **init.rb** file of a plugin used to look like this:
+Until Rails 2.0 the **init.rb** file of a plugin used to look like this:
 
 	# init.rb of plugin open_id_authentication
 	require 'yadis' 
@@ -46,4 +46,4 @@ But in Rails 2.1 the **init.rb** file would be:
 	  ActionController::Base.send :include, OpenIdAuthentication
 	end
 
-So, when you run the task to install all necessary gems, these gems will be among them.
+So when you run the task to install all necessary gems, these gems will be among them.

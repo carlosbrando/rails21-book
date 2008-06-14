@@ -2,11 +2,11 @@
 
 ### rails:update
 
-From now on everytime you run the task **rake rails:freeze:edge** it will also run **rails:update**, updating the config files and *JavaScripts*.
+From now on every time you run the task **rake rails:freeze:edge** it will also run **rails:update**, updating the config files and *JavaScripts*.
 
 ### Database in 127.0.0.1
 
-A change was made in the file databases.rake that used to look only in localhost for local databases, it will now also consider the IP **127.0.0.1**. This works for both **create** and **drop** tasks. The databases.rake file was also refactored to make the code less repetitive.
+The databases.rake used to look only in localhost for local databases, it will now also consider the IP **127.0.0.1**. This works for both **create** and **drop** tasks. The databases.rake file was also refactored to make the code less repetitive.
 
 ### Freezing a specific Rails release.
 
