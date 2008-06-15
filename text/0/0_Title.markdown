@@ -1,10 +1,10 @@
 #Introduction
 
-Around July of 2004 David Heinemeier Hansson publicly released the Ruby on Rails framework, which had been extracted from a web application called Basecamp. More than three years later, on the December 7th, 2007 Ruby on Rails version 2.0 was released with numerous important changes.
+Around July of 2004 David Heinemeier Hansson publicly released the Ruby on Rails framework. The framework had been extracted from a web application called he was working on called Basecamp. More than three years later, on the December 7th 2007, Ruby on Rails version 2.0 was released with numerous important changes.
 
 Six months have passed since then, and during this time more than **1400 developers** from all around the world have contributed  **1600 patches** to the framework. Today, June 1st 2008, version 2.1 of the Ruby on Rails framework was released.
 
-Major new features according to David:
+Major new features according to David Heinemeier Hansson:
 
 * Timezones
 * Dirty tracking
