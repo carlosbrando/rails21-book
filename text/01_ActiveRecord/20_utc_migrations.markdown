@@ -14,11 +14,7 @@ Also a new table called **schema_migrations** was created and it stores which **
 
 Apparently, it solves the conflict problem with **migrations**.
 
-There is an option to disable this feature by including the following line in **environment.rb**:
-
-	config.active_record.timestamped_migrations = false
-
-There are also new rake tasks to "walk through" **migrations**:
+There are also two new rake tasks to "walk through" **migrations**:
 
 	rake db:migrate:up
 	rake db:migrate:down
