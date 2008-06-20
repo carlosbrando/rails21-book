@@ -48,3 +48,7 @@ Chapter 2
 **Abraão Coelho** - [http://abrcoelho.net](http://abrcoelho.net/)
 
 Chapter 9
+
+**Bruno Miranda** - [http://brunomiranda.com](http://brunomiranda.com)
+
+Reviser
